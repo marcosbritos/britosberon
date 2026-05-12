@@ -1,0 +1,6 @@
+# robots.txt para britosberon.com.ar
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://britosberon.com.ar/sitemap.xml
