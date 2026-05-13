@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface LogoProps {
   context?: string;
@@ -8,16 +9,19 @@ interface LogoProps {
 
 export function Logo({ context, variant = "light", accentColor }: LogoProps) {
   const isLight = variant === "light";
-  const bgClass = isLight ? "bg-white text-ink-900" : "bg-ink-900 text-white";
   const textClass = isLight ? "text-white" : "text-ink-900";
   const subtleClass = isLight ? "text-white/45" : "text-ink-900/45";
 
   return (
     <Link href="/" className="inline-flex items-center gap-3 group">
-      <div
-        className={`flex items-center justify-center w-11 h-7 ${bgClass} rounded`}
-      >
-        <span className="font-serif text-[14px] font-bold tracking-tighter">B&B</span>
+      <div className="relative w-10 h-10 overflow-hidden rounded-md shrink-0">
+        <Image
+          src="/logo.png"
+          alt="B&B Logo"
+          fill
+          className={`object-contain ${isLight ? "brightness-0 invert" : ""}`}
+          priority
+        />
       </div>
       <div className="flex flex-col leading-none">
         <span className={`text-[14px] font-semibold ${textClass} tracking-tight`}>
