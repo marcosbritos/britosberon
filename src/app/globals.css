@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Gradiente radial reusable */
+.radial-glow-violet {
+  background-image: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.18), transparent 50%);
+}
+.radial-glow-gold {
+  background-image: radial-gradient(circle at 10% 80%, rgba(212, 175, 55, 0.06), transparent 40%);
+}
+.radial-glow-lime {
+  background-image: radial-gradient(circle at 75% 30%, rgba(201, 255, 63, 0.12), transparent 60%);
+}
+.radial-glow-sage {
+  background-image: radial-gradient(circle at 80% 20%, rgba(122, 139, 106, 0.18), transparent 60%);
+}
+
+/* Cursor effect */
+.cursor-blob {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+/* Selection styles */
+::selection {
+  background: #6366f1;
+  color: #fff;
+}
