@@ -1,79 +1,42 @@
-"use client";
-
+import React from "react";
 import Link from "next/link";
-import { Logo } from "./Logo";
-import { whatsappLink, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
-import { MessageCircle } from "lucide-react";
-import { motion } from "framer-motion";
+import { BBLogo } from "./Logo";
+import { BB_C, BB_FONTS } from "@/lib/design";
 
-interface HeaderProps {
-  context?: string;
-  accentColor?: string;
-  whatsappMessage?: string;
-  variant?: "dark" | "light";
-}
-
-export function Header({
-  context,
-  accentColor,
-  whatsappMessage = WHATSAPP_MESSAGES.generic,
-  variant = "dark",
-}: HeaderProps) {
-  const isDark = variant === "dark";
+export function Header({ whatsappMessage }: { context?: string; accentColor?: string; whatsappMessage?: string; variant?: "dark" | "light" }) {
+  const waUrl = whatsappMessage 
+    ? `https://wa.me/5491100000000?text=${encodeURIComponent(whatsappMessage)}` 
+    : "https://wa.me/5491100000000";
 
   return (
-    <motion.header
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className={`relative z-30 flex items-center justify-between px-5 sm:px-8 py-4 sm:py-5 ${
-        isDark
-          ? "border-b border-white/[0.06]"
-          : "border-b border-black/[0.06]"
-      }`}
-    >
-      <Logo
-        context={context}
-        variant={isDark ? "light" : "dark"}
-        accentColor={accentColor}
-      />
-
-      <nav className="hidden md:flex items-center gap-7">
-        <Link
-          href="/comercios"
-          className={`text-[13px] ${
-            isDark ? "text-white/70 hover:text-white" : "text-ink-900/70 hover:text-ink-900"
-          } transition-colors`}
-        >
-          Comercios
+    <header style={{
+      display:'flex', alignItems:'center', justifyContent:'space-between',
+      padding:'22px 56px', borderBottom:`1px solid ${BB_C.ink}1A`,
+      background:BB_C.bone, position:'relative', zIndex:50,
+    }}>
+      <div style={{display:'flex', alignItems:'center', gap:18}}>
+        <Link href="/">
+          <BBLogo variant="mark-ink" height={52} />
         </Link>
-        <Link
-          href="/deportes"
-          className={`text-[13px] ${
-            isDark ? "text-white/70 hover:text-white" : "text-ink-900/70 hover:text-ink-900"
-          } transition-colors`}
-        >
-          Deportes
-        </Link>
-        <Link
-          href="/belleza"
-          className={`text-[13px] ${
-            isDark ? "text-white/70 hover:text-white" : "text-ink-900/70 hover:text-ink-900"
-          } transition-colors`}
-        >
-          Belleza
-        </Link>
+        <div className="hidden md:block" style={{borderLeft:`1px solid ${BB_C.ink}22`, paddingLeft:18,
+          fontFamily:BB_FONTS.mono, fontSize:10, letterSpacing:'.22em', textTransform:'uppercase', lineHeight:1.7, color:BB_C.ink}}>
+          BRITOS &amp; BERÓN<br/>
+          <span style={{color:BB_C.mute}}>Gestión y Desarrollo Digital</span>
+        </div>
+      </div>
+      <nav className="hidden lg:flex" style={{gap:36, fontFamily:BB_FONTS.mono, fontSize:11, letterSpacing:'.18em', textTransform:'uppercase'}}>
+        <Link href="/comercios"><sup style={{color:BB_C.acc, marginRight:6}}>01</sup>Comercios</Link>
+        <Link href="/deportes"><sup style={{color:BB_C.acc, marginRight:6}}>02</sup>Deportes</Link>
+        <Link href="/belleza"><sup style={{color:BB_C.acc, marginRight:6}}>03</sup>Belleza</Link>
       </nav>
-
-      <a
-        href={whatsappLink(whatsappMessage)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-whatsapp text-white px-3 sm:px-4 py-2 rounded-md text-[12px] sm:text-[13px] font-medium inline-flex items-center gap-1.5 hover:opacity-90 transition-opacity"
-      >
-        <MessageCircle size={14} fill="currentColor" />
-        <span className="hidden sm:inline">Hablemos</span>
+      <a href={waUrl} target="_blank" rel="noreferrer" style={{
+        background:BB_C.ink, color:BB_C.bone, padding:'12px 18px',
+        fontFamily:BB_FONTS.mono, fontSize:11, letterSpacing:'.18em', textTransform:'uppercase',
+        display:'inline-flex', alignItems:'center', gap:10, textDecoration:'none',
+      }}>
+        <span style={{width:8, height:8, background:BB_C.acc, borderRadius:'50%', boxShadow:`0 0 0 3px ${BB_C.acc}33`}}/>
+        WhatsApp
       </a>
-    </motion.header>
+    </header>
   );
 }

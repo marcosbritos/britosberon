@@ -1,22 +1,25 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Bricolage_Grotesque, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-display",
   display: "swap",
-  fallback: ["system-ui", "arial"],
-  adjustFontFallback: false,
 });
 
-const playfair = Playfair_Display({
+const serif = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
+  variable: "--font-serif",
+  weight: ["400"],
   style: ["normal", "italic"],
-  fallback: ["Georgia", "serif"],
-  adjustFontFallback: false,
+  display: "swap",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -76,8 +79,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang="es" className={`${display.variable} ${serif.variable} ${mono.variable}`}>
+      <body className="font-display text-ink bg-bone-2 antialiased overflow-x-hidden m-0">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -99,6 +102,26 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Shared SVG defs (filters, patterns) */}
+        <svg className="absolute w-0 h-0 overflow-hidden" aria-hidden="true">
+          <defs>
+            <filter id="bb-turb" x="0" y="0" width="100%" height="100%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="3"/>
+              <feDisplacementMap in="SourceGraphic" scale="14"/>
+            </filter>
+            <filter id="bb-turb-soft">
+              <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="2" seed="7"/>
+              <feDisplacementMap in="SourceGraphic" scale="8"/>
+            </filter>
+            <pattern id="bb-stripes" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <rect width="14" height="14" fill="transparent"/>
+              <rect width="1.4" height="14" fill="currentColor" opacity=".55"/>
+            </pattern>
+            <pattern id="bb-dots" width="14" height="14" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="currentColor" opacity=".7"/>
+            </pattern>
+          </defs>
+        </svg>
         {children}
       </body>
     </html>

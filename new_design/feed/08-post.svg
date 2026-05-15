@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+      <rect width="1080" height="1080" fill="#0E0E0C"></rect>
+      
+    <text x="48" y="68" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="22" fill="#FF4A1C" fill-opacity=".7" letter-spacing="4.4">B&amp;B / ESTUDIO DIGITAL</text>
+    <text x="1032" y="68" text-anchor="end" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="22" fill="#FF4A1C" fill-opacity=".7" letter-spacing="4.4">08/09</text>
+    <text x="48" y="1042" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="18" fill="#FF4A1C" fill-opacity=".55" letter-spacing="3.4">BRITOSBERON.COM.AR</text>
+    <text x="1032" y="1042" text-anchor="end" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="18" fill="#FF4A1C" fill-opacity=".55" letter-spacing="3.4">@BRITOSBERON</text>
+  
+      <text x="540" y="630" text-anchor="middle" font-family="&#39;Instrument Serif&#39;, Georgia, serif" font-style="italic" font-weight="400" font-size="340" fill="#FF4A1C">existe.</text>
+    </svg>
