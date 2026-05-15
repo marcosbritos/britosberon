@@ -10,13 +10,13 @@ import { LandingCTA } from "@/components/landings/LandingCTA";
 import { WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "B&B Deportes | Reservas de canchas y gestión de torneos",
+  title: "B&B Deportes | Gestión de Torneos Amateur de Fútbol",
   description:
-    "Plataforma todo-en-uno para predios, canchas, clubes y ligas amateur. Reservas online, torneos completos, cobros con Mercado Pago y app para jugadores. Argentina.",
+    "Plataforma todo-en-uno para ligas y organizadores de torneos amateur. Fixture automático, tablas, goleadores, cobros y app para jugadores. Argentina.",
   openGraph: {
-    title: "B&B Deportes | Predio o liga deportiva profesional",
+    title: "B&B Deportes | Tu torneo amateur, profesional",
     description:
-      "Reservas + torneos + cobros + app para jugadores. Plataforma para predios deportivos en Argentina.",
+      "Gestión de torneos + cobros + app para jugadores. Plataforma para ligas amateur en Argentina.",
   },
 };
 
@@ -29,7 +29,7 @@ export default function DeportesPage() {
       <DeportesProducts />
       <DeportesFeatures />
       <LandingCTA
-        title="¿Listo para profesionalizar tu predio o liga?"
+        title="¿Listo para profesionalizar tu torneo?"
         subtitle="Te mostramos la plataforma en vivo en una demo de 20 minutos."
         whatsappMessage={WHATSAPP_MESSAGES.deportes}
         accentColor="lime"
