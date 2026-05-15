@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function ComerciosPage() {
   return (
-    <main className="bg-ink min-h-screen">
+    <main className="bg-bone min-h-screen">
       <HomeNav />
       <ComerciosHero />
       <ComerciosFor />

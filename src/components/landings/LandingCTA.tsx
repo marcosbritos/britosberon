@@ -10,12 +10,21 @@ interface LandingCTAProps {
   accentColor?: "gold" | "lime" | "sage" | "violet";
 }
 
-export function LandingCTA({ title, subtitle, whatsappMessage }: LandingCTAProps) {
+export function LandingCTA({ title, subtitle, whatsappMessage, accentColor }: LandingCTAProps) {
+  const theme = {
+    default: "bg-acc text-bone",
+    gold: "bg-gold text-ink",
+    lime: "bg-lime-600 text-bone",
+    sage: "bg-emerald-700 text-bone",
+    violet: "bg-violet-700 text-bone",
+  };
+  const themeClass = theme[accentColor ?? "default"] || theme.default;
+
   return (
-    <section className="bg-acc text-bone px-5 md:px-[56px] py-20 md:py-[120px] relative overflow-hidden">
+    <section className={`${themeClass} px-5 md:px-[56px] py-20 md:py-[120px] relative overflow-hidden`}>
       <div className="bb-grain dark" />
-      <div className="absolute top-[-40px] right-[-120px] w-[600px] h-[600px] pointer-events-none hidden md:block">
-        <BBLogo variant="mark-ink" style={{ height: 600, width: "auto", filter: "opacity(.3)" }} />
+      <div className="absolute top-[-40px] right-[-120px] w-[600px] h-[600px] pointer-events-none hidden md:block opacity-90">
+        <BBLogo variant="mark-ink" style={{ height: 600, width: "auto", filter: "opacity(.25)" }} />
       </div>
       <div className="relative max-w-[880px]">
         <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">

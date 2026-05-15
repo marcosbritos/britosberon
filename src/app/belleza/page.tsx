@@ -6,7 +6,7 @@ import { BellezaHero } from "@/components/landings/BellezaHero";
 import { BellezaFor } from "@/components/landings/BellezaFor";
 import { BellezaFeatures } from "@/components/landings/BellezaFeatures";
 import { BellezaProcess } from "@/components/landings/BellezaProcess";
-import { BellezaCTA } from "@/components/landings/BellezaCTA";
+import { LandingCTA } from "@/components/landings/LandingCTA";
 import { WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
@@ -22,13 +22,18 @@ export const metadata: Metadata = {
 
 export default function BellezaPage() {
   return (
-    <main className="bg-sage-900 min-h-screen">
+    <main className="bg-bone min-h-screen">
       <HomeNav />
       <BellezaHero />
       <BellezaFor />
       <BellezaFeatures />
       <BellezaProcess />
-      <BellezaCTA />
+      <LandingCTA
+        title="¿Listo para transformar tu salón?"
+        subtitle="Web propia + turnos online + Google Maps. Profesionalizá tu talento hoy."
+        whatsappMessage={WHATSAPP_MESSAGES.belleza}
+        accentColor="teal"
+      />
       <HomeFooter />
       <FloatingWhatsApp message={WHATSAPP_MESSAGES.belleza} />
     </main>

@@ -13,15 +13,18 @@ const config: Config = {
           DEFAULT: "#F2EFE6",
           2: "#E8E4D8",
         },
+        bone2: "#E8E4D8",
         ink: {
           DEFAULT: "#0A1F2A",
           2: "#142A36",
         },
+        ink2: "#142A36",
         mute: "#6B6962",
         acc: {
           DEFAULT: "#1FA3B5",
           2: "#0E6B7C",
         },
+        acc2: "#0E6B7C",
         gold: "#C9A961",
       },
       fontFamily: {

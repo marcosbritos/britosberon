@@ -7,20 +7,20 @@ export function DeportesHero() {
   return (
     <section className="relative px-5 md:px-[56px] pt-16 md:pt-[80px] pb-20 md:pb-[100px] border-b border-ink/10 bg-bone">
       <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-6 md:mb-[32px]">
-        <span className="inline-block w-6 md:w-[36px] h-px bg-ink"/>
+        <span className="inline-block w-6 md:w-[36px] h-px bg-ink" />
         <span>02 — Deportes</span>
-        <span className="flex-1 h-px bg-ink/10 mx-3"/>
+        <span className="flex-1 h-px bg-ink/10 mx-3" />
         <span>↓ scroll</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 md:gap-[64px] items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12 md:gap-[64px] items-start">
         <div>
           <div className="font-mono text-[9px] md:text-[10px] tracking-[0.22em] uppercase text-mute mb-3 md:mb-[14px]">
             Para organizadores de torneos
           </div>
           <h1 className="m-0 font-display font-semibold text-[54px] sm:text-[80px] md:text-[130px] leading-[0.9] tracking-[-0.045em]">
-            Gestión de<br/>
-            torneos de<br/>
+            Gestión de <br />
+            torneos de <br />
             <span className="font-serif italic font-normal text-acc">fútbol.</span>
           </h1>
 
@@ -49,9 +49,8 @@ export function DeportesHero() {
           </div>
         </div>
 
-        {/* Foto de recuerdo */}
         <div className="flex justify-center lg:justify-end pt-4 lg:pt-[60px]">
-          <div className="bg-[#f8f8f8] p-3 sm:p-4 pb-10 sm:pb-12 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 max-w-[260px] sm:max-w-[300px] border border-ink/10">
+          <div className="bg-[#f8f8f8] p-3 sm:p-4 pb-10 sm:pb-12 shadow-2xl -rotate-2 hover:rotate-0 transition-transform duration-500 max-w-[260px] sm:max-w-[300px] border border-ink/10">
             <div className="w-full aspect-[9/16] overflow-hidden border border-ink/10 relative">
               <img src="/torneo-foto.png" alt="Torneo Interface" className="w-full h-full object-cover object-top" />
             </div>
@@ -62,7 +61,6 @@ export function DeportesHero() {
         </div>
       </div>
 
-      {/* Footnote */}
       <div className="mt-12 md:mt-[60px] pt-5 md:pt-[22px] border-t border-ink/10 flex flex-col md:flex-row md:justify-between items-start md:items-baseline gap-4 font-mono text-[10px] md:text-[11px] tracking-wider text-mute">
         <div>Base de datos centralizada · Sin data entry · Datos con veracidad desde el día uno</div>
         <div className="font-tabular-nums hidden md:block">pág. 02 / 09</div>

@@ -14,13 +14,13 @@ const features = [
 
 export function BellezaFeatures() {
   return (
-    <section id="features" className="px-5 md:px-[56px] py-20 md:py-[120px] bg-bone border-b-[1.5px] border-ink">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-[40px] mb-12 md:mb-[80px]">
+    <section id="features" className="px-5 md:px-[56px] py-12 md:py-24 bg-bone border-b-[1.5px] border-ink">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-[40px] mb-8 md:mb-12">
         <div>
           <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-3 md:mb-[14px] text-mute">
             02 — sección
           </div>
-          <h2 className="m-0 font-display font-semibold text-[54px] md:text-[100px] leading-[0.9] tracking-[-0.045em]">
+          <h2 className="m-0 font-display font-semibold text-[54px] md:text-[100px] leading-[0.9] tracking-[-0.045em] text-ink">
             Incluye<span className="font-serif italic text-acc font-normal">.</span>
           </h2>
         </div>
@@ -41,7 +41,7 @@ export function BellezaFeatures() {
           >
             <div className="flex items-baseline gap-4 mb-3">
               <span className="font-mono text-[11px] tracking-[0.15em] text-acc">{f.n}</span>
-              <h3 className="m-0 font-display font-medium text-[22px] md:text-[28px] tracking-tight">{f.title}</h3>
+              <h3 className="m-0 font-display font-medium text-[22px] md:text-[28px] tracking-tight text-ink">{f.title}</h3>
             </div>
             <p className="m-0 font-display text-[14px] md:text-[15px] leading-[1.55] text-ink ml-[36px] md:ml-[44px]">
               {f.body}

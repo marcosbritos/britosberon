@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function DeportesPage() {
   return (
-    <main className="bg-ink min-h-screen">
+    <main className="bg-bone min-h-screen">
       <HomeNav />
       <DeportesHero />
       <DeportesFor />

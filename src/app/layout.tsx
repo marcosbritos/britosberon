@@ -80,7 +80,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${display.variable} ${serif.variable} ${mono.variable}`}>
-      <body className="font-display text-ink bg-bone-2 antialiased overflow-x-hidden m-0">
+      <body suppressHydrationWarning className="font-display text-ink bg-bone-2 antialiased overflow-x-hidden m-0">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

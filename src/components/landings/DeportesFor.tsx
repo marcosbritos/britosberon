@@ -6,7 +6,7 @@ const tags = ["Fútbol 5","Fútbol 7","Fútbol 11","Ligas amateur","Torneos de b
 
 export function DeportesFor() {
   return (
-    <section className="px-5 md:px-[56px] py-7 border-b border-ink/10 bg-bone">
+    <section className="px-5 md:px-[56px] py-5 border-b border-ink/10 bg-bone">
       <div className="font-mono text-[10px] tracking-[0.2em] text-mute uppercase mb-3">
         Diseñado para:
       </div>

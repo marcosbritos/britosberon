@@ -6,20 +6,20 @@ export function ComerciosHero() {
   return (
     <section className="relative px-5 md:px-[56px] pt-16 md:pt-[80px] pb-20 md:pb-[100px] border-b border-ink/10 bg-bone">
       <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-6 md:mb-[32px]">
-        <span className="inline-block w-6 md:w-[36px] h-px bg-ink"/>
+        <span className="inline-block w-6 md:w-[36px] h-px bg-ink" />
         <span>01 — Comercios</span>
-        <span className="flex-1 h-px bg-ink/10 mx-3"/>
+        <span className="flex-1 h-px bg-ink/10 mx-3" />
         <span>↓ scroll</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-12 md:gap-[64px] items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12 md:gap-[64px] items-start">
         <div>
           <div className="font-mono text-[9px] md:text-[10px] tracking-[0.22em] uppercase text-mute mb-3 md:mb-[14px]">
             Para comercios y profesionales
           </div>
           <h1 className="m-0 font-display font-semibold text-[54px] sm:text-[80px] md:text-[130px] leading-[0.9] tracking-[-0.045em]">
-            Tu negocio<br/>
-            merece más<br/>
+            Tu negocio <br />
+            merece más <br />
             <span className="font-serif italic font-normal text-acc">que un chat.</span>
           </h1>
 
@@ -47,15 +47,14 @@ export function ComerciosHero() {
           </div>
         </div>
 
-        {/* Right meta column */}
         <div className="pt-8 md:pt-[60px] border-t lg:border-t-0 lg:border-l border-ink/10 lg:pl-[30px]">
           {[
-            ['01','Entrega','7 a 14 días corridos'],
-            ['02','Modelo','Suscripción mensual'],
-            ['03','Incluye','Web + Turnos + WhatsApp'],
-            ['04','Soporte','WhatsApp · ≤ 24 hs'],
-            ['05','Dominio','Queda a tu nombre'],
-          ].map(([k,l,v]) => (
+            ['01', 'Entrega', '7 a 14 días corridos'],
+            ['02', 'Modelo', 'Suscripción mensual'],
+            ['03', 'Incluye', 'Web + Turnos + WhatsApp'],
+            ['04', 'Soporte', 'WhatsApp · ≤ 24 hs'],
+            ['05', 'Dominio', 'Queda a tu nombre'],
+          ].map(([k, l, v]) => (
             <div key={k} className="grid grid-cols-[24px_1fr] gap-2.5 py-3 border-b border-ink/10">
               <span className="font-mono text-[10px] text-acc tracking-wider">{k}</span>
               <div>
@@ -67,7 +66,6 @@ export function ComerciosHero() {
         </div>
       </div>
 
-      {/* Footnote */}
       <div className="mt-12 md:mt-[60px] pt-5 md:pt-[22px] border-t border-ink/10 flex flex-col md:flex-row md:justify-between items-start md:items-baseline gap-4 font-mono text-[10px] md:text-[11px] tracking-wider text-mute">
         <div>Web · Turnos online · Google Maps · WhatsApp automático · Todo en uno</div>
         <div className="font-tabular-nums hidden md:block">pág. 01 / 09</div>
