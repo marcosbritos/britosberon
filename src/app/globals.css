@@ -46,6 +46,21 @@
     opacity: .18;
     mix-blend-mode: overlay;
   }
+
+  /* Marquee */
+  @keyframes bb-marquee { 
+    from { transform: translateX(0); } 
+    to { transform: translateX(-50%); } 
+  }
+  .bb-mq-track { 
+    display: inline-flex; 
+    gap: 48px; 
+    white-space: nowrap; 
+    animation: bb-marquee 38s linear infinite; 
+    will-change: transform; 
+  }
+  .bb-mq-track.fast { animation-duration: 22s; }
+  .bb-mq-track.rev { animation-direction: reverse; }
 }
 
 /* Selection styles */

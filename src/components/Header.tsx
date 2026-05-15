@@ -5,8 +5,8 @@ import { BB_C, BB_FONTS } from "@/lib/design";
 
 export function Header({ whatsappMessage }: { context?: string; accentColor?: string; whatsappMessage?: string; variant?: "dark" | "light" }) {
   const waUrl = whatsappMessage 
-    ? `https://wa.me/5491100000000?text=${encodeURIComponent(whatsappMessage)}` 
-    : "https://wa.me/5491100000000";
+    ? `https://wa.me/5491169299378?text=${encodeURIComponent(whatsappMessage)}` 
+    : "https://wa.me/5491169299378";
 
   return (
     <header style={{

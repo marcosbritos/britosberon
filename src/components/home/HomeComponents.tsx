@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { BBLogo } from "../Logo";
 import { BB_C, BB_FONTS } from "@/lib/design";
 
@@ -7,7 +8,7 @@ export function HomeMarquee() {
     'GESTIÓN Y DESARROLLO DIGITAL', 'BUENOS AIRES', 'EST. MMXXV',
     'WEBS · TURNOS · ECOMMERCE · IA',
     'TORNEOS AMATEUR DE FÚTBOL', '4°36′S 58°22′W',
-    'WHATSAPP +54 9 11 0000 0000',
+    'WHATSAPP +54 9 11 6929 9378',
   ];
   const Row = ({rev}: {rev?: boolean}) => (
     <div className={`bb-mq-track ${rev?'rev':''}`}>
@@ -47,13 +48,13 @@ export function HomeNav() {
         </div>
       </div>
       <nav style={{display:'flex', gap:36, fontFamily:BB_FONTS.mono, fontSize:11, letterSpacing:'.18em', textTransform:'uppercase'}}>
-        <span><sup style={{color:BB_C.acc, marginRight:6}}>01</sup>Comercios</span>
-        <span><sup style={{color:BB_C.acc, marginRight:6}}>02</sup>Deportes</span>
-        <span><sup style={{color:BB_C.acc, marginRight:6}}>03</sup>Belleza</span>
-        <span><sup style={{color:BB_C.acc, marginRight:6}}>04</sup>Proceso</span>
-        <span><sup style={{color:BB_C.acc, marginRight:6}}>05</sup>Sobre</span>
+        <Link href="/comercios" style={{textDecoration:'none', color:'inherit'}}><sup style={{color:BB_C.acc, marginRight:6}}>01</sup>Comercios</Link>
+        <Link href="/deportes" style={{textDecoration:'none', color:'inherit'}}><sup style={{color:BB_C.acc, marginRight:6}}>02</sup>Deportes</Link>
+        <Link href="/belleza" style={{textDecoration:'none', color:'inherit'}}><sup style={{color:BB_C.acc, marginRight:6}}>03</sup>Belleza</Link>
+        <a href="#proceso" style={{textDecoration:'none', color:'inherit'}}><sup style={{color:BB_C.acc, marginRight:6}}>04</sup>Proceso</a>
+        <a href="#manifiesto" style={{textDecoration:'none', color:'inherit'}}><sup style={{color:BB_C.acc, marginRight:6}}>05</sup>Sobre</a>
       </nav>
-      <a href="https://wa.me/5491100000000" target="_blank" rel="noreferrer" style={{
+      <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" style={{
         background:BB_C.ink, color:BB_C.bone, padding:'12px 18px',
         fontFamily:BB_FONTS.mono, fontSize:11, letterSpacing:'.18em', textTransform:'uppercase',
         display:'inline-flex', alignItems:'center', gap:10, textDecoration:'none',
@@ -92,7 +93,7 @@ export function HomeHero() {
             <sup style={{fontSize:42, color:BB_C.acc, fontFamily:BB_FONTS.serif, fontStyle:'italic', verticalAlign:'super'}}>*</sup>
           </h1>
           <div style={{marginTop:42, display:'flex', gap:20, alignItems:'center'}}>
-            <a href="https://wa.me/5491100000000" target="_blank" rel="noreferrer" style={{
+            <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" style={{
               background:BB_C.acc, color:BB_C.bone,
               padding:'20px 28px', fontFamily:BB_FONTS.mono, fontSize:12, letterSpacing:'.2em', textTransform:'uppercase',
               display:'inline-flex', alignItems:'center', gap:14, textDecoration:'none', position:'relative',
@@ -157,71 +158,73 @@ function Meta({ k, l, v }: {k:string, l:string, v:string}) {
 
 export function HomeIndex() {
   const items = [
-    { n:'01', title:'Comercio', kicker:'Vidrieras digitales', body:'Web profesional, sistema de turnos, bot de WhatsApp para comercios, profesionales y servicios.', tags:['WEB','TURNOS','BOT'] },
-    { n:'02', title:'Deportes', kicker:'Torneos amateur de fútbol', body:'Gestión integral de torneos y ligas amateur, reservas de canchas, fixtures, tablas y app para jugadores. Para predios, organizadores y clubes.', tags:['TORNEOS','FIXTURES','APP'] },
-    { n:'03', title:'Belleza',  kicker:'Salones que enamoran', body:'Portfolio digital, turnos 24/7, recordatorios automáticos. Para peluquerías, spa, manicura y barberías.', tags:['BOOK','24/7','SMS'] },
+    { n:'01', title:'Comercio', kicker:'Vidrieras digitales', body:'Web profesional, sistema de turnos, bot de WhatsApp para comercios, profesionales y servicios.', tags:['WEB','TURNOS','BOT'], path: '/comercios' },
+    { n:'02', title:'Deportes', kicker:'Torneos amateur de fútbol', body:'Gestión integral de torneos y ligas amateur, reservas de canchas, fixtures, tablas y app para jugadores. Para predios, organizadores y clubes.', tags:['TORNEOS','FIXTURES','APP'], path: '/deportes' },
+    { n:'03', title:'Belleza',  kicker:'Salones que enamoran', body:'Portfolio digital, turnos 24/7, recordatorios automáticos. Para peluquerías, spa, manicura y barberías.', tags:['BOOK','24/7','SMS'], path: '/belleza' },
   ];
   return (
     <section id="caminos" style={{padding:'120px 56px 100px', position:'relative'}}>
       <SectionHead nro="02" t="Índice" sub="Tres caminos. Una sola obsesión: que tu negocio venda más." />
       <div style={{marginTop:60, borderTop:`1.5px solid ${BB_C.ink}`}}>
         {items.map((it,i) => (
-          <article key={it.n} style={{
-            display:'grid', gridTemplateColumns:'80px 1.3fr 1.5fr 280px',
-            gap:32, alignItems:'center', padding:'40px 0',
-            borderBottom:`1.5px solid ${BB_C.ink}`,
-            position:'relative',
-          }}>
-            <div style={{fontFamily:BB_FONTS.mono, fontSize:13, letterSpacing:'.15em', color:BB_C.acc, alignSelf:'start', paddingTop:8}}>{it.n}</div>
-            <div>
-              <div style={{fontFamily:BB_FONTS.mono, fontSize:10, letterSpacing:'.22em', textTransform:'uppercase', color:BB_C.mute, marginBottom:10}}>{it.kicker}</div>
-              <h3 style={{margin:0, fontFamily:BB_FONTS.display, fontWeight:600, fontSize:96, lineHeight:.95, letterSpacing:'-.04em'}}>
-                {it.title}<span style={{fontFamily:BB_FONTS.serif, fontStyle:'italic', color:BB_C.acc, fontWeight:400, fontSize:96}}>.</span>
-              </h3>
-            </div>
-            <p style={{margin:0, fontFamily:BB_FONTS.display, fontSize:17, lineHeight:1.45, color:BB_C.ink, maxWidth:480}}>
-              {it.body}
-              <span style={{display:'block', marginTop:14, fontFamily:BB_FONTS.mono, fontSize:11, letterSpacing:'.18em', color:BB_C.mute, textTransform:'uppercase'}}>
-                {it.tags.map((t,j) => <span key={t}>{t}{j<it.tags.length-1 && <span style={{margin:'0 8px', color:BB_C.acc}}>×</span>}</span>)}
-              </span>
-            </p>
-            {/* Image card */}
-            <div style={{aspectRatio:'1/1', background: i===0?BB_C.ink:i===1?BB_C.acc:BB_C.bone2, position:'relative', overflow:'hidden'}}>
-              <svg viewBox="0 0 280 280" style={{position:'absolute',inset:0,width:'100%',height:'100%'}}>
-                <rect width="280" height="280" fill={i===0?BB_C.ink:i===1?BB_C.acc:BB_C.bone2}/>
-                <g style={{color: i===2? BB_C.ink : BB_C.bone, opacity: i===1? 1 : .15}}>
-                  {i===1 ? (
-                    <g fill="none" stroke={BB_C.bone} strokeWidth="1.4" opacity=".7">
-                      <rect x="20" y="40" width="240" height="200" />
-                      <line x1="140" y1="40" x2="140" y2="240" />
-                      <circle cx="140" cy="140" r="32" />
-                      <circle cx="140" cy="140" r="2" fill={BB_C.bone}/>
-                      <rect x="20" y="90" width="36" height="100" />
-                      <rect x="224" y="90" width="36" height="100" />
-                      <rect x="20" y="115" width="14" height="50" />
-                      <rect x="246" y="115" width="14" height="50" />
-                      <path d="M56,108 a 32,32 0 0 1 0,64" />
-                      <path d="M224,108 a 32,32 0 0 0 0,64" />
-                      <g opacity=".55" stroke={BB_C.bone} strokeWidth="1">
-                        <path d="M178,16 h 22 v 8 M178,32 h 22 v -8 M200,20 h 18 v 8 M222,16 h 22 v 8 M222,32 h 22 v -8 M244,20 h 18 v 8" />
+          <a href={it.path} key={it.n} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+            <article style={{
+              display:'grid', gridTemplateColumns:'80px 1.3fr 1.5fr 280px',
+              gap:32, alignItems:'center', padding:'40px 0',
+              borderBottom:`1.5px solid ${BB_C.ink}`,
+              position:'relative',
+            }}>
+              <div style={{fontFamily:BB_FONTS.mono, fontSize:13, letterSpacing:'.15em', color:BB_C.acc, alignSelf:'start', paddingTop:8}}>{it.n}</div>
+              <div>
+                <div style={{fontFamily:BB_FONTS.mono, fontSize:10, letterSpacing:'.22em', textTransform:'uppercase', color:BB_C.mute, marginBottom:10}}>{it.kicker}</div>
+                <h3 style={{margin:0, fontFamily:BB_FONTS.display, fontWeight:600, fontSize:96, lineHeight:.95, letterSpacing:'-.04em'}}>
+                  {it.title}<span style={{fontFamily:BB_FONTS.serif, fontStyle:'italic', color:BB_C.acc, fontWeight:400, fontSize:96}}>.</span>
+                </h3>
+              </div>
+              <p style={{margin:0, fontFamily:BB_FONTS.display, fontSize:17, lineHeight:1.45, color:BB_C.ink, maxWidth:480}}>
+                {it.body}
+                <span style={{display:'block', marginTop:14, fontFamily:BB_FONTS.mono, fontSize:11, letterSpacing:'.18em', color:BB_C.mute, textTransform:'uppercase'}}>
+                  {it.tags.map((t,j) => <span key={t}>{t}{j<it.tags.length-1 && <span style={{margin:'0 8px', color:BB_C.acc}}>×</span>}</span>)}
+                </span>
+              </p>
+              {/* Image card */}
+              <div style={{aspectRatio:'1/1', background: i===0?BB_C.ink:i===1?BB_C.acc:BB_C.bone2, position:'relative', overflow:'hidden'}}>
+                <svg viewBox="0 0 280 280" style={{position:'absolute',inset:0,width:'100%',height:'100%'}}>
+                  <rect width="280" height="280" fill={i===0?BB_C.ink:i===1?BB_C.acc:BB_C.bone2}/>
+                  <g style={{color: i===2? BB_C.ink : BB_C.bone, opacity: i===1? 1 : .15}}>
+                    {i===1 ? (
+                      <g fill="none" stroke={BB_C.bone} strokeWidth="1.4" opacity=".7">
+                        <rect x="20" y="40" width="240" height="200" />
+                        <line x1="140" y1="40" x2="140" y2="240" />
+                        <circle cx="140" cy="140" r="32" />
+                        <circle cx="140" cy="140" r="2" fill={BB_C.bone}/>
+                        <rect x="20" y="90" width="36" height="100" />
+                        <rect x="224" y="90" width="36" height="100" />
+                        <rect x="20" y="115" width="14" height="50" />
+                        <rect x="246" y="115" width="14" height="50" />
+                        <path d="M56,108 a 32,32 0 0 1 0,64" />
+                        <path d="M224,108 a 32,32 0 0 0 0,64" />
+                        <g opacity=".55" stroke={BB_C.bone} strokeWidth="1">
+                          <path d="M178,16 h 22 v 8 M178,32 h 22 v -8 M200,20 h 18 v 8 M222,16 h 22 v 8 M222,32 h 22 v -8 M244,20 h 18 v 8" />
+                        </g>
                       </g>
-                    </g>
-                  ) : (
-                    <rect width="280" height="280" fill="url(#bb-dots)"/>
-                  )}
-                </g>
-              </svg>
-              <div style={{position:'absolute', top:14, left:14, fontFamily:BB_FONTS.mono, fontSize:9, letterSpacing:'.2em', textTransform:'uppercase', color: i===2?BB_C.ink:BB_C.bone, opacity:.85}}>
-                {i===0?'IMG / 02 · COMERCIO':i===1?'IMG / 03 · TORNEOS DE FÚTBOL':'IMG / 04 · BELLEZA'}
+                    ) : (
+                      <rect width="280" height="280" fill="url(#bb-dots)"/>
+                    )}
+                  </g>
+                </svg>
+                <div style={{position:'absolute', top:14, left:14, fontFamily:BB_FONTS.mono, fontSize:9, letterSpacing:'.2em', textTransform:'uppercase', color: i===2?BB_C.ink:BB_C.bone, opacity:.85}}>
+                  {i===0?'IMG / 02 · COMERCIO':i===1?'IMG / 03 · TORNEOS DE FÚTBOL':'IMG / 04 · BELLEZA'}
+                </div>
+                <div style={{position:'absolute', bottom:14, left:14, right:14, fontFamily:BB_FONTS.serif, fontStyle:'italic', fontSize:30, lineHeight:1, color: i===2?BB_C.ink:BB_C.bone}}>
+                  {i===0?'kiosko':i===1?'torneos':'salón'}
+                </div>
+                <div style={{position:'absolute', top:14, right:14, fontFamily:BB_FONTS.mono, fontSize:10, color: i===2?BB_C.ink:BB_C.bone, opacity:.8}}>
+                  /{(i+1)*123}.jpg
+                </div>
               </div>
-              <div style={{position:'absolute', bottom:14, left:14, right:14, fontFamily:BB_FONTS.serif, fontStyle:'italic', fontSize:30, lineHeight:1, color: i===2?BB_C.ink:BB_C.bone}}>
-                {i===0?'kiosko':i===1?'torneos':'salón'}
-              </div>
-              <div style={{position:'absolute', top:14, right:14, fontFamily:BB_FONTS.mono, fontSize:10, color: i===2?BB_C.ink:BB_C.bone, opacity:.8}}>
-                /{(i+1)*123}.jpg
-              </div>
-            </div>
-          </article>
+            </article>
+          </a>
         ))}
       </div>
     </section>
@@ -260,7 +263,7 @@ export function HomeProcess() {
     { n:'03', t:'Lanzamos', s:'7 — 14 días', body:'Online y funcionando. Después seguimos: actualizaciones, soporte y crecimiento mes a mes.' },
   ];
   return (
-    <section style={{padding:'120px 56px 100px', background:BB_C.bone2, borderTop:`1.5px solid ${BB_C.ink}`, borderBottom:`1.5px solid ${BB_C.ink}`}}>
+    <section id="proceso" style={{padding:'120px 56px 100px', background:BB_C.bone2, borderTop:`1.5px solid ${BB_C.ink}`, borderBottom:`1.5px solid ${BB_C.ink}`}}>
       <SectionHead nro="03" t="Proceso" sub="Mensualidad accesible. Contrato corto. Si no te sirve, te vas. No hay drama." />
       <div style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:0, marginTop:80}}>
         {steps.map((st,i) => (
@@ -292,7 +295,7 @@ export function HomeProcess() {
 
 export function HomeManifesto() {
   return (
-    <section style={{background:BB_C.ink, color:BB_C.bone, padding:'140px 56px 140px', position:'relative', overflow:'hidden'}}>
+    <section id="manifiesto" style={{background:BB_C.ink, color:BB_C.bone, padding:'140px 56px 140px', position:'relative', overflow:'hidden'}}>
       <div className="bb-grain dark" />
       <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{position:'absolute', top:0, left:0, width:'100%', height:'100%', opacity:.05, color:BB_C.bone}}>
         <rect width="100" height="100" fill="url(#bb-stripes)"/>
@@ -414,7 +417,7 @@ export function HomeCTA() {
           30 minutos de charla. Sin compromiso. Te decimos si podemos ayudarte y, si no, te recomendamos a alguien que sí.
         </p>
         <div style={{display:'flex', gap:18, alignItems:'center'}}>
-          <a href="https://wa.me/5491100000000" target="_blank" rel="noreferrer" style={{
+          <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" style={{
             background:BB_C.ink, color:BB_C.bone, padding:'24px 32px',
             fontFamily:BB_FONTS.mono, fontSize:13, letterSpacing:'.22em', textTransform:'uppercase',
             display:'inline-flex', alignItems:'center', gap:14, textDecoration:'none',
@@ -445,7 +448,7 @@ export function HomeFooter() {
           ['Servicios',['Desarrollo web','Sistema de turnos','Ecommerce','Automatización','Apps móviles']],
           ['Productos',['B&B Comercio','B&B Deportes','B&B Belleza','B&B Profesional ↗']],
           ['Estudio',['Quiénes somos','Cómo trabajamos','Contacto','Trabajá con nosotros']],
-          ['Contacto',['WhatsApp +54 9 11','hola@britosberon','@britosberon','Bs. As., AR']],
+          ['Contacto',['WhatsApp +54 9 11 6929 9378','hola@britosberon','@britosberon','Bs. As., AR']],
         ].map(([t,items]) => (
           <div key={t as string}>
             <div style={{fontFamily:BB_FONTS.mono, fontSize:10, letterSpacing:'.22em', textTransform:'uppercase', color:`${BB_C.bone}66`, marginBottom:16}}>{t}</div>
