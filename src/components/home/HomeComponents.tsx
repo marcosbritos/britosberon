@@ -67,10 +67,10 @@ export function HomeHero() {
             <span>↓ scroll</span>
           </div>
           <h1 className="m-0 font-display font-semibold text-[64px] sm:text-[80px] md:text-[140px] lg:text-[188px] leading-[0.9] md:leading-[0.88] tracking-[-0.045em]">
-            Si tu negocio<br/>
-            no está en<br/>
-            internet,<br/>
-            <span className="font-serif italic font-normal text-acc">no existe.</span>
+            Que te encuentren<br/>
+            es el primer paso.<br/>
+            Que te elijan<br/>
+            es nuestro trabajo.
             <sup className="text-[24px] md:text-[42px] text-acc font-serif italic align-super">*</sup>
           </h1>
           <div className="mt-8 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
@@ -225,7 +225,7 @@ export function HomeProcess() {
   ];
   return (
     <section id="proceso" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone2 border-y-[1.5px] border-ink">
-      <SectionHead nro="03" t="Proceso" sub="Mensualidad accesible. Contrato corto. Si no te sirve, te vas. No hay drama." />
+      <SectionHead nro="03" t="Proceso" sub="Sin barreras de entrada. Crecemos con vos. Sin letras chicas ni contratos abusivos." />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mt-12 md:mt-[80px]">
         {steps.map((st,i) => (
           <div key={st.n} className={`py-10 lg:p-[36px_32px_36px] relative ${i>0 ? 'border-t lg:border-t-0 lg:border-l border-ink/20' : ''}`}>

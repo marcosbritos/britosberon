@@ -32,7 +32,6 @@ export default function DeportesPage() {
         title="¿Listo para profesionalizar tu torneo?"
         subtitle="Te mostramos la plataforma en vivo en una demo de 20 minutos."
         whatsappMessage={WHATSAPP_MESSAGES.deportes}
-        accentColor="gold"
       />
       <HomeFooter />
       <FloatingWhatsApp message={WHATSAPP_MESSAGES.deportes} />

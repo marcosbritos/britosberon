@@ -19,9 +19,9 @@ export function DeportesHero() {
             Para organizadores de torneos
           </div>
           <h1 className="m-0 font-display font-semibold text-[54px] sm:text-[80px] md:text-[130px] leading-[0.9] tracking-[-0.045em]">
-            Gestión de <br />
-            torneos de <br />
-            <span className="font-serif italic font-normal text-acc">fútbol.</span>
+            Convertí tu torneo de <br/>
+            barrio en una <br/>
+            <span className="font-serif italic font-normal text-acc">liga profesional.</span>
           </h1>
 
           <p className="mt-8 md:mt-[36px] mb-0 font-display text-[16px] md:text-[18px] leading-[1.5] text-ink max-w-[540px]">
