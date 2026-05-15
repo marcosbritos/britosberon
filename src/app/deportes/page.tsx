@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { HomeNav } from "@/components/home/HomeComponents";
+import { HomeFooter } from "@/components/home/HomeComponents";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { DeportesHero } from "@/components/landings/DeportesHero";
 import { DeportesFor } from "@/components/landings/DeportesFor";
@@ -22,12 +22,8 @@ export const metadata: Metadata = {
 
 export default function DeportesPage() {
   return (
-    <main className="bg-ink-900 min-h-screen">
-      <Header
-        context="Deportes"
-        accentColor="#c9ff3f"
-        whatsappMessage={WHATSAPP_MESSAGES.deportes}
-      />
+    <main className="bg-ink min-h-screen">
+      <HomeNav />
       <DeportesHero />
       <DeportesFor />
       <DeportesProducts />
@@ -38,7 +34,7 @@ export default function DeportesPage() {
         whatsappMessage={WHATSAPP_MESSAGES.deportes}
         accentColor="lime"
       />
-      <Footer />
+      <HomeFooter />
       <FloatingWhatsApp message={WHATSAPP_MESSAGES.deportes} />
     </main>
   );

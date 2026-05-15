@@ -43,7 +43,7 @@ export function LandingCTA({
   const colors = colorMap[accentColor];
 
   return (
-    <section className="bg-ink-900 py-16 sm:py-20">
+    <section className="bg-ink py-16 sm:py-20">
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,17 +52,17 @@ export function LandingCTA({
           transition={{ duration: 0.6 }}
           className={`bg-gradient-to-br ${colors.bg} border ${colors.border} rounded-3xl p-8 sm:p-12 text-center`}
         >
-          <h2 className="text-[26px] sm:text-[34px] font-bold text-white tracking-tight mb-3 max-w-xl mx-auto text-balance">
+          <h2 className="text-[26px] sm:text-[34px] font-bold text-bone tracking-tight mb-3 max-w-xl mx-auto text-balance">
             {title}
           </h2>
-          <p className="text-[15px] text-white/65 max-w-md mx-auto mb-7">
+          <p className="text-[15px] text-bone/65 max-w-md mx-auto mb-7">
             {subtitle}
           </p>
           <a
             href={whatsappLink(whatsappMessage)}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${colors.button} text-white px-7 py-3.5 rounded-lg text-[14px] font-medium inline-flex items-center gap-2 hover:opacity-90 transition-opacity`}
+            className={`${colors.button} text-bone px-7 py-3.5 rounded-lg text-[14px] font-medium inline-flex items-center gap-2 hover:opacity-90 transition-opacity`}
           >
             <MessageCircle size={18} fill="currentColor" />
             Hablemos por WhatsApp

@@ -18,7 +18,7 @@ export function DeportesFor() {
   return (
     <section className="bg-white/[0.02] border-y border-white/[0.04] py-7">
       <div className="container-page">
-        <div className="text-[10px] tracking-[0.2em] text-white/40 uppercase mb-3">
+        <div className="text-[10px] tracking-[0.2em] text-bone/40 uppercase mb-3">
           Para todo tipo de deporte:
         </div>
         <motion.div
@@ -38,7 +38,7 @@ export function DeportesFor() {
                 hidden: { opacity: 0, y: 10 },
                 show: { opacity: 1, y: 0 },
               }}
-              className="bg-white/[0.04] text-white/80 text-[12.5px] px-3 py-1.5 rounded-full border border-white/[0.08]"
+              className="bg-white/[0.04] text-bone/80 text-[12.5px] px-3 py-1.5 rounded-full border border-white/[0.08]"
             >
               {tag}
             </motion.div>

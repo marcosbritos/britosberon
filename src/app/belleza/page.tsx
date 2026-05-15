@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { HomeNav } from "@/components/home/HomeComponents";
+import { HomeFooter } from "@/components/home/HomeComponents";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { BellezaHero } from "@/components/landings/BellezaHero";
 import { BellezaFor } from "@/components/landings/BellezaFor";
@@ -23,18 +23,13 @@ export const metadata: Metadata = {
 export default function BellezaPage() {
   return (
     <main className="bg-sage-900 min-h-screen">
-      <Header
-        context="Belleza"
-        accentColor="#7a8b6a"
-        whatsappMessage={WHATSAPP_MESSAGES.belleza}
-        variant="dark"
-      />
+      <HomeNav />
       <BellezaHero />
       <BellezaFor />
       <BellezaFeatures />
       <BellezaProcess />
       <BellezaCTA />
-      <Footer />
+      <HomeFooter />
       <FloatingWhatsApp message={WHATSAPP_MESSAGES.belleza} />
     </main>
   );

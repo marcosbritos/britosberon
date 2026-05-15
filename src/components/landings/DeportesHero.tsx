@@ -31,7 +31,7 @@ export function DeportesHero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.6 }}
-              className="text-[34px] sm:text-[44px] lg:text-[52px] leading-[1.05] font-bold text-white tracking-tight mb-5 text-balance"
+              className="text-[34px] sm:text-[44px] lg:text-[52px] leading-[1.05] font-bold text-bone tracking-tight mb-5 text-balance"
             >
               Tu predio o liga deportiva,{" "}
               <span className="bg-gradient-to-r from-lime to-lime-dark bg-clip-text text-transparent">
@@ -44,7 +44,7 @@ export function DeportesHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.5 }}
-              className="text-[15px] sm:text-[16px] leading-relaxed text-white/60 mb-8"
+              className="text-[15px] sm:text-[16px] leading-relaxed text-bone/60 mb-8"
             >
               Reservas de canchas, gestión de torneos, cobros online y app para tus jugadores. Todo en una plataforma diseñada para el deporte amateur argentino.
             </motion.p>
@@ -59,14 +59,14 @@ export function DeportesHero() {
                 href={whatsappLink(WHATSAPP_MESSAGES.deportes)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-whatsapp text-white px-6 py-3.5 rounded-lg text-[14px] font-medium inline-flex items-center gap-2 hover:opacity-90 transition-opacity"
+                className="bg-whatsapp text-bone px-6 py-3.5 rounded-lg text-[14px] font-medium inline-flex items-center gap-2 hover:opacity-90 transition-opacity"
               >
                 <MessageCircle size={18} fill="currentColor" />
                 Quiero una demo
               </a>
               <a
                 href="#features"
-                className="border border-white/15 text-white px-5 py-3.5 rounded-lg text-[14px] font-medium inline-flex items-center gap-2 hover:bg-white/5 transition-colors"
+                className="border border-white/15 text-bone px-5 py-3.5 rounded-lg text-[14px] font-medium inline-flex items-center gap-2 hover:bg-white/5 transition-colors"
               >
                 Ver características <ArrowRight size={14} />
               </a>
@@ -86,7 +86,7 @@ export function DeportesHero() {
                   <div className="text-[9px] text-lime tracking-[0.1em] uppercase">
                     📅 Reservas Hoy
                   </div>
-                  <div className="text-[12px] text-white font-semibold mt-0.5">
+                  <div className="text-[12px] text-bone font-semibold mt-0.5">
                     Cancha Principal
                   </div>
                 </div>
@@ -107,14 +107,14 @@ export function DeportesHero() {
                     >
                       <div
                         className={`text-[10px] font-semibold ${
-                          slot.filled ? "text-lime-light" : "text-white/40"
+                          slot.filled ? "text-lime-light" : "text-bone/40"
                         }`}
                       >
                         {slot.time}
                       </div>
                       <div
                         className={`text-[10px] ${
-                          slot.filled ? "text-white" : "text-white/55"
+                          slot.filled ? "text-bone" : "text-bone/55"
                         }`}
                       >
                         {slot.team}

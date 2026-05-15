@@ -51,7 +51,7 @@ const features = [
 
 export function DeportesFeatures() {
   return (
-    <section id="features" className="bg-ink-900 py-16 sm:py-20">
+    <section id="features" className="bg-ink py-16 sm:py-20">
       <div className="container-page">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export function DeportesFeatures() {
           <div className="text-[11px] tracking-[0.2em] text-lime uppercase mb-3">
             Más características
           </div>
-          <h2 className="text-[26px] sm:text-[32px] font-bold text-white tracking-tight">
+          <h2 className="text-[26px] sm:text-[32px] font-bold text-bone tracking-tight">
             Pensado para crecer con vos
           </h2>
         </motion.div>
@@ -81,10 +81,10 @@ export function DeportesFeatures() {
               <div className="w-9 h-9 bg-lime/15 rounded-lg flex items-center justify-center mb-3">
                 <f.icon size={18} className="text-lime" />
               </div>
-              <h3 className="text-[15px] font-semibold text-white mb-1.5">
+              <h3 className="text-[15px] font-semibold text-bone mb-1.5">
                 {f.title}
               </h3>
-              <p className="text-[13px] text-white/60 leading-relaxed">
+              <p className="text-[13px] text-bone/60 leading-relaxed">
                 {f.description}
               </p>
             </motion.div>
