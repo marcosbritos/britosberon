@@ -73,48 +73,15 @@ export function BellezaHero() {
           </a>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.55, duration: 0.5 }}
-          className="flex flex-wrap gap-8 sm:gap-12 justify-center pt-8 border-t border-sage-900/10 max-w-2xl mx-auto"
-        >
-          <div className="text-center">
-            <div className="font-serif text-[28px] font-normal text-sage-500 leading-none">
-              7-14
-            </div>
-            <div className="text-[10px] text-sage-900/55 tracking-[0.15em] uppercase mt-1.5">
-              Días para lanzar
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="font-serif text-[28px] font-normal text-sage-500 leading-none">
-              24/7
-            </div>
-            <div className="text-[10px] text-sage-900/55 tracking-[0.15em] uppercase mt-1.5">
-              Reservas online
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="font-serif text-[28px] font-normal text-sage-500 leading-none">
-              0
-            </div>
-            <div className="text-[10px] text-sage-900/55 tracking-[0.15em] uppercase mt-1.5">
-              Inversión inicial
-            </div>
-          </div>
-        </motion.div>
-
         {/* Mockup */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-16 flex justify-center"
+          transition={{ delay: 0.55, duration: 0.6 }}
+          className="flex justify-center"
         >
           <div className="relative">
-            <div className="w-[240px] h-[400px] bg-ink border-[6px] border-ink-900 rounded-[28px] overflow-hidden relative shadow-2xl shadow-sage-900/10">
+            <div className="w-[240px] sm:w-[260px] h-[400px] sm:h-[440px] bg-ink border-[6px] border-sage-900/30 rounded-[28px] overflow-hidden relative shadow-2xl shadow-sage-900/10">
               <img src="/barberia.webp" alt="Barbería App" className="w-full h-full object-cover object-top" />
             </div>
           </div>
