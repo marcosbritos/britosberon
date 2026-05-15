@@ -82,52 +82,7 @@ export function DeportesHero() {
           >
             <div className="relative">
               <div className="w-[240px] h-[400px] bg-[#1a1f2e] border-[6px] border-[#2a2f3e] rounded-[28px] overflow-hidden relative shadow-2xl shadow-lime/10">
-                <div className="bg-lime/10 px-3 py-3 border-b border-white/[0.06]">
-                  <div className="text-[9px] text-lime tracking-[0.1em] uppercase">
-                    📅 Reservas Hoy
-                  </div>
-                  <div className="text-[12px] text-bone font-semibold mt-0.5">
-                    Cancha Principal
-                  </div>
-                </div>
-                <div className="p-3 space-y-2">
-                  {[
-                    { time: "19:00 - 20:00", team: "Los Tigres FC", filled: true },
-                    { time: "20:00 - 21:00", team: "Amigos del Barrio", filled: true },
-                    { time: "21:00 - 22:00", team: "Disponible", filled: false },
-                    { time: "22:00 - 23:00", team: "FC Vecinos", filled: true },
-                  ].map((slot, i) => (
-                    <div
-                      key={i}
-                      className={`px-2 py-2 rounded ${
-                        slot.filled
-                          ? "bg-lime/10 border-l-2 border-lime"
-                          : "bg-white/[0.04] border border-dashed border-white/15"
-                      }`}
-                    >
-                      <div
-                        className={`text-[10px] font-semibold ${
-                          slot.filled ? "text-lime-light" : "text-bone/40"
-                        }`}
-                      >
-                        {slot.time}
-                      </div>
-                      <div
-                        className={`text-[10px] ${
-                          slot.filled ? "text-bone" : "text-bone/55"
-                        }`}
-                      >
-                        {slot.team}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="absolute bottom-3 left-3 right-3 bg-green-500/15 border border-green-500/30 px-2.5 py-2 rounded-lg flex items-center gap-1.5">
-                  <DollarSign size={11} className="text-green-300" />
-                  <div className="text-[10px] text-green-300 font-medium">
-                    Pago confirmado
-                  </div>
-                </div>
+                <img src="/torneo.webp" alt="Torneo App" className="w-full h-full object-cover" />
               </div>
             </div>
           </motion.div>

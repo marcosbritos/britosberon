@@ -105,6 +105,20 @@ export function BellezaHero() {
             </div>
           </div>
         </motion.div>
+
+        {/* Mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="mt-16 flex justify-center"
+        >
+          <div className="relative">
+            <div className="w-[240px] h-[400px] bg-ink border-[6px] border-ink-900 rounded-[28px] overflow-hidden relative shadow-2xl shadow-sage-900/10">
+              <img src="/barberia.webp" alt="Barbería App" className="w-full h-full object-cover object-top" />
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
