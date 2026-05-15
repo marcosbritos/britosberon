@@ -7,7 +7,7 @@ interface LandingCTAProps {
   title: string;
   subtitle: string;
   whatsappMessage: string;
-  accentColor?: "gold" | "lime" | "sage" | "violet";
+  accentColor?: "gold" | "lime" | "sage" | "violet" | "teal";
 }
 
 export function LandingCTA({ title, subtitle, whatsappMessage, accentColor }: LandingCTAProps) {
@@ -17,6 +17,7 @@ export function LandingCTA({ title, subtitle, whatsappMessage, accentColor }: La
     lime: "bg-lime-600 text-bone",
     sage: "bg-emerald-700 text-bone",
     violet: "bg-violet-700 text-bone",
+    teal: "bg-teal-700 text-bone",
   };
   const themeClass = theme[accentColor ?? "default"] || theme.default;
 

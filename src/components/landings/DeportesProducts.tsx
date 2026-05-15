@@ -15,7 +15,7 @@ export function DeportesProducts() {
             Cómo <br/> funciona <span className="font-serif italic text-acc font-normal">.</span>
           </h2>
         </div>
-        <p className="max-w-[380px] m-0 font-display text-[16px] md:text-[18px] leading-[1.45] text-mute">
+        <p className="max-w-[380px] m-0 font-display text-[16px] md:text-[18px] leading-[1.45] text-ink">
           La diferencia no es la app. Es que cargamos toda la estructura del torneo antes del primer partido.
         </p>
       </div>
