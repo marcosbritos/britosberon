@@ -1,113 +1,76 @@
 "use client";
 
+import { Database, Trophy, ShieldCheck, Check } from "lucide-react";
 import { motion } from "framer-motion";
-import { Database, Trophy, Check, ShieldCheck } from "lucide-react";
 
 export function DeportesProducts() {
   return (
-    <section className="bg-ink py-16 sm:py-20">
-      <div className="container-page">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <div className="text-[11px] tracking-[0.2em] text-lime uppercase mb-3">
-            Cómo funciona
+    <section className="px-5 md:px-[56px] py-20 md:py-[120px] bg-bone2 border-b-[1.5px] border-ink">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-[40px] mb-12 md:mb-[80px]">
+        <div>
+          <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-3 md:mb-[14px] text-mute">
+            02 — sección
           </div>
-          <h2 className="text-[26px] sm:text-[36px] font-bold text-bone tracking-tight max-w-xl mx-auto text-balance">
-            Tu torneo, organizado desde la raíz.
+          <h2 className="m-0 font-display font-semibold text-[54px] md:text-[100px] leading-[0.9] tracking-[-0.045em]">
+            Cómo<br/>funciona<span className="font-serif italic text-acc font-normal">.</span>
           </h2>
-          <p className="text-[15px] text-bone/55 max-w-lg mx-auto mt-4 leading-relaxed">
-            La diferencia no es sólo la app. Es que cargamos toda la estructura del torneo en nuestra base de datos antes de que empiece el primer partido.
-          </p>
-        </motion.div>
+        </div>
+        <p className="max-w-[380px] m-0 font-display text-[16px] md:text-[18px] leading-[1.45] text-mute">
+          La diferencia no es la app. Es que cargamos toda la estructura del torneo antes del primer partido.
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+      <div className="border-t-[1.5px] border-ink">
+        {[
+          {
+            icon: Database,
+            n: "01",
+            title: "Base de datos completa",
+            body: "Antes del torneo, nosotros cargamos cada equipo y cada jugador. Sin formularios, sin errores, sin demoras. Los datos son verídicos desde el primer saque.",
+            items: ["Equipos y planteles cargados por nosotros", "Sin data entry manual para los jugadores", "Perfiles por jugador con historial completo", "Datos disponibles al instante en la app"],
+          },
+          {
+            icon: Trophy,
+            n: "02",
+            title: "Gestión del torneo",
+            body: "Fixture automático, tabla de posiciones en vivo, estadísticas individuales y fair play. Los equipos siguen todo desde su celular.",
+            items: ["Fixture generado automáticamente", "Tabla de posiciones en tiempo real", "Goleadores y tarjetas por jugador", "App instalable para los equipos (PWA)"],
+          },
+          {
+            icon: ShieldCheck,
+            n: "03",
+            title: "¿Por qué importa la base de datos?",
+            body: "En los torneos amateur, la información se pierde en grupos de WhatsApp y planillas de papel. Con nuestra plataforma, cada gol, tarjeta y resultado queda registrado con nombre real del jugador. Eso le da al torneo una transparencia que los participantes valoran — y que convierte tu liga en la que todos quieren jugar.",
+            items: ["Registros permanentes por jugador", "Historial de torneos pasados", "Estadísticas exportables", "Transparencia total para los equipos"],
+          },
+        ].map((item, i) => (
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            key={item.n}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-lime/[0.05] border border-lime/20 p-6 rounded-2xl"
+            transition={{ delay: i * 0.1, duration: 0.5 }}
+            className="grid grid-cols-1 lg:grid-cols-[80px_1fr_1fr] gap-6 lg:gap-[40px] py-10 md:py-[48px] border-b border-ink/20"
           >
-            <div className="flex items-center gap-2.5 mb-3">
-              <Database size={20} className="text-lime" />
-              <h3 className="text-[16px] font-semibold text-bone">
-                Base de datos completa
-              </h3>
-            </div>
-            <p className="text-[13px] text-bone/60 leading-relaxed mb-4">
-              Antes del torneo, nosotros cargamos cada equipo y cada jugador. Sin formularios, sin errores, sin demoras. Los datos son verídicos desde el primer saque.
-            </p>
-            <ul className="space-y-2">
-              {[
-                "Equipos y planteles cargados por nosotros",
-                "Sin data entry manual para los jugadores",
-                "Perfiles por jugador con historial",
-                "Datos disponibles al instante en la app",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-[12px] text-bone/80">
-                  <Check size={14} className="text-lime shrink-0" strokeWidth={2.5} />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="bg-bone/[0.03] border border-bone/[0.08] p-6 rounded-2xl"
-          >
-            <div className="flex items-center gap-2.5 mb-3">
-              <Trophy size={20} className="text-lime" />
-              <h3 className="text-[16px] font-semibold text-bone">
-                Gestión completa del torneo
-              </h3>
-            </div>
-            <p className="text-[13px] text-bone/60 leading-relaxed mb-4">
-              Fixture automático, tabla de posiciones en vivo, estadísticas por jugador y fair play. Los equipos siguen todo desde su celular.
-            </p>
-            <ul className="space-y-2">
-              {[
-                "Fixture con actualización automática",
-                "Tabla de posiciones en tiempo real",
-                "Goleadores y tarjetas por jugador",
-                "App instalable para equipos (PWA)",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-[12px] text-bone/80">
-                  <Check size={14} className="text-lime shrink-0" strokeWidth={2.5} />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="md:col-span-2 bg-gradient-to-r from-lime/[0.06] to-transparent border border-lime/15 p-6 rounded-2xl flex flex-col sm:flex-row gap-4 items-start"
-          >
-            <div className="w-10 h-10 bg-lime/15 rounded-xl flex items-center justify-center shrink-0">
-              <ShieldCheck size={20} className="text-lime" />
-            </div>
+            <div className="font-mono text-[11px] md:text-[13px] tracking-[0.15em] text-acc">{item.n}</div>
             <div>
-              <h3 className="text-[15px] font-semibold text-bone mb-1.5">
-                ¿Por qué importa la base de datos?
+              <h3 className="m-0 font-display font-semibold text-[32px] md:text-[48px] leading-[0.95] tracking-tight mb-4">
+                {item.title}
               </h3>
-              <p className="text-[13px] text-bone/60 leading-relaxed">
-                En los torneos amateur, la información suele perderse en grupos de WhatsApp y planillas de papel. Con nuestra plataforma, cada gol, tarjeta y resultado queda registrado con nombre y apellido real del jugador. Eso le da al torneo una seriedad y una transparencia que los participantes reconocen y valoran — y que convierte a tu liga en la que todos quieren jugar.
+              <p className="m-0 font-display text-[15px] md:text-[17px] leading-[1.45] text-ink">
+                {item.body}
               </p>
             </div>
+            <ul className="list-none p-0 m-0 flex flex-col gap-3 self-start lg:pt-2">
+              {item.items.map((feat) => (
+                <li key={feat} className="flex items-start gap-3 font-display text-[14px] leading-[1.45] text-ink">
+                  <span className="inline-flex w-5 h-5 border border-ink items-center justify-center text-acc font-serif italic text-[14px] leading-none -translate-y-0.5 shrink-0 mt-0.5">✓</span>
+                  {feat}
+                </li>
+              ))}
+            </ul>
           </motion.div>
-        </div>
+        ))}
       </div>
     </section>
   );

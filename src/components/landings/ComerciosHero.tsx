@@ -1,96 +1,76 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { MessageCircle, ArrowRight, Store, Globe, Calendar, Bot } from "lucide-react";
 import { whatsappLink, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 export function ComerciosHero() {
   return (
-    <section className="relative overflow-hidden bg-ink">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(251,191,36,0.08),transparent_60%)]" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(251,191,36,0.04),transparent_70%)]" />
+    <section className="relative px-5 md:px-[56px] pt-16 md:pt-[80px] pb-20 md:pb-[100px] border-b border-ink/10 bg-bone">
+      <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-6 md:mb-[32px]">
+        <span className="inline-block w-6 md:w-[36px] h-px bg-ink"/>
+        <span>01 — Comercios</span>
+        <span className="flex-1 h-px bg-ink/10 mx-3"/>
+        <span>↓ scroll</span>
       </div>
 
-      <div className="relative container-page py-16 sm:py-24 text-center flex flex-col items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 px-3 py-1.5 rounded-full mb-6"
-        >
-          <Store size={13} className="text-gold" />
-          <span className="text-[11px] text-gold tracking-[0.12em] uppercase font-medium">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-12 md:gap-[64px] items-start">
+        <div>
+          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.22em] uppercase text-mute mb-3 md:mb-[14px]">
             Para comercios y profesionales
-          </span>
-        </motion.div>
+          </div>
+          <h1 className="m-0 font-display font-semibold text-[54px] sm:text-[80px] md:text-[130px] leading-[0.9] tracking-[-0.045em]">
+            Tu negocio<br/>
+            merece más<br/>
+            <span className="font-serif italic font-normal text-acc">que un chat.</span>
+          </h1>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
-          className="text-[36px] sm:text-[52px] lg:text-[64px] leading-[1.0] font-bold text-bone tracking-tight mb-6 max-w-3xl text-balance"
-        >
-          Tu comercio merece más{" "}
-          <span className="font-serif italic font-normal text-gold">
-            que un WhatsApp Business.
-          </span>
-        </motion.h1>
+          <p className="mt-8 md:mt-[36px] mb-0 font-display text-[16px] md:text-[18px] leading-[1.5] text-ink max-w-[540px]">
+            Web profesional, sistema de turnos online, presencia en Google Maps y
+            atención automatizada. Todo en una suscripción mensual, sin inversión grande.
+          </p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25, duration: 0.5 }}
-          className="text-[16px] sm:text-[17px] leading-relaxed text-bone/60 max-w-xl mb-10"
-        >
-          Web profesional, sistema de turnos online, presencia en Google Maps y atención automatizada.
-          Todo en una suscripción mensual, sin inversión grande.
-        </motion.p>
+          <div className="mt-8 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
+            <a
+              href={whatsappLink(WHATSAPP_MESSAGES.comercios)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-acc text-bone px-6 md:px-[28px] py-4 md:py-[20px] font-mono text-[11px] md:text-[12px] tracking-[0.2em] uppercase inline-flex items-center justify-center gap-3 no-underline hover:opacity-90 transition-opacity text-center"
+            >
+              Pedir presupuesto
+              <span className="font-serif italic text-[20px] md:text-[24px] leading-none -translate-y-0.5">→</span>
+            </a>
+            <a
+              href="#features"
+              className="px-6 md:px-[24px] py-4 md:py-[20px] font-mono text-[11px] md:text-[12px] tracking-[0.2em] uppercase border border-ink text-ink no-underline text-center hover:bg-ink/5 transition-colors"
+            >
+              Ver qué incluye ↓
+            </a>
+          </div>
+        </div>
 
-        {/* Value props */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35, duration: 0.5 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-2xl mb-10"
-        >
+        {/* Right meta column */}
+        <div className="pt-8 md:pt-[60px] border-t lg:border-t-0 lg:border-l border-ink/10 lg:pl-[30px]">
           {[
-            { icon: Globe, label: "Web profesional", desc: "Diseño premium que transmite confianza y convierte visitas en clientes" },
-            { icon: Calendar, label: "Turnos online 24/7", desc: "Tus clientes reservan solos. Vos no levantás el teléfono" },
-            { icon: Bot, label: "Atención automática", desc: "Respuestas por WhatsApp y recordatorios sin intervención tuya" },
-          ].map((item, i) => (
-            <div key={i} className="bg-white/[0.03] border border-white/[0.07] rounded-2xl p-4 text-left">
-              <div className="w-8 h-8 bg-gold/15 rounded-lg flex items-center justify-center mb-3">
-                <item.icon size={16} className="text-gold" />
+            ['01','Entrega','7 a 14 días corridos'],
+            ['02','Modelo','Suscripción mensual'],
+            ['03','Incluye','Web + Turnos + WhatsApp'],
+            ['04','Soporte','WhatsApp · ≤ 24 hs'],
+            ['05','Dominio','Queda a tu nombre'],
+          ].map(([k,l,v]) => (
+            <div key={k} className="grid grid-cols-[24px_1fr] gap-2.5 py-3 border-b border-ink/10">
+              <span className="font-mono text-[10px] text-acc tracking-wider">{k}</span>
+              <div>
+                <div className="font-mono text-[9px] md:text-[10px] text-mute tracking-[0.18em] uppercase">{l}</div>
+                <div className="font-display text-[13px] md:text-[14px] leading-[1.35] mt-0.5 text-ink">{v}</div>
               </div>
-              <div className="text-[13px] font-semibold text-bone mb-1">{item.label}</div>
-              <div className="text-[12px] text-bone/50 leading-relaxed">{item.desc}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.5 }}
-          className="flex flex-wrap gap-3 items-center justify-center"
-        >
-          <a
-            href={whatsappLink(WHATSAPP_MESSAGES.comercios)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-whatsapp text-bone px-7 py-3.5 rounded-full text-[14px] font-medium inline-flex items-center gap-2 hover:opacity-90 transition-opacity"
-          >
-            <MessageCircle size={18} fill="currentColor" />
-            Pedir presupuesto
-          </a>
-          <a
-            href="#features"
-            className="border border-bone/20 text-bone/80 px-6 py-3.5 rounded-full text-[14px] font-medium inline-flex items-center gap-2 hover:bg-bone/5 transition-colors"
-          >
-            Ver qué incluye <ArrowRight size={14} />
-          </a>
-        </motion.div>
+      {/* Footnote */}
+      <div className="mt-12 md:mt-[60px] pt-5 md:pt-[22px] border-t border-ink/10 flex flex-col md:flex-row md:justify-between items-start md:items-baseline gap-4 font-mono text-[10px] md:text-[11px] tracking-wider text-mute">
+        <div>Web · Turnos online · Google Maps · WhatsApp automático · Todo en uno</div>
+        <div className="font-tabular-nums hidden md:block">pág. 01 / 09</div>
       </div>
     </section>
   );

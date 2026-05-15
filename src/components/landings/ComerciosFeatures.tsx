@@ -4,79 +4,50 @@ import { motion } from "framer-motion";
 import { Globe, Calendar, MapPin, MessageCircle, Star, CreditCard } from "lucide-react";
 
 const features = [
-  {
-    icon: Globe,
-    title: "Web profesional",
-    description: "Diseño a medida, mobile-first, hosting y dominio incluido.",
-  },
-  {
-    icon: Calendar,
-    title: "Turnos online 24/7",
-    description: "Tus clientes reservan solos, sin que tengas que llamarte.",
-  },
-  {
-    icon: MapPin,
-    title: "Google Maps y SEO",
-    description: "Aparecé cuando te buscan en tu zona, configurado desde el día 1.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Bot de WhatsApp",
-    description: "Atención automática, confirmación y recordatorios de citas.",
-  },
-  {
-    icon: Star,
-    title: "Reseñas automáticas",
-    description: "Pedido automático de reseñas post-servicio a tus clientes.",
-  },
-  {
-    icon: CreditCard,
-    title: "Cobros online",
-    description: "Mercado Pago integrado opcional para señas y pagos anticipados.",
-  },
+  { icon: Globe, n:"01", title: "Web profesional", body: "Diseño a medida, mobile-first, hosting y dominio incluido. Nunca templates genéricos." },
+  { icon: Calendar, n:"02", title: "Turnos online 24/7", body: "Tus clientes reservan solos, sin que tengan que llamarte. Vos confirmás con un toque." },
+  { icon: MapPin, n:"03", title: "Google Maps y SEO", body: "Aparecé cuando te buscan en tu zona. Configuramos todo desde el día uno, sin vueltas." },
+  { icon: MessageCircle, n:"04", title: "Bot de WhatsApp", body: "Atención automática, confirmación y recordatorios de turnos. Sin que tengas que escribir." },
+  { icon: Star, n:"05", title: "Reseñas automáticas", body: "Pedido automático de reseñas post-servicio a tus clientes. Tu reputación crece sola." },
+  { icon: CreditCard, n:"06", title: "Cobros online", body: "Mercado Pago integrado para señas y pagos anticipados. Menos ausentismo, más caja." },
 ];
 
 export function ComerciosFeatures() {
   return (
-    <section id="features" className="bg-ink py-16 sm:py-20">
-      <div className="container-page">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-10"
-        >
-          <div className="text-[11px] tracking-[0.2em] text-gold uppercase mb-3">
-            Lo que incluimos
+    <section id="features" className="px-5 md:px-[56px] py-20 md:py-[120px] bg-bone border-b-[1.5px] border-ink">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-[40px] mb-12 md:mb-[80px]">
+        <div>
+          <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-3 md:mb-[14px] text-mute">
+            02 — sección
           </div>
-          <h2 className="text-[26px] sm:text-[32px] font-bold text-bone tracking-tight max-w-xl mx-auto text-balance">
-            Todo lo que necesita tu comercio en internet
+          <h2 className="m-0 font-display font-semibold text-[54px] md:text-[100px] leading-[0.9] tracking-[-0.045em]">
+            Incluye<span className="font-serif italic text-acc font-normal">.</span>
           </h2>
-        </motion.div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {features.map((f, i) => (
-            <motion.div
-              key={f.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05, duration: 0.4 }}
-              className="bg-white/[0.03] border border-white/[0.08] p-5 rounded-2xl hover:border-gold/30 transition-colors"
-            >
-              <div className="w-9 h-9 bg-gold/15 rounded-lg flex items-center justify-center mb-3">
-                <f.icon size={18} className="text-gold" />
-              </div>
-              <h3 className="text-[15px] font-semibold text-bone mb-1.5">
-                {f.title}
-              </h3>
-              <p className="text-[13px] text-bone/60 leading-relaxed">
-                {f.description}
-              </p>
-            </motion.div>
-          ))}
         </div>
+        <p className="max-w-[380px] m-0 font-display text-[16px] md:text-[18px] leading-[1.45] text-mute">
+          Lo que entra en la suscripción mensual. Sin asteriscos chiquitos.
+        </p>
+      </div>
+
+      <div className="border-t-[1.5px] border-ink grid grid-cols-1 lg:grid-cols-2">
+        {features.map((f, i) => (
+          <motion.div
+            key={f.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.06, duration: 0.4 }}
+            className={`py-8 md:py-[36px] ${i % 2 !== 0 ? "lg:border-l border-ink/20 lg:pl-[40px]" : ""} ${i > 0 ? "border-t border-ink/20" : ""} ${i === 1 ? "lg:border-t-0" : ""}`}
+          >
+            <div className="flex items-baseline gap-4 mb-3">
+              <span className="font-mono text-[11px] tracking-[0.15em] text-acc">{f.n}</span>
+              <h3 className="m-0 font-display font-medium text-[22px] md:text-[28px] tracking-tight">{f.title}</h3>
+            </div>
+            <p className="m-0 font-display text-[14px] md:text-[15px] leading-[1.55] text-ink ml-[36px] md:ml-[44px]">
+              {f.body}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

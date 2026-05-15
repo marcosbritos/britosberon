@@ -1,50 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Scissors, Sparkles, Hand, Flower2, Wand2 } from "lucide-react";
 
-const tags = [
-  { icon: Scissors, label: "Peluquerías" },
-  { icon: Sparkles, label: "Salones de belleza" },
-  { icon: Hand, label: "Manicura y pedicura" },
-  { icon: Flower2, label: "Spa y estética" },
-  { icon: Wand2, label: "Cosmetología" },
-  { icon: Scissors, label: "Barberías" },
-  { icon: Sparkles, label: "Depilación" },
-];
+const tags = ["Peluquerías","Salones de belleza","Manicura y pedicura","Spa y estética","Cosmetología","Barberías","Depilación","Pestañas y cejas"];
 
 export function BellezaFor() {
   return (
-    <section className="bg-cream-100 py-10 border-y border-sage-900/[0.06]">
-      <div className="container-page text-center">
-        <div className="font-serif italic text-[13px] text-sage-500 tracking-[0.08em] mb-5">
-          — Para todos los rubros —
-        </div>
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            show: { transition: { staggerChildren: 0.05 } },
-          }}
-          className="flex flex-wrap gap-2 justify-center"
-        >
-          {tags.map((tag) => (
-            <motion.div
-              key={tag.label}
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                show: { opacity: 1, y: 0 },
-              }}
-              className="bg-sage-500/[0.08] text-sage-900 text-[12.5px] px-3.5 py-1.5 rounded-full border border-sage-500/20 inline-flex items-center gap-1.5"
-            >
-              <tag.icon size={13} className="text-sage-500" />
-              {tag.label}
-            </motion.div>
-          ))}
-        </motion.div>
+    <section className="px-5 md:px-[56px] py-7 border-b border-ink/10 bg-bone">
+      <div className="font-mono text-[10px] tracking-[0.2em] text-mute uppercase mb-3">
+        Para todos los rubros:
       </div>
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.04 } } }}
+        className="flex flex-wrap gap-2"
+      >
+        {tags.map((tag) => (
+          <motion.div
+            key={tag}
+            variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }}
+            className="font-mono text-[11px] tracking-[0.12em] uppercase px-3 py-1.5 border border-ink/20 text-ink/70"
+          >
+            {tag}
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 }
