@@ -48,10 +48,15 @@ export function BellezaHero() {
           </div>
         </div>
 
-        {/* Mockup */}
+        {/* Foto de recuerdo */}
         <div className="flex justify-center lg:justify-end pt-4 lg:pt-[60px]">
-          <div className="w-[240px] sm:w-[260px] h-[420px] sm:h-[460px] border-[6px] border-ink rounded-[28px] overflow-hidden relative shadow-2xl">
-            <img src="/barberia.webp" alt="Barbería App" className="w-full h-full object-cover object-top" />
+          <div className="bg-[#f8f8f8] p-3 sm:p-4 pb-10 sm:pb-12 shadow-2xl -rotate-2 hover:rotate-0 transition-transform duration-500 max-w-[260px] sm:max-w-[300px] border border-ink/10">
+            <div className="w-full aspect-[9/16] overflow-hidden border border-ink/10 relative">
+              <img src="/barberia-foto.png" alt="Barbería Interface" className="w-full h-full object-cover object-top" />
+            </div>
+            <div className="font-serif italic text-center text-ink text-sm sm:text-base mt-4 sm:mt-5 opacity-80">
+              Gestión de turnos
+            </div>
           </div>
         </div>
       </div>
