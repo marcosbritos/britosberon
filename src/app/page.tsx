@@ -10,6 +10,8 @@ import {
   HomeCTA, 
   HomeFooter 
 } from "@/components/home/HomeComponents";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 export default function HomePage() {
   return (
@@ -24,6 +26,7 @@ export default function HomePage() {
       <HomeFaq />
       <HomeCTA />
       <HomeFooter />
+      <FloatingWhatsApp message={WHATSAPP_MESSAGES.generic} />
     </main>
   );
 }

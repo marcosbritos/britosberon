@@ -56,10 +56,10 @@
     display: inline-flex; 
     gap: 48px; 
     white-space: nowrap; 
-    animation: bb-marquee 38s linear infinite; 
+    animation: bb-marquee 75s linear infinite; 
     will-change: transform; 
   }
-  .bb-mq-track.fast { animation-duration: 22s; }
+  .bb-mq-track.fast { animation-duration: 45s; }
   .bb-mq-track.rev { animation-direction: reverse; }
 }
 
