@@ -86,16 +86,16 @@ export function HomeNav() {
             <Link href="/turismo" className="no-underline text-inherit hover:opacity-70 transition-opacity"><sup className="text-acc2 mr-1.5">04</sup>Turismo</Link>
           </nav>
 
-          {/* WA siempre visible — antes era hidden sm:inline-flex */}
+          {/* WA pill: solo desde sm (md? mantenemos en tablet+). En mobile va el drawer. */}
           <a
             href="https://wa.me/5491169299378"
             target="_blank"
             rel="noreferrer"
             aria-label="WhatsApp"
-            className="bg-ink text-bone px-3.5 md:px-[18px] py-2.5 md:py-[12px] min-h-[44px] font-mono text-[10.5px] md:text-[11px] tracking-[0.18em] uppercase inline-flex items-center gap-2.5 no-underline hover:bg-ink-2 transition-colors shrink-0"
+            className="hidden sm:inline-flex bg-ink text-bone px-3.5 md:px-[18px] py-2.5 md:py-[12px] min-h-[44px] font-mono text-[10.5px] md:text-[11px] tracking-[0.18em] uppercase items-center gap-2.5 no-underline hover:bg-ink-2 transition-colors shrink-0"
           >
             <span className="w-2 h-2 bg-acc rounded-full shadow-[0_0_0_3px_rgba(31,163,181,0.25)]" />
-            <span className="hidden xs:inline sm:inline">WhatsApp</span>
+            <span>WhatsApp</span>
           </a>
 
           {/* Hamburguesa < 1024px */}
@@ -178,7 +178,7 @@ export function HomeHero() {
           <h1 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.045em] text-[clamp(44px,11.5vw,130px)]">
             Construimos<br />
             negocios digitales.<br />
-            <span className="text-acc2 lg:text-acc">Impulsamos<br />
+            <span className="text-acc">Impulsamos<br />
             su crecimiento.</span>
           </h1>
           <div className="mt-6 md:mt-[42px] flex flex-col sm:flex-row gap-3 md:gap-5 items-stretch sm:items-center">

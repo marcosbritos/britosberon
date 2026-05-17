@@ -20,7 +20,7 @@ export function BellezaHero() {
           <h1 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.045em] text-[clamp(48px,13vw,130px)]">
             Tu talento <br />
             también <br />
-            <span className="font-serif italic font-normal text-acc2 lg:text-acc">en internet.</span>
+            <span className="font-serif italic font-normal text-acc">en internet.</span>
           </h1>
 
           <p className="mt-8 md:mt-[36px] mb-0 font-display text-[16px] md:text-[18px] leading-[1.55] text-ink max-w-[540px]">
