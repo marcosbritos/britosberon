@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe, Calendar, MapPin, MessageCircle, Star, CreditCard } from "lucide-react";
+import { Globe, ShoppingBag, Calendar, MapPin, MessageCircle, Star } from "lucide-react";
 
 const features = [
-  { icon: Globe, n:"01", title: "Web profesional", body: "Diseño a medida, mobile-first, hosting y dominio incluido. Nunca templates genéricos." },
-  { icon: Calendar, n:"02", title: "Turnos online 24/7", body: "Tus clientes reservan solos, sin que tengan que llamarte. Vos confirmás con un toque." },
-  { icon: MapPin, n:"03", title: "Google Maps y SEO", body: "Aparecé cuando te buscan en tu zona. Configuramos todo desde el día uno, sin vueltas." },
-  { icon: MessageCircle, n:"04", title: "Bot de WhatsApp", body: "Atención automática, confirmación y recordatorios de turnos. Sin que tengas que escribir." },
-  { icon: Star, n:"05", title: "Reseñas automáticas", body: "Pedido automático de reseñas post-servicio a tus clientes. Tu reputación crece sola." },
-  { icon: CreditCard, n:"06", title: "Cobros online", body: "Mercado Pago integrado para señas y pagos anticipados. Menos ausentismo, más caja." },
+  { icon: Globe, n:"01", title: "Web a medida", body: "Diseño boutique que respeta tu identidad de marca. Mobile-first, hosting y dominio incluido. Nunca una plantilla repetida." },
+  { icon: ShoppingBag, n:"02", title: "Tienda online", body: "Carrito, pagos con Mercado Pago, stock, envíos y panel de administración. Misma operativa que las grandes plataformas, con el diseño de tu marca." },
+  { icon: Calendar, n:"03", title: "Turnos online 24/7", body: "Tus clientes reservan solos, sin que tengan que llamarte. Vos confirmás con un toque." },
+  { icon: MapPin, n:"04", title: "Google Maps y SEO", body: "Aparecé cuando te buscan en tu zona. Configuramos todo desde el día uno, sin vueltas." },
+  { icon: MessageCircle, n:"05", title: "Bot de WhatsApp", body: "Atención automática, confirmación y recordatorios de turnos. Sin que tengas que escribir." },
+  { icon: Star, n:"06", title: "Reseñas automáticas", body: "Pedido automático de reseñas post-servicio a tus clientes. Tu reputación crece sola." },
 ];
 
 export function ComerciosFeatures() {

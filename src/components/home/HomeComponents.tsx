@@ -70,7 +70,7 @@ export function HomeHero() {
             negocios digitales.<br/>
             Acompañamos<br/>
             el crecimiento.
-            <sup className="text-[24px] md:text-[42px] text-acc font-serif italic align-super">*</sup>
+            <sup className="text-[24px] md:text-[42px] text-mute font-serif italic align-super">*</sup>
           </h1>
           <div className="mt-8 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
             <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" className="bg-acc text-bone px-6 md:px-[28px] py-4 md:py-[20px] font-mono text-[11px] md:text-[12px] tracking-[0.2em] uppercase inline-flex items-center justify-center gap-3 no-underline relative hover:opacity-90 transition-opacity text-center">
@@ -108,7 +108,7 @@ export function HomeHero() {
 
       {/* Footnote */}
       <div className="mt-12 md:mt-[60px] pt-5 md:pt-[22px] border-t border-ink/10 flex flex-col md:flex-row md:justify-between items-start md:items-baseline gap-4 font-mono text-[10px] md:text-[11px] tracking-wider text-mute">
-        <div><span className="text-acc">*</span> Webs, sistemas de reservas, ecommerce y automatización para negocios en Argentina.</div>
+        <div><span className="text-mute">*</span> Webs, sistemas de reservas, ecommerce y automatización para negocios en Argentina.</div>
         <div className="font-tabular-nums hidden md:block">pág. 01 / 09</div>
       </div>
     </section>
@@ -128,7 +128,7 @@ function Meta({ k, l, v }: {k:string, l:string, v:string}) {
 
 export function HomeIndex() {
   const items = [
-    { n:'01', title:'Comercio', kicker:'Tu local del barrio, encontrable en internet', body:'Web profesional, sistema de turnos, bot de WhatsApp para comercios, profesionales y servicios.', tags:['WEB','TURNOS','BOT'], path: '/comercios' },
+    { n:'01', title:'Comercio', kicker:'Tu local del barrio, encontrable en internet', body:'Web a medida, tienda online, sistema de turnos y bot de WhatsApp. Misma operativa que las grandes plataformas, con el diseño boutique de tu marca.', tags:['WEB','TIENDA','TURNOS'], path: '/comercios' },
     { n:'02', title:'Deportes', kicker:'Tus equipos sienten que juegan una liga seria. Vos cargás partidos en minutos, no en horas, gracias a la base de datos', body:'Plataforma con base de datos de equipos y jugadores. Fixtures automáticos, tablas en vivo, carga de partidos intuitiva y app instalable para los participantes. Para predios, ligas y clubes amateur.', tags:['BASE DE DATOS','FIXTURES','APP'], path: '/deportes' },
     { n:'03', title:'Belleza',  kicker:'Tu salón, en Google y en el celular de tus clientas', body:'Portfolio digital, turnos 24/7, recordatorios automáticos. Para peluquerías, spa, manicura y barberías.', tags:['BOOK','24/7','SMS'], path: '/belleza' },
     { n:'04', title:'Turismo',  kicker:'Que el viajero te encuentre antes de elegir dónde dormir', body:'Web con galería, reservas online, Google Maps optimizado y reseñas automáticas. Para campings, hosterías, cabañas, posadas y refugios.', tags:['WEB','RESERVAS','MAPS'], path: '/turismo' },

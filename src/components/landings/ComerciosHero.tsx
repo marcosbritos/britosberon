@@ -18,14 +18,15 @@ export function ComerciosHero() {
             Para comercios y profesionales
           </div>
           <h1 className="m-0 font-display font-semibold text-[54px] sm:text-[80px] md:text-[130px] leading-[0.9] tracking-[-0.045em]">
-            Tu negocio <br />
-            merece más <br />
-            <span className="font-serif italic font-normal text-acc">que un chat.</span>
+            Tu marca, <br />
+            tu negocio <br />
+            <span className="font-serif italic font-normal text-acc">online.</span>
           </h1>
 
           <p className="mt-8 md:mt-[36px] mb-0 font-display text-[16px] md:text-[18px] leading-[1.5] text-ink max-w-[540px]">
-            Web profesional, sistema de turnos online, presencia en Google Maps y
-            atención automatizada. Todo en una suscripción mensual, sin inversión grande.
+            Misma operativa que las grandes plataformas, pero con un diseño hecho a medida
+            de tu marca. Webs, tiendas online, turnos y bot de WhatsApp. Suscripción
+            mensual accesible, sin inversión grande.
           </p>
 
           <div className="mt-8 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
@@ -51,9 +52,9 @@ export function ComerciosHero() {
           {[
             ['01', 'Entrega', '7 a 14 días corridos'],
             ['02', 'Modelo', 'Suscripción mensual'],
-            ['03', 'Incluye', 'Web + Turnos + WhatsApp'],
+            ['03', 'Incluye', 'Web + Tienda + Turnos'],
             ['04', 'Soporte', 'WhatsApp · ≤ 24 hs'],
-            ['05', 'Dominio', 'Queda a tu nombre'],
+            ['05', 'Diseño', 'A medida, no plantilla'],
           ].map(([k, l, v]) => (
             <div key={k} className="grid grid-cols-[24px_1fr] gap-2.5 py-3 border-b border-ink/10">
               <span className="font-mono text-[10px] text-acc tracking-wider">{k}</span>
@@ -67,7 +68,7 @@ export function ComerciosHero() {
       </div>
 
       <div className="mt-12 md:mt-[60px] pt-5 md:pt-[22px] border-t border-ink/10 flex flex-col md:flex-row md:justify-between items-start md:items-baseline gap-4 font-mono text-[10px] md:text-[11px] tracking-wider text-mute">
-        <div>Web · Turnos online · Google Maps · WhatsApp automático · Todo en uno</div>
+        <div>Web a medida · Tienda online · Turnos · WhatsApp automático · Google Maps</div>
         <div className="font-tabular-nums hidden md:block">pág. 01 / 09</div>
       </div>
     </section>

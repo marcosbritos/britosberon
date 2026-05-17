@@ -9,13 +9,13 @@ import { LandingCTA } from "@/components/landings/LandingCTA";
 import { WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "B&B Comercio | Web + Turnos + WhatsApp para tu negocio",
+  title: "B&B Comercio | Web a medida, Tienda online y Turnos para tu negocio",
   description:
-    "Web profesional, sistema de turnos online, presencia en Google Maps y bot de WhatsApp. Todo en una suscripción mensual accesible. Para peluquerías, profesionales, talleres y comercios en Argentina.",
+    "Web boutique a medida, tienda online completa, sistema de turnos online, presencia en Google Maps y bot de WhatsApp. Misma operativa que las grandes plataformas, con el diseño de tu marca. Suscripción mensual accesible para comercios y profesionales en Argentina.",
   openGraph: {
-    title: "B&B Comercio | Tu negocio profesional en internet",
+    title: "B&B Comercio | Tu marca, tu negocio online",
     description:
-      "Web + turnos online + Google + WhatsApp para comercios y profesionales en Argentina.",
+      "Tienda online + turnos + WhatsApp + Google Maps con diseño boutique a medida. No otra plantilla.",
   },
 };
 
@@ -27,8 +27,8 @@ export default function ComerciosPage() {
       <ComerciosFor />
       <ComerciosFeatures />
       <LandingCTA
-        title="¿Listo para llevar tu comercio al siguiente nivel?"
-        subtitle="Charlemos 30 minutos sin compromiso. Te mostramos casos similares al tuyo."
+        title="¿Listo para tener tu marca online?"
+        subtitle="Charlemos 30 minutos sin compromiso. Te mostramos cómo se ve tu negocio con un diseño hecho a medida."
         whatsappMessage={WHATSAPP_MESSAGES.comercios}
         accentColor="gold"
       />
