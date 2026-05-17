@@ -32,13 +32,13 @@ export function HomeMarquee() {
 export function HomeNav() {
   return (
     <header className="flex items-center justify-between px-5 md:px-[56px] py-4 md:py-[22px] border-b border-ink/10 bg-bone relative z-10">
-      <div className="flex items-center gap-3 md:gap-[18px]">
-        <Link href="/">
+      <div className="flex items-center gap-3 md:gap-[18px] min-w-0">
+        <Link href="/" className="shrink-0">
           <BBLogo variant="mark-ink" className="h-10 md:h-[52px] w-auto" />
         </Link>
-        <div className="hidden md:block border-l border-ink/10 pl-[18px] font-mono text-[10px] tracking-[0.22em] uppercase leading-[1.7] text-ink">
+        <div className="border-l border-ink/10 pl-3 md:pl-[18px] font-mono text-[8px] md:text-[10px] tracking-[0.18em] md:tracking-[0.22em] uppercase leading-[1.5] md:leading-[1.7] text-ink min-w-0">
           BRITOS BERÓN<br/>
-          <span className="text-mute">Estudio digital · Webs, sistemas y crecimiento</span>
+          <span className="text-mute block truncate md:whitespace-normal">Estudio digital · Webs, sistemas y crecimiento</span>
         </div>
       </div>
       <nav className="hidden lg:flex gap-[36px] font-mono text-[11px] tracking-[0.18em] uppercase">
@@ -47,10 +47,9 @@ export function HomeNav() {
         <Link href="/belleza" className="no-underline text-inherit hover:opacity-70 transition-opacity"><sup className="text-acc mr-1.5">03</sup>Belleza</Link>
         <Link href="/turismo" className="no-underline text-inherit hover:opacity-70 transition-opacity"><sup className="text-acc mr-1.5">04</sup>Turismo</Link>
       </nav>
-      <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" className="bg-ink text-bone px-4 md:px-[18px] py-2.5 md:py-[12px] font-mono text-[10px] md:text-[11px] tracking-[0.18em] uppercase inline-flex items-center gap-2.5 no-underline hover:opacity-90 transition-opacity">
+      <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" className="hidden sm:inline-flex bg-ink text-bone px-4 md:px-[18px] py-2.5 md:py-[12px] font-mono text-[10px] md:text-[11px] tracking-[0.18em] uppercase items-center gap-2.5 no-underline hover:opacity-90 transition-opacity shrink-0">
         <span className="w-2 h-2 bg-acc rounded-full shadow-[0_0_0_3px_rgba(255,87,34,0.2)]"/>
-        <span className="hidden sm:inline">WhatsApp</span>
-        <span className="sm:hidden">Hablemos</span>
+        WhatsApp
       </a>
     </header>
   );
