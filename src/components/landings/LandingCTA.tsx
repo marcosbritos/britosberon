@@ -31,10 +31,11 @@ export function LandingCTA({ title, subtitle, whatsappMessage, accentColor }: La
         <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">
           — Empezá ahora
         </div>
-        <h2 className="m-0 font-display font-semibold text-[54px] md:text-[120px] leading-[0.92] tracking-[-0.04em]">
+        {/* clamp() para escalar fluido sin overflow en 320px */}
+        <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.04em] text-[clamp(48px,11vw,120px)]">
           {title}
         </h2>
-        <p className="my-8 md:my-[42px] font-display text-[18px] md:text-[22px] leading-[1.45] max-w-[520px]">
+        <p className="my-8 md:my-[42px] font-display text-[17px] md:text-[22px] leading-[1.45] max-w-[520px]">
           {subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-[18px] items-stretch sm:items-center">
@@ -42,14 +43,18 @@ export function LandingCTA({ title, subtitle, whatsappMessage, accentColor }: La
             href={whatsappLink(whatsappMessage)}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-ink text-bone px-6 md:px-[32px] py-4 md:py-[24px] font-mono text-[11px] md:text-[13px] tracking-[0.22em] uppercase inline-flex items-center justify-center gap-3 no-underline hover:opacity-90 transition-opacity text-center"
+            aria-label="Escribinos por WhatsApp"
+            className="bg-ink text-bone px-6 md:px-[32px] py-4 md:py-[22px] min-h-[56px] font-mono text-[11px] md:text-[13px] tracking-[0.22em] uppercase inline-flex items-center justify-center gap-3 no-underline hover:bg-black active:translate-y-[1px] transition-all text-center"
           >
             Escribinos por WhatsApp
-            <span className="font-serif italic text-[24px] md:text-[28px] -translate-y-0.5">→</span>
+            <span className="font-serif italic text-[24px] md:text-[28px] -translate-y-0.5" aria-hidden="true">→</span>
           </a>
-          <span className="font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-center sm:text-left mt-2 sm:mt-0">
+          <a
+            href="mailto:hola@britosberon.com.ar"
+            className="font-mono text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-center sm:text-left mt-2 sm:mt-0 underline-offset-4 hover:underline"
+          >
             o · hola@britosberon.com.ar
-          </span>
+          </a>
         </div>
       </div>
     </section>
