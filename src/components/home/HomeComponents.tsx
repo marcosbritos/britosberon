@@ -70,8 +70,8 @@ export function HomeHero() {
           <h1 className="m-0 font-display font-semibold text-[54px] sm:text-[80px] md:text-[130px] leading-[0.9] tracking-[-0.045em]">
             Construimos<br/>
             negocios digitales.<br/>
-            <span className="text-acc">Acompañamos<br/>
-            el crecimiento.</span>
+            <span className="text-acc">Impulsamos<br/>
+            su crecimiento.</span>
           </h1>
           <div className="mt-6 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
             <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" className="bg-acc text-bone px-6 md:px-[28px] py-4 md:py-[20px] font-mono text-[11px] md:text-[12px] tracking-[0.2em] uppercase inline-flex items-center justify-center gap-3 no-underline relative hover:opacity-90 transition-opacity text-center">
