@@ -68,8 +68,8 @@ export function HomeHero() {
           <h1 className="m-0 font-display font-semibold text-[64px] sm:text-[80px] md:text-[140px] lg:text-[188px] leading-[0.9] md:leading-[0.88] tracking-[-0.045em]">
             Construimos<br/>
             negocios digitales.<br/>
-            Acompañamos<br/>
-            el crecimiento.
+            <span className="text-acc">Acompañamos<br/>
+            el crecimiento.</span>
             <sup className="text-[24px] md:text-[42px] text-mute font-serif italic align-super">*</sup>
           </h1>
           <div className="mt-8 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
