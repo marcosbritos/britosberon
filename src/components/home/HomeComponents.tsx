@@ -66,10 +66,10 @@ export function HomeHero() {
             <span>↓ scroll</span>
           </div>
           <h1 className="m-0 font-display font-semibold text-[64px] sm:text-[80px] md:text-[140px] lg:text-[188px] leading-[0.9] md:leading-[0.88] tracking-[-0.045em]">
-            Que te encuentren<br/>
-            es el primer paso.<br/>
-            Que te elijan<br/>
-            es nuestro trabajo.
+            Construimos<br/>
+            negocios digitales.<br/>
+            Acompañamos<br/>
+            el crecimiento.
             <sup className="text-[24px] md:text-[42px] text-acc font-serif italic align-super">*</sup>
           </h1>
           <div className="mt-8 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
@@ -78,7 +78,7 @@ export function HomeHero() {
               <span className="font-serif italic text-[20px] md:text-[24px] leading-none -translate-y-0.5">→</span>
             </a>
             <a href="#caminos" className="px-6 md:px-[24px] py-4 md:py-[20px] font-mono text-[11px] md:text-[12px] tracking-[0.2em] uppercase border border-ink text-ink no-underline text-center hover:bg-ink/5 transition-colors">
-              Ver los 3 caminos ↓
+              Ver los 4 caminos ↓
             </a>
           </div>
         </div>
@@ -108,7 +108,7 @@ export function HomeHero() {
 
       {/* Footnote */}
       <div className="mt-12 md:mt-[60px] pt-5 md:pt-[22px] border-t border-ink/10 flex flex-col md:flex-row md:justify-between items-start md:items-baseline gap-4 font-mono text-[10px] md:text-[11px] tracking-wider text-mute">
-        <div><span className="text-acc">*</span> Existe. Pero nadie lo encuentra. Y los que no se encuentran no se compran.</div>
+        <div><span className="text-acc">*</span> Webs, sistemas de reservas, ecommerce y automatización para negocios en Argentina.</div>
         <div className="font-tabular-nums hidden md:block">pág. 01 / 09</div>
       </div>
     </section>
@@ -128,10 +128,10 @@ function Meta({ k, l, v }: {k:string, l:string, v:string}) {
 
 export function HomeIndex() {
   const items = [
-    { n:'01', title:'Comercio', kicker:'Vidrieras digitales', body:'Web profesional, sistema de turnos, bot de WhatsApp para comercios, profesionales y servicios.', tags:['WEB','TURNOS','BOT'], path: '/comercios' },
-    { n:'02', title:'Deportes', kicker:'Torneos amateur de fútbol', body:'Gestión integral de torneos y ligas amateur, reservas de canchas, fixtures, tablas y app para jugadores. Para predios, organizadores y clubes.', tags:['TORNEOS','FIXTURES','APP'], path: '/deportes' },
-    { n:'03', title:'Belleza',  kicker:'Salones que enamoran', body:'Portfolio digital, turnos 24/7, recordatorios automáticos. Para peluquerías, spa, manicura y barberías.', tags:['BOOK','24/7','SMS'], path: '/belleza' },
-    { n:'04', title:'Turismo',  kicker:'Alojamientos encontrables', body:'Web con galería, reservas online, Google Maps optimizado y reseñas automáticas. Para campings, hosterías, cabañas, posadas y refugios.', tags:['WEB','RESERVAS','MAPS'], path: '/turismo' },
+    { n:'01', title:'Comercio', kicker:'Tu local del barrio, encontrable en internet', body:'Web profesional, sistema de turnos, bot de WhatsApp para comercios, profesionales y servicios.', tags:['WEB','TURNOS','BOT'], path: '/comercios' },
+    { n:'02', title:'Deportes', kicker:'Tu predio o torneo, sin Excel ni grupos de WhatsApp', body:'Gestión integral de torneos y ligas amateur, reservas de canchas, fixtures, tablas y app para jugadores. Para predios, organizadores y clubes.', tags:['TORNEOS','FIXTURES','APP'], path: '/deportes' },
+    { n:'03', title:'Belleza',  kicker:'Tu salón, en Google y en el celular de tus clientas', body:'Portfolio digital, turnos 24/7, recordatorios automáticos. Para peluquerías, spa, manicura y barberías.', tags:['BOOK','24/7','SMS'], path: '/belleza' },
+    { n:'04', title:'Turismo',  kicker:'Que el viajero te encuentre antes de elegir dónde dormir', body:'Web con galería, reservas online, Google Maps optimizado y reseñas automáticas. Para campings, hosterías, cabañas, posadas y refugios.', tags:['WEB','RESERVAS','MAPS'], path: '/turismo' },
   ];
   return (
     <section id="caminos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] relative">
