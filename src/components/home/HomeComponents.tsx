@@ -50,7 +50,7 @@ export function HomeNav() {
       <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" className="bg-ink text-bone px-4 md:px-[18px] py-2.5 md:py-[12px] font-mono text-[10px] md:text-[11px] tracking-[0.18em] uppercase inline-flex items-center gap-2.5 no-underline hover:opacity-90 transition-opacity">
         <span className="w-2 h-2 bg-acc rounded-full shadow-[0_0_0_3px_rgba(255,87,34,0.2)]"/>
         <span className="hidden sm:inline">WhatsApp</span>
-        <span className="sm:hidden">Chat</span>
+        <span className="sm:hidden">Hablemos</span>
       </a>
     </header>
   );
