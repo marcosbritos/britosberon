@@ -129,7 +129,7 @@ function Meta({ k, l, v }: {k:string, l:string, v:string}) {
 export function HomeIndex() {
   const items = [
     { n:'01', title:'Comercio', kicker:'Tu local del barrio, encontrable en internet', body:'Web profesional, sistema de turnos, bot de WhatsApp para comercios, profesionales y servicios.', tags:['WEB','TURNOS','BOT'], path: '/comercios' },
-    { n:'02', title:'Deportes', kicker:'Tu predio o torneo, sin Excel ni grupos de WhatsApp', body:'Gestión integral de torneos y ligas amateur, reservas de canchas, fixtures, tablas y app para jugadores. Para predios, organizadores y clubes.', tags:['TORNEOS','FIXTURES','APP'], path: '/deportes' },
+    { n:'02', title:'Deportes', kicker:'Tus equipos sienten que juegan una liga seria. Vos cargás partidos en minutos, no en horas, gracias a la base de datos', body:'Plataforma con base de datos de equipos y jugadores. Fixtures automáticos, tablas en vivo, carga de partidos intuitiva y app instalable para los participantes. Para predios, ligas y clubes amateur.', tags:['BASE DE DATOS','FIXTURES','APP'], path: '/deportes' },
     { n:'03', title:'Belleza',  kicker:'Tu salón, en Google y en el celular de tus clientas', body:'Portfolio digital, turnos 24/7, recordatorios automáticos. Para peluquerías, spa, manicura y barberías.', tags:['BOOK','24/7','SMS'], path: '/belleza' },
     { n:'04', title:'Turismo',  kicker:'Que el viajero te encuentre antes de elegir dónde dormir', body:'Web con galería, reservas online, Google Maps optimizado y reseñas automáticas. Para campings, hosterías, cabañas, posadas y refugios.', tags:['WEB','RESERVAS','MAPS'], path: '/turismo' },
   ];
@@ -288,7 +288,7 @@ export function HomeManifesto() {
           <p className="mt-8 md:mt-[48px] mb-0 font-display text-[18px] md:text-[22px] leading-[1.55] max-w-[760px] text-bone/80">
             Para nosotros el diseño no es decoración. Es la diferencia entre que tu cliente te encuentre
             o se vaya con tu competencia. Trabajamos para comercios reales, no para slides de inversores.
-            Hablamos castellano, no agencia. <span className="text-acc">Y respondemos el WhatsApp.</span>
+            Hablamos castellano. Respondemos rápido. <span className="text-acc">Y trabajamos como si tu negocio fuera el nuestro.</span>
           </p>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 mt-12 md:mt-[80px] border-t border-bone/20">
