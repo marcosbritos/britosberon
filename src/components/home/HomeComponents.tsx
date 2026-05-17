@@ -35,16 +35,15 @@ export function HomeNav() {
           <BBLogo variant="mark-ink" className="h-10 md:h-[52px] w-auto" />
         </Link>
         <div className="hidden md:block border-l border-ink/10 pl-[18px] font-mono text-[10px] tracking-[0.22em] uppercase leading-[1.7] text-ink">
-          BRITOS &amp; BERÓN<br/>
-          <span className="text-mute">Gestión y Desarrollo Digital</span>
+          BRITOS BERÓN<br/>
+          <span className="text-mute">Estudio digital · Webs, sistemas y crecimiento</span>
         </div>
       </div>
       <nav className="hidden lg:flex gap-[36px] font-mono text-[11px] tracking-[0.18em] uppercase">
         <Link href="/comercios" className="no-underline text-inherit hover:opacity-70 transition-opacity"><sup className="text-acc mr-1.5">01</sup>Comercios</Link>
         <Link href="/deportes" className="no-underline text-inherit hover:opacity-70 transition-opacity"><sup className="text-acc mr-1.5">02</sup>Deportes</Link>
         <Link href="/belleza" className="no-underline text-inherit hover:opacity-70 transition-opacity"><sup className="text-acc mr-1.5">03</sup>Belleza</Link>
-        <a href="#proceso" className="no-underline text-inherit hover:opacity-70 transition-opacity"><sup className="text-acc mr-1.5">04</sup>Proceso</a>
-        <a href="#manifiesto" className="no-underline text-inherit hover:opacity-70 transition-opacity"><sup className="text-acc mr-1.5">05</sup>Sobre</a>
+        <Link href="/turismo" className="no-underline text-inherit hover:opacity-70 transition-opacity"><sup className="text-acc mr-1.5">04</sup>Turismo</Link>
       </nav>
       <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" className="bg-ink text-bone px-4 md:px-[18px] py-2.5 md:py-[12px] font-mono text-[10px] md:text-[11px] tracking-[0.18em] uppercase inline-flex items-center gap-2.5 no-underline hover:opacity-90 transition-opacity">
         <span className="w-2 h-2 bg-acc rounded-full shadow-[0_0_0_3px_rgba(255,87,34,0.2)]"/>
@@ -132,10 +131,11 @@ export function HomeIndex() {
     { n:'01', title:'Comercio', kicker:'Vidrieras digitales', body:'Web profesional, sistema de turnos, bot de WhatsApp para comercios, profesionales y servicios.', tags:['WEB','TURNOS','BOT'], path: '/comercios' },
     { n:'02', title:'Deportes', kicker:'Torneos amateur de fútbol', body:'Gestión integral de torneos y ligas amateur, reservas de canchas, fixtures, tablas y app para jugadores. Para predios, organizadores y clubes.', tags:['TORNEOS','FIXTURES','APP'], path: '/deportes' },
     { n:'03', title:'Belleza',  kicker:'Salones que enamoran', body:'Portfolio digital, turnos 24/7, recordatorios automáticos. Para peluquerías, spa, manicura y barberías.', tags:['BOOK','24/7','SMS'], path: '/belleza' },
+    { n:'04', title:'Turismo',  kicker:'Alojamientos encontrables', body:'Web con galería, reservas online, Google Maps optimizado y reseñas automáticas. Para campings, hosterías, cabañas, posadas y refugios.', tags:['WEB','RESERVAS','MAPS'], path: '/turismo' },
   ];
   return (
     <section id="caminos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] relative">
-      <SectionHead nro="02" t="Índice" sub="Tres caminos. Una sola obsesión: que tu negocio venda más." />
+      <SectionHead nro="02" t="Índice" sub="Cuatro caminos. Una sola obsesión: que tu negocio venda más." />
       <div className="mt-12 md:mt-[60px] border-t-[1.5px] border-ink">
         {items.map((it,i) => (
           <Link href={it.path} key={it.n} className="no-underline text-inherit block group">
@@ -154,9 +154,9 @@ export function HomeIndex() {
                 </span>
               </p>
               {/* Image card */}
-              <div className={`aspect-square w-full lg:w-[280px] relative overflow-hidden ${i===0?'bg-ink':i===1?'bg-acc':'bg-bone2'}`}>
+              <div className={`aspect-square w-full lg:w-[280px] relative overflow-hidden ${i===0?'bg-ink':i===1?'bg-acc':i===2?'bg-bone2':'bg-acc2'}`}>
                 <svg viewBox="0 0 280 280" className="absolute inset-0 w-full h-full">
-                  <rect width="280" height="280" fill={i===0?'var(--color-ink)':i===1?'var(--color-acc)':'var(--color-bone2)'}/>
+                  <rect width="280" height="280" fill={i===0?'var(--color-ink)':i===1?'var(--color-acc)':i===2?'var(--color-bone2)':'var(--color-acc2)'}/>
                   <g className={`${i===2?'text-ink':'text-bone'} ${i===1?'opacity-100':'opacity-15'}`}>
                     {i===1 ? (
                       <g fill="none" stroke="currentColor" strokeWidth="1.4" className="opacity-70">
@@ -174,16 +174,35 @@ export function HomeIndex() {
                           <path d="M178,16 h 22 v 8 M178,32 h 22 v -8 M200,20 h 18 v 8 M222,16 h 22 v 8 M222,32 h 22 v -8 M244,20 h 18 v 8" />
                         </g>
                       </g>
+                    ) : i===3 ? (
+                      <g fill="none" stroke="currentColor" strokeWidth="1.4" className="opacity-70">
+                        {/* Montaña + carpa */}
+                        <path d="M30 220 L100 90 L160 170 L210 110 L260 220 Z" />
+                        <path d="M100 90 L120 130 L80 130 Z" fill="currentColor" opacity="0.5"/>
+                        <path d="M210 110 L225 145 L195 145 Z" fill="currentColor" opacity="0.5"/>
+                        {/* Pinos */}
+                        <path d="M40 230 L52 200 L64 230 Z" />
+                        <path d="M40 220 L52 195 L64 220 Z" />
+                        <line x1="52" y1="195" x2="52" y2="240" />
+                        {/* Carpa */}
+                        <path d="M140 220 L165 180 L190 220 Z" />
+                        <line x1="165" y1="180" x2="165" y2="220" />
+                        {/* Sol/luna */}
+                        <circle cx="220" cy="55" r="14" />
+                        <g className="opacity-55">
+                          <path d="M178 32 h 22 v 8 M178 48 h 22 v -8 M222 32 h 22 v 8" />
+                        </g>
+                      </g>
                     ) : (
                       <rect width="280" height="280" fill="url(#bb-dots)"/>
                     )}
                   </g>
                 </svg>
                 <div className={`absolute top-3 left-3 font-mono text-[9px] tracking-[0.2em] uppercase opacity-85 ${i===2?'text-ink':'text-bone'}`}>
-                  {i===0?'IMG / 02 · COMERCIO':i===1?'IMG / 03 · TORNEOS DE FÚTBOL':'IMG / 04 · BELLEZA'}
+                  {i===0?'IMG / 02 · COMERCIO':i===1?'IMG / 03 · TORNEOS DE FÚTBOL':i===2?'IMG / 04 · BELLEZA':'IMG / 05 · TURISMO'}
                 </div>
                 <div className={`absolute bottom-3 left-3 right-3 font-serif italic text-[24px] md:text-[30px] leading-none ${i===2?'text-ink':'text-bone'}`}>
-                  {i===0?'kiosko':i===1?'torneos':'salón'}
+                  {i===0?'kiosko':i===1?'torneos':i===2?'salón':'camping'}
                 </div>
                 <div className={`absolute top-3 right-3 font-mono text-[10px] opacity-80 ${i===2?'text-ink':'text-bone'}`}>
                   /{(i+1)*123}.jpg
@@ -408,14 +427,14 @@ export function HomeFooter() {
         <div className="sm:col-span-2 lg:col-span-1">
           <BBLogo variant="mark-bone" className="h-12 md:h-[70px] w-auto" />
           <p className="max-w-[340px] font-display text-[14px] md:text-[15px] leading-[1.5] text-bone/60 mt-4 md:mt-[18px]">
-            Gestión y Desarrollo Digital para negocios de Argentina. Webs, sistemas, torneos, ecommerce. Buenos Aires, AR.
+            Estudio digital. Webs, sistemas y crecimiento para negocios en Argentina. Buenos Aires, AR.
           </p>
         </div>
         {[
           ['Servicios',['Desarrollo web','Sistema de turnos','Ecommerce','Automatización','Apps móviles']],
-          ['Productos',['B&B Comercio','B&B Deportes','B&B Belleza','B&B Profesional ↗']],
+          ['Productos',['B&B Comercio','B&B Deportes','B&B Belleza','B&B Turismo','B&B Profesional ↗']],
           ['Estudio',['Quiénes somos','Cómo trabajamos','Contacto','Trabajá con nosotros']],
-          ['Contacto',['WhatsApp +54 9 11 6929 9378','hola@britosberon','@britosberon','Bs. As., AR']],
+          ['Contacto',['WhatsApp','hola@britosberon.com.ar','@britosberon','Bs. As., AR']],
         ].map(([t,items]) => (
           <div key={t as string}>
             <div className="font-mono text-[9px] md:text-[10px] tracking-[0.22em] uppercase text-bone/40 mb-3 md:mb-[16px]">{t}</div>
@@ -426,7 +445,7 @@ export function HomeFooter() {
         ))}
       </div>
       <div className="mt-6 md:mt-[24px] flex flex-col md:flex-row justify-between gap-4 font-mono text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-bone/40 items-center md:items-start text-center md:text-left">
-        <span>© {new Date().getFullYear()} Britos &amp; Berón · Todos los derechos reservados</span>
+        <span>© {new Date().getFullYear()} Britos Berón · Todos los derechos reservados</span>
         <span className="flex gap-3 justify-center">
           <span>Términos</span><span>·</span><span>Privacidad</span><span>·</span><span>Cookies</span>
         </span>
