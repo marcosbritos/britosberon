@@ -70,7 +70,6 @@ export function HomeHero() {
             negocios digitales.<br/>
             <span className="text-acc">Acompañamos<br/>
             el crecimiento.</span>
-            <sup className="text-[24px] md:text-[42px] text-mute font-serif italic align-super">*</sup>
           </h1>
           <div className="mt-8 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
             <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" className="bg-acc text-bone px-6 md:px-[28px] py-4 md:py-[20px] font-mono text-[11px] md:text-[12px] tracking-[0.2em] uppercase inline-flex items-center justify-center gap-3 no-underline relative hover:opacity-90 transition-opacity text-center">
@@ -108,7 +107,7 @@ export function HomeHero() {
 
       {/* Footnote */}
       <div className="mt-12 md:mt-[60px] pt-5 md:pt-[22px] border-t border-ink/10 flex flex-col md:flex-row md:justify-between items-start md:items-baseline gap-4 font-mono text-[10px] md:text-[11px] tracking-wider text-mute">
-        <div><span className="text-mute">*</span> Webs, sistemas de reservas, ecommerce y automatización para negocios en Argentina.</div>
+        <div>Webs, sistemas, ecommerce y plataformas. Pensados para crecer con tu negocio.</div>
         <div className="font-tabular-nums hidden md:block">pág. 01 / 09</div>
       </div>
     </section>
