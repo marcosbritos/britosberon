@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HomeNav } from "@/components/home/HomeComponents";
 import { HomeFooter } from "@/components/home/HomeComponents";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { LandingMarquee } from "@/components/landings/LandingMarquee";
 import { BellezaHero } from "@/components/landings/BellezaHero";
 import { BellezaFor } from "@/components/landings/BellezaFor";
 import { BellezaFeatures } from "@/components/landings/BellezaFeatures";
@@ -20,9 +21,19 @@ export const metadata: Metadata = {
   },
 };
 
+const bellezaMarqueeItems = [
+  "B&B BELLEZA",
+  "TUS CLIENTAS RESERVAN ONLINE 24/7",
+  "PELUQUERÍAS · SALONES · SPA · MANICURA · BARBERÍAS",
+  "WEB CON PORTFOLIO · GOOGLE MAPS · RECORDATORIOS",
+  "MENOS AUSENTES · MÁS INGRESOS · MEJOR REPUTACIÓN",
+  "DISEÑO BOUTIQUE QUE REFLEJA TU TALENTO",
+];
+
 export default function BellezaPage() {
   return (
     <main className="bg-bone min-h-screen">
+      <LandingMarquee items={bellezaMarqueeItems} />
       <HomeNav />
       <BellezaHero />
       <BellezaFor />

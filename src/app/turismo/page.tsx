@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HomeNav, HomeFooter } from "@/components/home/HomeComponents";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { LandingMarquee } from "@/components/landings/LandingMarquee";
 import { TurismoHero } from "@/components/landings/TurismoHero";
 import { TurismoFor } from "@/components/landings/TurismoFor";
 import { TurismoFeatures } from "@/components/landings/TurismoFeatures";
@@ -30,9 +31,19 @@ export const metadata: Metadata = {
   },
 };
 
+const turismoMarqueeItems = [
+  "B&B TURISMO",
+  "QUE EL VIAJERO TE ENCUENTRE PRIMERO",
+  "CAMPINGS · HOSTERÍAS · CABAÑAS · POSADAS · REFUGIOS",
+  "WEB CON GALERÍA · RESERVAS CON SEÑA · GOOGLE MAPS",
+  "RESEÑAS AUTOMÁTICAS · MULTI-IDIOMA",
+  "PATAGONIA · ARGENTINA · TODO EL PAÍS",
+];
+
 export default function TurismoPage() {
   return (
     <main className="bg-bone min-h-screen">
+      <LandingMarquee items={turismoMarqueeItems} />
       <HomeNav />
       <TurismoHero />
       <TurismoFor />

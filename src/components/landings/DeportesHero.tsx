@@ -5,7 +5,7 @@ import { whatsappLink, WHATSAPP_MESSAGES } from "@/lib/whatsapp";
 
 export function DeportesHero() {
   return (
-    <section className="relative px-5 md:px-[56px] pt-16 md:pt-[80px] pb-20 md:pb-[100px] border-b border-ink/10 bg-bone">
+    <section className="relative px-5 md:px-[56px] pt-10 md:pt-[80px] pb-14 md:pb-[100px] border-b border-ink/10 bg-bone">
       <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-6 md:mb-[32px]">
         <span className="inline-block w-6 md:w-[36px] h-px bg-ink" />
         <span>02 — Deportes</span>

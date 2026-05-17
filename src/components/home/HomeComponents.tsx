@@ -5,10 +5,12 @@ import { BB_C, BB_FONTS } from "@/lib/design";
 
 export function HomeMarquee() {
   const items = [
-    'GESTIÓN Y DESARROLLO DIGITAL', 'BUENOS AIRES', 'EST. MMXXV',
-    'WEBS · TURNOS · ECOMMERCE · IA',
-    'TORNEOS AMATEUR DE FÚTBOL', '4°36′S 58°22′W',
-    'WHATSAPP +54 9 11 6929 9378',
+    'ESTUDIO DIGITAL · WEBS · SISTEMAS · CRECIMIENTO',
+    'BUENOS AIRES · ARGENTINA',
+    'COMERCIO · DEPORTES · BELLEZA · TURISMO',
+    'WEBS A MEDIDA · TIENDAS ONLINE · TURNOS · BOT WHATSAPP',
+    'DISEÑO BOUTIQUE · SUSCRIPCIÓN MENSUAL ACCESIBLE',
+    'EST. MMXXV',
   ];
   const Row = ({rev}: {rev?: boolean}) => (
     <div className={`bb-mq-track ${rev?'rev':''}`}>
@@ -56,22 +58,22 @@ export function HomeNav() {
 
 export function HomeHero() {
   return (
-    <section className="relative px-5 md:px-[56px] pt-16 md:pt-[80px] pb-20 md:pb-[100px] border-b border-ink/10">
+    <section className="relative px-5 md:px-[56px] pt-10 md:pt-[80px] pb-14 md:pb-[100px] border-b border-ink/10">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12 md:gap-[64px] items-start">
         <div>
-          <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-6 md:mb-[32px]">
+          <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-4 md:mb-[32px]">
             <span className="inline-block w-6 md:w-[36px] h-px bg-ink"/>
             <span>01 — Manifiesto</span>
             <span className="flex-1 h-px bg-ink/10 mx-3"/>
             <span>↓ scroll</span>
           </div>
-          <h1 className="m-0 font-display font-semibold text-[64px] sm:text-[80px] md:text-[140px] lg:text-[188px] leading-[0.9] md:leading-[0.88] tracking-[-0.045em]">
+          <h1 className="m-0 font-display font-semibold text-[54px] sm:text-[80px] md:text-[130px] leading-[0.9] tracking-[-0.045em]">
             Construimos<br/>
             negocios digitales.<br/>
             <span className="text-acc">Acompañamos<br/>
             el crecimiento.</span>
           </h1>
-          <div className="mt-8 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
+          <div className="mt-6 md:mt-[42px] flex flex-col sm:flex-row gap-4 md:gap-5 items-stretch sm:items-center">
             <a href="https://wa.me/5491169299378" target="_blank" rel="noreferrer" className="bg-acc text-bone px-6 md:px-[28px] py-4 md:py-[20px] font-mono text-[11px] md:text-[12px] tracking-[0.2em] uppercase inline-flex items-center justify-center gap-3 no-underline relative hover:opacity-90 transition-opacity text-center">
               Hablemos por WhatsApp
               <span className="font-serif italic text-[20px] md:text-[24px] leading-none -translate-y-0.5">→</span>

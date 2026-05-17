@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HomeNav } from "@/components/home/HomeComponents";
 import { HomeFooter } from "@/components/home/HomeComponents";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { LandingMarquee } from "@/components/landings/LandingMarquee";
 import { DeportesHero } from "@/components/landings/DeportesHero";
 import { DeportesFor } from "@/components/landings/DeportesFor";
 import { DeportesProducts } from "@/components/landings/DeportesProducts";
@@ -20,9 +21,19 @@ export const metadata: Metadata = {
   },
 };
 
+const deportesMarqueeItems = [
+  "B&B DEPORTES",
+  "BASE DE DATOS DE EQUIPOS Y JUGADORES",
+  "FIXTURES AUTOMÁTICOS · TABLAS EN VIVO · GOLEADORES",
+  "CARGÁS PARTIDOS EN MINUTOS, NO EN HORAS",
+  "APP INSTALABLE PARA LOS PARTICIPANTES",
+  "PREDIOS · LIGAS AMATEUR · CLUBES",
+];
+
 export default function DeportesPage() {
   return (
     <main className="bg-bone min-h-screen">
+      <LandingMarquee items={deportesMarqueeItems} />
       <HomeNav />
       <DeportesHero />
       <DeportesFor />

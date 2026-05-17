@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HomeNav } from "@/components/home/HomeComponents";
 import { HomeFooter } from "@/components/home/HomeComponents";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { LandingMarquee } from "@/components/landings/LandingMarquee";
 import { ComerciosHero } from "@/components/landings/ComerciosHero";
 import { ComerciosFeatures } from "@/components/landings/ComerciosFeatures";
 import { ComerciosFor } from "@/components/landings/ComerciosFor";
@@ -19,9 +20,19 @@ export const metadata: Metadata = {
   },
 };
 
+const comerciosMarqueeItems = [
+  "B&B COMERCIO",
+  "WEB A MEDIDA · TIENDA ONLINE · TURNOS",
+  "DISEÑO BOUTIQUE QUE RESPETA TU MARCA",
+  "MISMA OPERATIVA QUE LAS GRANDES PLATAFORMAS",
+  "BOT DE WHATSAPP · GOOGLE MAPS · SEO",
+  "SUSCRIPCIÓN MENSUAL · SIN INVERSIÓN GRANDE",
+];
+
 export default function ComerciosPage() {
   return (
     <main className="bg-bone min-h-screen">
+      <LandingMarquee items={comerciosMarqueeItems} />
       <HomeNav />
       <ComerciosHero />
       <ComerciosFor />
