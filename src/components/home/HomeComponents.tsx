@@ -188,7 +188,7 @@ export function HomeHero() {
         <div>
           <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-4 md:mb-[32px]">
             <span className="inline-block w-6 md:w-[36px] h-px bg-ink" />
-            <span>01 — Manifiesto</span>
+            <span>01 — Inicio</span>
             <span className="flex-1 h-px bg-ink/10 mx-3" />
             <span>↓ scroll</span>
           </div>
@@ -204,7 +204,7 @@ export function HomeHero() {
               target="_blank"
               rel="noreferrer"
               aria-label="Hablemos por WhatsApp"
-              className="bg-acc text-bone px-6 md:px-[32px] py-4 md:py-[22px] min-h-[56px] font-mono text-[11px] md:text-[12px] tracking-[0.2em] uppercase inline-flex items-center justify-center gap-3 no-underline hover:bg-acc2 active:translate-y-[1px] transition-all text-center w-full sm:w-auto"
+              className="bg-ink text-bone px-6 md:px-[32px] py-4 md:py-[22px] min-h-[56px] font-mono text-[11px] md:text-[12px] tracking-[0.2em] uppercase inline-flex items-center justify-center gap-3 no-underline hover:bg-acc2 active:translate-y-[1px] transition-all text-center w-full sm:w-auto"
             >
               Hablemos por WhatsApp
               <span className="font-serif italic text-[20px] md:text-[24px] leading-none -translate-y-0.5" aria-hidden="true">→</span>
@@ -213,22 +213,19 @@ export function HomeHero() {
         </div>
 
         <div className="pt-8 md:pt-[60px] border-t lg:border-t-0 lg:border-l border-ink/10 lg:pl-[30px]">
-          <ValueBlock icon="⚡" label="Entrega rápida" value="7 a 14 días" />
-          <ValueBlock icon="💬" label="Soporte directo" value="WhatsApp · ≤ 24 hs" />
-          <ValueBlock icon="✦" label="Tecnología a medida" value="Diseño boutique" />
+          <ValueBlock label="Entrega rápida" value="7 a 14 días" />
+          <ValueBlock label="Soporte directo" value="WhatsApp · ≤ 24 hs" />
+          <ValueBlock label="Tecnología a medida" value="Diseño boutique" />
         </div>
       </div>
     </section>
   );
 }
-function ValueBlock({ icon, label, value }: { icon: string; label: string; value: string }) {
+function ValueBlock({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex items-center gap-4 py-5 border-b border-ink/10 last:border-b-0">
-      <span className="text-[24px] md:text-[28px] leading-none text-acc2 shrink-0 w-10 text-center" aria-hidden="true">{icon}</span>
-      <div className="min-w-0">
-        <div className="font-mono text-[9px] md:text-[10px] text-mute tracking-[0.18em] uppercase">{label}</div>
-        <div className="font-display text-[15px] md:text-[16px] font-medium leading-[1.3] mt-0.5 text-ink">{value}</div>
-      </div>
+    <div className="py-5 border-b border-ink/10 last:border-b-0">
+      <div className="font-mono text-[9px] md:text-[10px] text-mute tracking-[0.18em] uppercase">{label}</div>
+      <div className="font-display text-[15px] md:text-[16px] font-medium leading-[1.3] mt-1 text-ink">{value}</div>
     </div>
   );
 }
@@ -244,7 +241,7 @@ export function HomeProcess() {
   ];
   return (
     <section id="como-trabajamos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone2 border-y-[1.5px] border-ink">
-      <SectionHead nro="03" t="Proceso" sub="Sin barreras de entrada. Crecemos con vos. Sin letras chicas ni contratos abusivos." />
+      <SectionHead nro="02" t="Proceso" sub="Un proceso ágil, transparente y diseñado para que no tengas que preocuparte por nada." />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mt-12 md:mt-[80px]">
         {steps.map((st, i) => (
           <div key={st.n} className={`py-10 lg:p-[36px_32px_36px] relative ${i > 0 ? 'border-t lg:border-t-0 lg:border-l border-ink/20' : ''}`}>
@@ -274,7 +271,7 @@ export function HomeManifesto() {
         <rect width="100%" height="100%" fill="url(#bb-stripes)" />
       </svg>
       <div className="relative grid grid-cols-1 lg:grid-cols-[120px_1fr] gap-6 lg:gap-[48px]">
-        <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-acc">04 — Manifiesto</div>
+        <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-acc">03 — Manifiesto</div>
         <div>
           <p className="m-0 font-display font-medium leading-[1.04] tracking-tight max-w-[1100px] text-[clamp(40px,9vw,84px)]">
             Hacemos webs <span className="font-serif italic text-acc font-normal">que venden</span>,
@@ -319,7 +316,7 @@ export function HomeIncluye() {
   ];
   return (
     <section id="que-hacemos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px]">
-      <SectionHead nro="05" t="Incluye" sub="Lo que entra en la mensualidad. Sin asteriscos chiquitos." />
+      <SectionHead nro="04" t="Incluye" sub="Lo que entra en la mensualidad. Sin asteriscos chiquitos." />
 
       {/* Desktop table */}
       <table className="hidden lg:table mt-[60px] w-full border-collapse border-t-[1.5px] border-ink">
@@ -368,7 +365,7 @@ export function HomeFaq() {
   ];
   return (
     <section className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
-      <SectionHead nro="06" t="Dudas" sub="Las que nos hacen siempre. Respondidas sin vueltas." />
+      <SectionHead nro="05" t="Dudas" sub="Las que nos hacen siempre. Respondidas sin vueltas." />
       <div className="mt-12 md:mt-[60px] columns-1 lg:columns-2 gap-[48px]">
         {faqs.map(([q, a], i) => (
           <details key={i} className="break-inside-avoid mb-6 md:mb-[26px] border-t border-ink pt-4 md:pt-[18px] group">
@@ -399,7 +396,7 @@ export function HomeCTA() {
         <BBLogo variant="mark-ink" style={{ height: 780, width: 'auto', filter: 'opacity(.4)' }} />
       </div>
       <div className="relative max-w-[880px]">
-        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">07 — Empezá ahora</div>
+        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">06 — Empezá ahora</div>
         <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.04em] text-[clamp(56px,14vw,140px)]">
           ¿Listo<br />
           para <span className="font-serif italic text-ink font-normal">existir</span><br />
