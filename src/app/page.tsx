@@ -2,7 +2,6 @@ import {
   HomeMarquee, 
   HomeNav, 
   HomeHero, 
-  HomeIndex, 
   HomeProcess, 
   HomeManifesto, 
   HomeIncluye, 
@@ -19,7 +18,6 @@ export default function HomePage() {
       <HomeMarquee />
       <HomeNav />
       <HomeHero />
-      <HomeIndex />
       <HomeProcess />
       <HomeManifesto />
       <HomeIncluye />
