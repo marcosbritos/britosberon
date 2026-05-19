@@ -274,13 +274,15 @@ export function HomeManifesto() {
         <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-acc">03 — Manifiesto</div>
         <div>
           <p className="m-0 font-display font-medium leading-[1.04] tracking-tight max-w-[1100px] text-[clamp(40px,9vw,84px)]">
-            Hacemos webs <span className="font-serif italic text-acc font-normal">que venden</span>,
-            no que adornan.
+            Construimos <span className="font-serif italic text-acc font-normal">soluciones</span>,
+            no solo páginas.
           </p>
           <p className="mt-8 md:mt-[48px] mb-0 font-display text-[17px] md:text-[22px] leading-[1.55] max-w-[760px] text-bone/85">
-            Para nosotros el diseño no es decoración. Es la diferencia entre que tu cliente te encuentre
-            o se vaya con tu competencia. Trabajamos para comercios reales, no para slides de inversores.
-            Hablamos castellano. Respondemos rápido. <span className="text-acc">Y trabajamos como si tu negocio fuera el nuestro.</span>
+            Una interfaz estética es solo el principio. En B&amp;B nos enfocamos en que tu plataforma sea
+            una herramienta real de gestión y crecimiento para tu día a día. Simplificamos tus procesos
+            manuales, automatizamos tus reservas y profesionalizamos tu negocio bajo un modelo flexible
+            y sin contratos que te aten. Hacemos fácil lo que parece difícil
+            <span className="text-acc"> y trabajamos como si tu negocio fuera el nuestro.</span>
           </p>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 mt-12 md:mt-[80px] border-t border-bone/20">
