@@ -414,40 +414,6 @@ export function HomeIncluye() {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   HomeFaq
-───────────────────────────────────────────────────────────────────────────── */
-export function HomeFaq() {
-  const faqs = [
-    ['¿Cuánto cuesta una página web?', 'Trabajamos con suscripción mensual, no pago grande de entrada. Cada proyecto se cotiza según lo que necesites.'],
-    ['¿Puedo cancelar la suscripción cuando quiera?', 'Cada producto tiene un mínimo (3, 6 o 12 meses). Cumplido el plazo, cancelás con 30 días de aviso.'],
-    ['¿En cuánto tiempo está lista?', 'Entre 7 y 14 días desde la firma y la entrega de materiales.'],
-    ['¿El dominio queda a mi nombre?', 'Sí. Tu dominio queda a tu nombre/CUIT. Te lo llevás cuando quieras.'],
-    ['¿Y si necesito cambios después?', 'Cambios normales incluidos. Funcionalidades nuevas se cotizan aparte.'],
-    ['¿Trabajan en todo el país?', 'Sí, de forma remota. Presencial solo en GBA cuando hace falta.'],
-  ];
-  return (
-    <section className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
-      <SectionHead nro="06" t="Dudas" sub="Las que nos hacen siempre. Respondidas sin vueltas." />
-      <div className="mt-12 md:mt-[60px] columns-1 lg:columns-2 gap-[48px]">
-        {faqs.map(([q, a], i) => (
-          <details key={i} className="break-inside-avoid mb-6 md:mb-[26px] border-t border-ink pt-4 md:pt-[18px] group">
-            <summary className="cursor-pointer list-none flex items-baseline gap-3 md:gap-[14px] mb-2 md:mb-[10px]">
-              <span className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] text-acc2 shrink-0">Q.0{i + 1}</span>
-              <h4 className="m-0 font-display font-semibold text-[18px] md:text-[22px] tracking-[-0.015em] leading-[1.25] flex-1">{q}</h4>
-              <span className="font-mono text-[14px] text-mute group-open:rotate-45 transition-transform shrink-0" aria-hidden="true">+</span>
-            </summary>
-            <p className="m-0 ml-[36px] md:ml-[50px] font-display text-[14.5px] leading-[1.6] text-mute">
-              <span className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] text-ink mr-2">A.</span>
-              {a}
-            </p>
-          </details>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
    HomeCTA
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeCTA() {
@@ -458,7 +424,7 @@ export function HomeCTA() {
         <BBLogo variant="mark-ink" style={{ height: 780, width: 'auto', filter: 'opacity(.4)' }} />
       </div>
       <div className="relative max-w-[880px]">
-        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">07 — Empezá ahora</div>
+        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">06 — Empezá ahora</div>
         <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.04em] text-[clamp(56px,14vw,140px)]">
           ¿Listo<br />
           para <span className="font-serif italic text-ink font-normal">existir</span><br />
