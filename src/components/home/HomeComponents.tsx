@@ -261,6 +261,66 @@ export function HomeProcess() {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   HomeSoluciones — 3 tarjetas con las áreas de servicio
+───────────────────────────────────────────────────────────────────────────── */
+export function HomeSoluciones() {
+  const cards = [
+    {
+      n: '01',
+      t: 'Plataformas de gestión y ligas',
+      body: 'Nos especializamos en construir plataformas de alto impacto visual, con base de datos sólida para una gestión integral de torneos y ligas. Incorporamos fixtures y tablas automatizadas que optimizan todo el flujo de carga, para que volcar los datos de los partidos sea un proceso simple, rápido y libre de fricciones para el organizador.',
+    },
+    {
+      n: '02',
+      t: 'Webs profesionales a medida',
+      body: 'Diseño boutique, carga ultra rápida y optimizada para Google. Cada sitio se construye desde cero respetando tu identidad de marca. WhatsApp integrado para no perder ni una consulta. Ideales para comercios, profesionales y complejos turísticos.',
+    },
+    {
+      n: '03',
+      t: 'Reservas online 24/7',
+      body: 'Automatizá tus reservas y liberate de contestar mensajes a cualquier hora. Creamos plataformas integradas donde tus clientes puedan ver tus horarios disponibles y agendar su turno de forma autónoma las 24 horas.',
+    },
+  ];
+
+  return (
+    <section id="soluciones" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone border-b border-ink/10">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-[40px] mb-12 md:mb-[80px]">
+        <div>
+          <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-3 md:mb-[14px] text-mute">
+            03 — Sección
+          </div>
+          <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.045em] text-[clamp(40px,9vw,100px)]">
+            Soluciones<span className="font-serif italic text-acc2 font-normal">.</span>
+          </h2>
+        </div>
+        <p className="max-w-[420px] m-0 font-display text-[15px] md:text-[18px] leading-[1.5] text-mute">
+          Tres formas de impulsar tu negocio.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-[20px]">
+        {cards.map(({ n, t, body }) => (
+          <article
+            key={n}
+            className="bg-bone2 border border-ink/10 p-6 md:p-[28px] flex flex-col gap-4"
+          >
+            <div className="flex items-baseline gap-3">
+              <span className="font-mono text-[11px] tracking-[0.2em] text-acc2">{n}</span>
+              <h3 className="m-0 font-display font-medium text-[22px] md:text-[24px] leading-[1.15] tracking-[-0.01em] text-ink">
+                {t}
+              </h3>
+            </div>
+            <p className="m-0 font-display text-[14px] md:text-[15px] leading-[1.6] text-ink/80">
+              {body}
+            </p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    HomeManifesto
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeManifesto() {
@@ -271,7 +331,7 @@ export function HomeManifesto() {
         <rect width="100%" height="100%" fill="url(#bb-stripes)" />
       </svg>
       <div className="relative grid grid-cols-1 lg:grid-cols-[120px_1fr] gap-6 lg:gap-[48px]">
-        <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-acc">03 — Manifiesto</div>
+        <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-acc">04 — Manifiesto</div>
         <div>
           <p className="m-0 font-display font-medium leading-[1.04] tracking-tight max-w-[1100px] text-[clamp(40px,9vw,84px)]">
             Construimos <span className="font-serif italic text-acc font-normal">soluciones</span>,
@@ -318,7 +378,7 @@ export function HomeIncluye() {
   ];
   return (
     <section id="que-hacemos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px]">
-      <SectionHead nro="04" t="Incluye" sub="Lo que entra en la mensualidad. Sin asteriscos chiquitos." />
+      <SectionHead nro="05" t="Incluye" sub="Lo que entra en la mensualidad. Sin asteriscos chiquitos." />
 
       {/* Desktop table */}
       <table className="hidden lg:table mt-[60px] w-full border-collapse border-t-[1.5px] border-ink">
@@ -367,7 +427,7 @@ export function HomeFaq() {
   ];
   return (
     <section className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
-      <SectionHead nro="05" t="Dudas" sub="Las que nos hacen siempre. Respondidas sin vueltas." />
+      <SectionHead nro="06" t="Dudas" sub="Las que nos hacen siempre. Respondidas sin vueltas." />
       <div className="mt-12 md:mt-[60px] columns-1 lg:columns-2 gap-[48px]">
         {faqs.map(([q, a], i) => (
           <details key={i} className="break-inside-avoid mb-6 md:mb-[26px] border-t border-ink pt-4 md:pt-[18px] group">
@@ -398,7 +458,7 @@ export function HomeCTA() {
         <BBLogo variant="mark-ink" style={{ height: 780, width: 'auto', filter: 'opacity(.4)' }} />
       </div>
       <div className="relative max-w-[880px]">
-        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">06 — Empezá ahora</div>
+        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">07 — Empezá ahora</div>
         <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.04em] text-[clamp(56px,14vw,140px)]">
           ¿Listo<br />
           para <span className="font-serif italic text-ink font-normal">existir</span><br />

@@ -3,6 +3,7 @@ import {
   HomeNav, 
   HomeHero, 
   HomeProcess, 
+  HomeSoluciones,
   HomeManifesto, 
   HomeIncluye, 
   HomeFaq, 
@@ -19,6 +20,7 @@ export default function HomePage() {
       <HomeNav />
       <HomeHero />
       <HomeProcess />
+      <HomeSoluciones />
       <HomeManifesto />
       <HomeIncluye />
       <HomeFaq />
