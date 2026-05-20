@@ -505,18 +505,15 @@ export function HomeCTA() {
   return (
     <section id="contacto" className="bg-acc text-bone px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] relative overflow-hidden">
       <div className="bb-grain dark" />
-      <div className="absolute top-[-40px] right-[-120px] w-[780px] h-[780px] pointer-events-none opacity-95 mix-blend-multiply hidden md:block">
-        <BBLogo variant="mark-ink" style={{ height: 780, width: 'auto', filter: 'opacity(.4)' }} />
-      </div>
       <div className="relative max-w-[880px]">
-        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">07 — Empezá ahora</div>
-        <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.04em] text-[clamp(56px,14vw,140px)]">
-          ¿Listo<br />
-          para <span className="font-serif italic text-ink font-normal">existir</span><br />
-          en internet?
+        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">07 — Conectemos</div>
+        <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.04em] text-[clamp(48px,11vw,120px)]">
+          Tu futuro<br />
+          <span className="font-serif italic text-ink font-normal">digital</span><br />
+          empieza ahora.
         </h2>
-        <p className="my-8 md:my-[42px_0_36px] font-display text-[17px] md:text-[22px] leading-[1.45] max-w-[520px]">
-          30 minutos de charla. Sin compromiso. Te decimos si podemos ayudarte y, si no, te recomendamos a alguien que sí.
+        <p className="my-8 md:my-[42px_0_36px] font-display text-[17px] md:text-[22px] leading-[1.5] max-w-[620px]">
+          Agendá una charla de 30 minutos sin compromiso. Analizamos tu estructura actual y te decimos exactamente cómo podemos optimizarla con tecnología.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-[18px] items-stretch sm:items-center">
           <a
