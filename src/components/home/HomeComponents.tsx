@@ -368,44 +368,56 @@ export function HomeManifesto() {
    HomeIncluye
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeIncluye() {
-  const rows = [
-    ['01', 'Diseño a medida', 'Cada proyecto se diseña específicamente para tu marca. Nunca templates.'],
-    ['02', 'Hosting y dominio', 'Todo incluido. No pagás servidores aparte ni configurás nada.'],
-    ['03', 'SEO desde el día 1', 'Optimización técnica + Google Business Profile. Aparecés en tu zona.'],
-    ['04', 'Actualizaciones mensuales', 'Cambios de textos, fotos, precios y servicios. Sin costo extra.'],
-    ['05', 'Backup y seguridad', 'Copias periódicas. Protegido contra ataques y caídas.'],
-    ['06', 'Soporte por WhatsApp', 'Te atendemos nosotros. ≤ 24 horas. No call center.'],
+  const items = [
+    {
+      n: '01',
+      t: 'Ecosistema integrado',
+      body: 'Web, sistemas, automatizaciones y bases de datos trabajando como una sola plataforma. Sin parches ni herramientas dispersas.',
+    },
+    {
+      n: '02',
+      t: 'Soporte directo',
+      body: 'WhatsApp con respuesta en menos de 24 horas. Trato directo con quienes construyen tu plataforma. No te dejamos solo.',
+    },
+    {
+      n: '03',
+      t: 'Evolución continua',
+      body: 'Tu plataforma crece con vos. Sumamos funcionalidades, nuevas integraciones y mejoras a medida que tu negocio escala.',
+    },
   ];
+
   return (
     <section id="que-hacemos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px]">
-      <SectionHead nro="05" t="Incluye" sub="Lo que entra en la mensualidad. Sin asteriscos chiquitos." />
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-[40px] mb-10 md:mb-[60px]">
+        <div>
+          <div className="flex items-center gap-2.5 mb-3 md:mb-[14px]">
+            <span className="inline-block w-7 h-px bg-ink" />
+            <span className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-mute">05 — Sección</span>
+          </div>
+          <h2 className="m-0 font-display font-semibold leading-[0.95] tracking-[-0.035em] text-[clamp(36px,7.5vw,84px)] text-ink">
+            Tu departamento de tecnología<span className="text-acc2">.</span>
+          </h2>
+          <p className="mt-3 md:mt-[10px] m-0 font-serif italic text-[clamp(18px,3vw,32px)] leading-[1.1] text-acc2">
+            Sin los costos de tener uno.
+          </p>
+        </div>
+      </div>
 
-      {/* Desktop table */}
-      <table className="hidden lg:table mt-[60px] w-full border-collapse border-t-[1.5px] border-ink">
-        <tbody>
-          {rows.map(([n, t, d]) => (
-            <tr key={n} className="border-b border-ink/20">
-              <td className="py-[28px] pr-4 font-mono text-[13px] tracking-[0.15em] text-acc2 w-[80px] align-baseline">{n}</td>
-              <td className="py-[28px] pr-[24px] font-display font-medium text-[clamp(28px,3vw,36px)] tracking-tight w-[40%] align-baseline">{t}</td>
-              <td className="py-[28px] font-display text-[16px] leading-[1.55] text-ink align-baseline">{d}</td>
-              <td className="py-[28px] w-[80px] text-right align-baseline">
-                <span className="inline-flex w-8 h-8 border border-ink items-center justify-center text-acc2 font-serif italic text-[24px] leading-none -translate-y-0.5">✓</span>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      {/* Mobile */}
-      <div className="lg:hidden mt-12 border-t-[1.5px] border-ink flex flex-col">
-        {rows.map(([n, t, d]) => (
-          <div key={n} className="py-6 border-b border-ink/20 flex flex-col gap-2.5 relative">
-            <div className="flex items-center justify-between">
-              <span className="font-mono text-[11px] text-acc2">{n}</span>
-              <span className="inline-flex w-6 h-6 border border-ink items-center justify-center text-acc2 font-serif italic text-[18px] leading-none -translate-y-0.5">✓</span>
-            </div>
-            <h4 className="font-display font-medium text-[24px] m-0 leading-tight">{t}</h4>
-            <p className="font-display text-[15px] leading-[1.55] text-ink/85 m-0">{d}</p>
+      <div className="mt-8 md:mt-[40px] border-t-[1.5px] border-ink">
+        {items.map(({ n, t, body }) => (
+          <div
+            key={n}
+            className="grid grid-cols-[40px_1fr] md:grid-cols-[80px_240px_1fr] gap-x-4 md:gap-x-[40px] gap-y-2 py-7 md:py-[36px] border-b border-ink/20 items-baseline"
+          >
+            <span className="font-mono text-[11px] md:text-[13px] tracking-[0.2em] text-acc2 self-start md:self-baseline">
+              {n}
+            </span>
+            <h3 className="m-0 font-display font-medium tracking-[-0.01em] text-[clamp(22px,3.5vw,32px)] leading-[1.15] text-ink col-start-2 md:col-start-2">
+              {t}
+            </h3>
+            <p className="m-0 font-display text-[14.5px] md:text-[16px] leading-[1.6] text-ink col-start-2 md:col-start-3">
+              {body}
+            </p>
           </div>
         ))}
       </div>
