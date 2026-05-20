@@ -14,7 +14,7 @@ const features = [
 
 export function DeportesFeatures() {
   return (
-    <section id="features" className="px-5 md:px-[56px] py-20 md:py-[120px] bg-bone border-b-[1.5px] border-ink">
+    <section id="features" className="px-5 md:px-[56px] py-12 md:py-[120px] bg-bone border-b-[1.5px] border-ink">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-[40px] mb-12 md:mb-[80px]">
         <div>
           <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-3 md:mb-[14px] text-mute">

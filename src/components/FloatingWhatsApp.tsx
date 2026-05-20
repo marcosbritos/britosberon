@@ -8,11 +8,6 @@ interface FloatingWhatsAppProps {
   message?: string;
 }
 
-/**
- * v3 — Burbuja teal de marca (--acc #1FA3B5) con anillo bone + halo animado
- * en el mismo teal. Coherente con la paleta editorial; punto dorado arriba-der
- * como indicador de "online".
- */
 export function FloatingWhatsApp({ message }: FloatingWhatsAppProps) {
   const [visible, setVisible] = useState(false);
 
@@ -33,33 +28,24 @@ export function FloatingWhatsApp({ message }: FloatingWhatsAppProps) {
           href={whatsappLink(message)}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Contactar por WhatsApp"
-          initial={{ opacity: 0, scale: 0, y: 20 }}
+          aria-label="Hablemos por WhatsApp"
+          initial={{ opacity: 0, scale: 0.6, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0, y: 20 }}
+          exit={{ opacity: 0, scale: 0.6, y: 20 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          whileHover={{ scale: 1.06 }}
+          whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
-          className="fixed bottom-5 right-5 z-50 w-[60px] h-[60px] rounded-full bg-acc text-bone flex items-center justify-center hover:bg-acc-2 transition-colors"
-          style={{
-            boxShadow:
-              "0 14px 32px rgba(14,107,124,.45), 0 0 0 4px #F2EFE6, 0 0 0 5px rgba(10,31,42,.08)",
-          }}
+          className="fixed bottom-5 right-5 z-50 w-14 h-14 md:w-[60px] md:h-[60px] bg-acc rounded-full flex items-center justify-center shadow-[0_6px_20px_rgba(31,163,181,0.35)] hover:shadow-[0_8px_28px_rgba(31,163,181,0.5)] hover:bg-acc2 transition-colors"
         >
-          {/* WhatsApp glyph */}
-          <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true">
-            <path d="M20.5 3.5A11 11 0 0 0 3.7 18.2L2 22l3.9-1.7a11 11 0 0 0 14.6-16.8zM12 20.3a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.3 1 1-2.2-.2-.3a8.3 8.3 0 1 1 6 2.9zm4.7-6.1c-.3-.2-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.7-1.8c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3.7.3 1.2.4 1.6.5.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.7.2-1.2.1-1.3-.1-.2-.3-.3-.6-.4z" />
+          {/* Ícono oficial WhatsApp - SVG */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            className="w-7 h-7 md:w-8 md:h-8 fill-bone"
+            aria-hidden="true"
+          >
+            <path d="M16.003 0C7.166 0 .008 7.158.005 15.995a15.96 15.96 0 002.137 7.996L0 32l8.222-2.158a15.99 15.99 0 007.781 1.98c8.836 0 15.995-7.158 15.998-15.995A15.952 15.952 0 0027.319 4.69 15.954 15.954 0 0016.003 0zm0 29.282h-.003a13.27 13.27 0 01-6.764-1.853l-.485-.288-5.044 1.323 1.347-4.917-.316-.504a13.255 13.255 0 01-2.034-7.048c.002-7.337 5.973-13.307 13.301-13.307 3.553 0 6.892 1.385 9.402 3.9a13.215 13.215 0 013.893 9.41c-.004 7.34-5.973 13.306-13.297 13.306zm7.293-9.962c-.4-.2-2.365-1.168-2.732-1.301-.366-.134-.633-.2-.9.2-.267.4-1.034 1.3-1.267 1.567-.234.267-.467.3-.867.1-2.366-1.183-3.918-2.112-5.475-4.78-.413-.71.413-.66 1.183-2.197.13-.267.066-.5-.033-.7-.1-.2-.9-2.167-1.233-2.967-.323-.78-.654-.673-.9-.687-.234-.013-.5-.013-.767-.013-.267 0-.7.1-1.067.5-.367.4-1.4 1.367-1.4 3.333 0 1.967 1.434 3.867 1.633 4.133.2.267 2.821 4.307 6.834 6.04.954.412 1.7.658 2.28.843.957.304 1.83.261 2.518.158.768-.115 2.365-.967 2.7-1.9.333-.933.333-1.733.233-1.9-.1-.166-.367-.266-.766-.466z" />
           </svg>
-          {/* Punto "online" dorado en la esquina sup-der */}
-          <span
-            aria-hidden="true"
-            className="absolute top-[4px] right-[6px] w-[12px] h-[12px] rounded-full bg-gold ring-2 ring-bone"
-          />
-          {/* Halo teal animado (pulse) */}
-          <span
-            aria-hidden="true"
-            className="absolute inset-0 rounded-full bg-acc opacity-25 animate-ping"
-          />
         </motion.a>
       )}
     </AnimatePresence>

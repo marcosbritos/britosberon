@@ -22,7 +22,7 @@ export function LandingCTA({ title, subtitle, whatsappMessage, accentColor }: La
   const themeClass = theme[accentColor ?? "default"] || theme.default;
 
   return (
-    <section className={`${themeClass} px-5 md:px-[56px] py-20 md:py-[120px] relative overflow-hidden`}>
+    <section className={`${themeClass} px-5 md:px-[56px] py-12 md:py-[120px] relative overflow-hidden`}>
       <div className="bb-grain dark" />
       <div className="absolute top-[-40px] right-[-120px] w-[600px] h-[600px] pointer-events-none hidden md:block opacity-90">
         <BBLogo variant="mark-ink" style={{ height: 600, width: "auto", filter: "opacity(.25)" }} />

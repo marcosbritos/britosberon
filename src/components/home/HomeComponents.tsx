@@ -240,7 +240,7 @@ export function HomeProcess() {
     { n: '03', t: 'Lanzamos', s: '7 — 14 días', body: 'Online y funcionando. Después seguimos: actualizaciones, soporte y crecimiento mes a mes.' },
   ];
   return (
-    <section id="como-trabajamos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone2 border-y-[1.5px] border-ink">
+    <section id="como-trabajamos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] bg-bone2 border-y-[1.5px] border-ink">
       <SectionHead nro="02" t="Proceso" sub="Un proceso ágil, transparente y diseñado para que no tengas que preocuparte por nada." />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mt-12 md:mt-[80px]">
         {steps.map((st, i) => (
@@ -283,7 +283,7 @@ export function HomeSoluciones() {
   ];
 
   return (
-    <section id="soluciones" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone border-b border-ink/10">
+    <section id="soluciones" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] bg-bone border-b border-ink/10">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-[40px] mb-12 md:mb-[80px]">
         <div>
           <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-3 md:mb-[14px] text-mute">
@@ -325,7 +325,7 @@ export function HomeSoluciones() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeManifesto() {
   return (
-    <section id="manifiesto" className="bg-ink text-bone px-5 md:px-[56px] py-20 md:py-[140px] relative overflow-hidden">
+    <section id="manifiesto" className="bg-ink text-bone px-5 md:px-[56px] py-14 md:py-[140px] relative overflow-hidden">
       <div className="bb-grain dark" />
       <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full opacity-5 text-bone">
         <rect width="100%" height="100%" fill="url(#bb-stripes)" />
@@ -387,7 +387,7 @@ export function HomeIncluye() {
   ];
 
   return (
-    <section id="que-hacemos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px]">
+    <section id="que-hacemos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px]">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-[40px] mb-10 md:mb-[60px]">
         <div>
           <div className="flex items-center gap-2.5 mb-3 md:mb-[14px]">
@@ -430,7 +430,7 @@ export function HomeIncluye() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeQuienes() {
   return (
-    <section id="quienes-somos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
+    <section id="quienes-somos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
       <div className="flex items-center gap-2.5 mb-10 md:mb-[60px]">
         <span className="inline-block w-7 h-px bg-ink" />
         <span className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-mute">06 — Quiénes somos</span>
@@ -503,7 +503,7 @@ export function HomeQuienes() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeCTA() {
   return (
-    <section id="contacto" className="bg-acc text-bone px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] relative overflow-hidden">
+    <section id="contacto" className="bg-acc text-bone px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] relative overflow-hidden">
       <div className="bb-grain dark" />
       <div className="relative max-w-[880px]">
         <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">07 — Conectemos</div>
@@ -539,40 +539,52 @@ export function HomeCTA() {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   HomeFooter
+   HomeFooter — minimalista
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeFooter() {
   return (
-    <footer className="bg-ink text-bone px-5 md:px-[56px] py-12 md:py-[56px] pb-8 md:pb-[30px]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-[32px] border-b border-bone/20 pb-10 lg:pb-[36px]">
-        <div className="sm:col-span-2 lg:col-span-1">
-          <BBLogo variant="mark-bone" className="h-12 md:h-[70px] w-auto" />
-          <p className="max-w-[340px] font-display text-[14px] md:text-[15px] leading-[1.55] text-bone/65 mt-4 md:mt-[18px]">
-            Estudio digital. Webs, sistemas y crecimiento para negocios en Argentina. Buenos Aires, AR.
-          </p>
-        </div>
-        {[
-          ['Servicios', ['Desarrollo web', 'Sistema de turnos', 'Ecommerce', 'Automatización', 'Apps móviles']],
-          ['Productos', ['B&B Comercio', 'B&B Deportes', 'B&B Belleza', 'B&B Turismo', 'B&B Profesional ↗']],
-          ['Estudio', ['Quiénes somos', 'Cómo trabajamos', 'Contacto', 'Trabajá con nosotros']],
-          ['Contacto', ['WhatsApp', 'hola@britosberon.com.ar', '@britosberon', 'Bs. As., AR']],
-        ].map(([t, items]) => (
-          <div key={t as string}>
-            <div className="font-mono text-[9px] md:text-[10px] tracking-[0.22em] uppercase text-bone/45 mb-3 md:mb-[16px]">{t}</div>
-            <ul className="list-none p-0 m-0 flex flex-col gap-2 md:gap-1">
-              {(items as string[]).map((x) => (
-                <li key={x} className="font-display text-[13px] md:text-[14px] leading-[1.5] text-bone min-h-[32px] flex items-center">{x}</li>
-              ))}
-            </ul>
+    <footer className="bg-ink text-bone px-5 md:px-[56px] py-8 md:py-[40px]">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
+        {/* Logo + dominio */}
+        <div className="flex items-center gap-4">
+          <BBLogo variant="mark-bone" className="h-9 md:h-[40px] w-auto" />
+          <div className="font-mono text-[10px] md:text-[11px] tracking-[0.18em] uppercase text-bone/55">
+            britosberon.com.ar
           </div>
-        ))}
+        </div>
+
+        {/* Social icons */}
+        <div className="flex items-center gap-3">
+          <a
+            href="https://instagram.com/britosberon"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+            className="w-10 h-10 rounded-full border border-bone/20 flex items-center justify-center hover:bg-bone/10 hover:border-bone/40 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 fill-bone/80" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a
+            href="mailto:hola@britosberon.com.ar"
+            aria-label="Email"
+            className="w-10 h-10 rounded-full border border-bone/20 flex items-center justify-center hover:bg-bone/10 hover:border-bone/40 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 fill-bone/80" aria-hidden="true">
+              <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div className="mt-6 md:mt-[24px] flex flex-col md:flex-row justify-between gap-4 font-mono text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-bone/45 items-center md:items-start text-center md:text-left">
-        <span>© {new Date().getFullYear()} Britos Berón · Todos los derechos reservados</span>
+
+      {/* Legal line */}
+      <div className="mt-6 md:mt-[24px] pt-5 md:pt-[20px] border-t border-bone/15 flex flex-col md:flex-row justify-between gap-3 font-mono text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-bone/45 items-center md:items-start text-center md:text-left">
+        <span>© {new Date().getFullYear()} Britos Berón</span>
         <span className="flex gap-3 justify-center">
           <span>Términos</span><span>·</span><span>Privacidad</span><span>·</span><span>Cookies</span>
         </span>
-        <span>v1.1 · UX optimizado</span>
+        <span className="font-tabular-nums">v1.1 · {new Date().toISOString().split('T')[0].replace(/-/g, '.')}</span>
       </div>
     </footer>
   );
