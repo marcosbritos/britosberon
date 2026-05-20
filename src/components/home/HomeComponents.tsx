@@ -21,9 +21,9 @@ import { BBLogo } from "../Logo";
 
 function SectionHead({ nro, t, sub }: { nro: string; t: string; sub: string }) {
   return (
-    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-[40px] mb-12 md:mb-[80px]">
+    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 md:gap-[40px] mb-6 md:mb-[80px]">
       <div>
-        <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-3 md:mb-[14px] text-mute">
+        <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-2 md:mb-[14px] text-mute">
           {nro} — Sección
         </div>
         <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.045em] text-[clamp(40px,9vw,100px)]">
@@ -183,8 +183,8 @@ export function HomeNav() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeHero() {
   return (
-    <section className="relative px-5 md:px-[56px] pt-10 md:pt-[80px] pb-14 md:pb-[100px] border-b border-ink/10">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12 md:gap-[64px] items-start">
+    <section className="relative px-5 md:px-[56px] pt-10 md:pt-[80px] pb-8 md:pb-[100px] border-b border-ink/10">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 md:gap-[64px] items-start">
         <div>
           <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-4 md:mb-[32px]">
             <span className="inline-block w-6 md:w-[36px] h-px bg-ink" />
@@ -212,7 +212,7 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="pt-8 md:pt-[60px] border-t lg:border-t-0 lg:border-l border-ink/10 lg:pl-[30px]">
+        <div className="pt-5 md:pt-[60px] border-t lg:border-t-0 lg:border-l border-ink/10 lg:pl-[30px]">
           <ValueBlock label="Entrega rápida" value="7 a 14 días" />
           <ValueBlock label="Soporte directo" value="WhatsApp · ≤ 24 hs" />
           <ValueBlock label="Tecnología a medida" value="Diseño boutique" />
@@ -242,9 +242,9 @@ export function HomeProcess() {
   return (
     <section id="como-trabajamos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] bg-bone2 border-y-[1.5px] border-ink">
       <SectionHead nro="02" t="Proceso" sub="Un proceso ágil, transparente y diseñado para que no tengas que preocuparte por nada." />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mt-12 md:mt-[80px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mt-4 md:mt-[80px]">
         {steps.map((st, i) => (
-          <div key={st.n} className={`py-10 lg:p-[36px_32px_36px] relative ${i > 0 ? 'border-t lg:border-t-0 lg:border-l border-ink/20' : ''}`}>
+          <div key={st.n} className={`py-6 lg:p-[36px_32px_36px] relative ${i > 0 ? 'border-t lg:border-t-0 lg:border-l border-ink/20' : ''}`}>
             <div className="flex items-baseline justify-between">
               <div className="font-display font-bold leading-[0.85] tracking-[-0.06em] text-ink text-[clamp(96px,22vw,220px)]">{st.n}</div>
               <div className="font-mono text-[9px] md:text-[10px] tracking-[0.22em] uppercase text-acc2 [writing-mode:vertical-rl] rotate-180">{st.s}</div>
@@ -544,9 +544,9 @@ export function HomeCTA() {
 export function HomeFooter() {
   return (
     <footer className="bg-ink text-bone px-5 md:px-[56px] py-8 md:py-[40px]">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
+      <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between gap-5 md:gap-4 text-center md:text-left">
         {/* Logo + dominio */}
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
           <BBLogo variant="mark-bone" className="h-9 md:h-[40px] w-auto" />
           <div className="font-mono text-[10px] md:text-[11px] tracking-[0.18em] uppercase text-bone/55">
             britosberon.com.ar
@@ -554,7 +554,7 @@ export function HomeFooter() {
         </div>
 
         {/* Social icons */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 justify-center">
           <a
             href="https://instagram.com/britosberon"
             target="_blank"
@@ -568,12 +568,13 @@ export function HomeFooter() {
           </a>
           <a
             href="mailto:hola@britosberon.com.ar"
-            aria-label="Email"
-            className="w-10 h-10 rounded-full border border-bone/20 flex items-center justify-center hover:bg-bone/10 hover:border-bone/40 transition-colors"
+            aria-label="Email hola@britosberon.com.ar"
+            className="px-4 h-10 rounded-full border border-bone/20 inline-flex items-center justify-center gap-2 hover:bg-bone/10 hover:border-bone/40 transition-colors no-underline"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 fill-bone/80" aria-hidden="true">
               <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
             </svg>
+            <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-bone/80">hola@britosberon</span>
           </a>
         </div>
       </div>
