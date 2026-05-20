@@ -298,11 +298,11 @@ export function HomeSoluciones() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-[20px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-[20px]">
         {cards.map(({ n, t, body }) => (
           <article
             key={n}
-            className="bg-bone2 border border-ink/10 p-6 md:p-[28px] flex flex-col gap-4"
+            className="bg-bone2 border border-ink/10 p-5 md:p-[28px] flex flex-col gap-3 md:gap-4"
           >
             <div className="flex items-baseline gap-3">
               <span className="font-mono text-[11px] tracking-[0.2em] text-acc2">{n}</span>
@@ -347,7 +347,7 @@ export function HomeManifesto() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 mt-6 md:mt-[80px] border-t border-bone/20">
             {[
-              ['+24h', 'tiempo de respuesta'],
+              ['24h', 'tiempo de respuesta'],
               ['7-14', 'días al aire'],
               ['1:1', 'trato directo'],
               ['∞', 'revisiones incluidas'],
@@ -387,27 +387,27 @@ export function HomeIncluye() {
   ];
 
   return (
-    <section id="que-hacemos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px]">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-[40px] mb-10 md:mb-[60px]">
+    <section id="que-hacemos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-6 md:pb-[100px]">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 md:gap-[40px] mb-5 md:mb-[60px]">
         <div>
-          <div className="flex items-center gap-2.5 mb-3 md:mb-[14px]">
+          <div className="flex items-center gap-2.5 mb-2 md:mb-[14px]">
             <span className="inline-block w-7 h-px bg-ink" />
             <span className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-mute">05 — Sección</span>
           </div>
           <h2 className="m-0 font-display font-semibold leading-[0.95] tracking-[-0.035em] text-[clamp(36px,7.5vw,84px)] text-ink">
             Tu departamento de tecnología<span className="text-acc2">.</span>
           </h2>
-          <p className="mt-3 md:mt-[10px] m-0 font-serif italic text-[clamp(18px,3vw,32px)] leading-[1.1] text-acc2">
+          <p className="mt-2 md:mt-[10px] m-0 font-serif italic text-[clamp(18px,3vw,32px)] leading-[1.1] text-acc2">
             Sin los costos de tener uno.
           </p>
         </div>
       </div>
 
-      <div className="mt-8 md:mt-[40px] border-t-[1.5px] border-ink">
+      <div className="mt-4 md:mt-[40px] border-t-[1.5px] border-ink">
         {items.map(({ n, t, body }) => (
           <div
             key={n}
-            className="grid grid-cols-[40px_1fr] md:grid-cols-[80px_240px_1fr] gap-x-4 md:gap-x-[40px] gap-y-2 py-7 md:py-[36px] border-b border-ink/20 items-baseline"
+            className="grid grid-cols-[40px_1fr] md:grid-cols-[80px_240px_1fr] gap-x-4 md:gap-x-[40px] gap-y-1 md:gap-y-2 py-4 md:py-[36px] border-b border-ink/20 items-baseline"
           >
             <span className="font-mono text-[11px] md:text-[13px] tracking-[0.2em] text-acc2 self-start md:self-baseline">
               {n}
@@ -415,7 +415,7 @@ export function HomeIncluye() {
             <h3 className="m-0 font-display font-medium tracking-[-0.01em] text-[clamp(22px,3.5vw,32px)] leading-[1.15] text-ink col-start-2 md:col-start-2">
               {t}
             </h3>
-            <p className="m-0 font-display text-[14.5px] md:text-[16px] leading-[1.6] text-ink col-start-2 md:col-start-3">
+            <p className="m-0 font-display text-[14.5px] md:text-[16px] leading-[1.55] text-ink col-start-2 md:col-start-3">
               {body}
             </p>
           </div>
@@ -430,26 +430,26 @@ export function HomeIncluye() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeQuienes() {
   return (
-    <section id="quienes-somos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
-      <div className="flex items-center gap-2.5 mb-10 md:mb-[60px]">
+    <section id="quienes-somos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-6 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
+      <div className="flex items-center gap-2.5 mb-5 md:mb-[60px]">
         <span className="inline-block w-7 h-px bg-ink" />
         <span className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-mute">06 — Quiénes somos</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-10 md:gap-[80px] items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-5 md:gap-[80px] items-start">
         {/* Avatares M & B */}
         <div className="flex items-center" aria-label="Marcos y Belén">
           <div
-            className="relative w-[96px] h-[96px] md:w-[140px] md:h-[140px] rounded-full flex items-center justify-center shadow-[0_8px_28px_rgba(31,163,181,0.25)]"
+            className="relative w-[80px] h-[80px] md:w-[140px] md:h-[140px] rounded-full flex items-center justify-center shadow-[0_8px_28px_rgba(31,163,181,0.25)]"
             style={{ background: 'linear-gradient(135deg, #1FA3B5, #0E6B7C)' }}
           >
-            <span className="font-serif font-semibold text-bone text-[44px] md:text-[64px] leading-none -tracking-[0.04em]" aria-hidden="true">M</span>
+            <span className="font-serif font-semibold text-bone text-[36px] md:text-[64px] leading-none -tracking-[0.04em]" aria-hidden="true">M</span>
           </div>
           <div
-            className="relative w-[96px] h-[96px] md:w-[140px] md:h-[140px] rounded-full flex items-center justify-center shadow-[0_8px_28px_rgba(201,169,97,0.25)] -ml-7 md:-ml-10 border-[4px] border-bone2"
+            className="relative w-[80px] h-[80px] md:w-[140px] md:h-[140px] rounded-full flex items-center justify-center shadow-[0_8px_28px_rgba(201,169,97,0.25)] -ml-6 md:-ml-10 border-[4px] border-bone2"
             style={{ background: 'linear-gradient(135deg, #C9A961, #8a6f31)' }}
           >
-            <span className="font-serif font-semibold text-ink text-[44px] md:text-[64px] leading-none -tracking-[0.04em]" aria-hidden="true">B</span>
+            <span className="font-serif font-semibold text-ink text-[36px] md:text-[64px] leading-none -tracking-[0.04em]" aria-hidden="true">B</span>
           </div>
         </div>
 
@@ -458,21 +458,21 @@ export function HomeQuienes() {
           <h2 className="m-0 font-display font-semibold leading-[0.96] tracking-[-0.035em] text-[clamp(36px,7vw,72px)] text-ink">
             Marcos &amp; Belén<span className="text-acc2">.</span>
           </h2>
-          <p className="mt-2 md:mt-[10px] m-0 font-serif italic text-[clamp(18px,2.5vw,28px)] leading-[1.15] text-acc2">
+          <p className="mt-1.5 md:mt-[10px] m-0 font-serif italic text-[clamp(18px,2.5vw,28px)] leading-[1.15] text-acc2">
             Un estudio. Dos personas.
           </p>
 
-          <div className="mt-7 md:mt-[36px] flex flex-col gap-4 md:gap-5 max-w-[640px]">
-            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.65] text-ink">
+          <div className="mt-4 md:mt-[36px] flex flex-col gap-3 md:gap-5 max-w-[640px]">
+            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.55] text-ink">
               Nos especializamos en construir presencia digital para negocios que quieren crecer sin perder identidad.
             </p>
-            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.65] text-ink">
+            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.55] text-ink">
               Trabajamos juntos como pareja desde 2025, con la convicción de que la tecnología tiene que servir al negocio, no al revés.
             </p>
-            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.65] text-ink">
+            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.55] text-ink">
               Nos apasiona la tecnología cuando transforma lo cotidiano: cómo trabajás, cómo vendés, cuánto crece tu negocio.
             </p>
-            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.65] text-ink">
+            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.55] text-ink">
               No somos una agencia gigante con respuestas automáticas: somos un estudio boutique de Buenos Aires y trabajamos como <span className="font-serif italic text-acc2">tus socios tecnológicos</span>.
             </p>
           </div>
@@ -480,17 +480,17 @@ export function HomeQuienes() {
       </div>
 
       {/* Datos */}
-      <div className="mt-12 md:mt-[80px] border-t-[1.5px] border-ink grid grid-cols-3 gap-4 pt-5 md:pt-[24px]">
+      <div className="mt-6 md:mt-[80px] border-t-[1.5px] border-ink grid grid-cols-3 gap-4 pt-4 md:pt-[24px]">
         <div>
-          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1.5 md:mb-[8px]">Estudio</div>
+          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1 md:mb-[8px]">Estudio</div>
           <div className="font-display font-medium text-[15px] md:text-[17px] text-ink">Boutique</div>
         </div>
         <div>
-          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1.5 md:mb-[8px]">Ubicación</div>
+          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1 md:mb-[8px]">Ubicación</div>
           <div className="font-display font-medium text-[15px] md:text-[17px] text-ink">Buenos Aires</div>
         </div>
         <div>
-          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1.5 md:mb-[8px]">Desde</div>
+          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1 md:mb-[8px]">Desde</div>
           <div className="font-display font-medium text-[15px] md:text-[17px] text-ink">2025</div>
         </div>
       </div>
