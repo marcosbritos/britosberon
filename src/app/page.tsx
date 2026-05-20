@@ -6,6 +6,7 @@ import {
   HomeSoluciones,
   HomeManifesto, 
   HomeIncluye, 
+  HomeQuienes,
   HomeCTA, 
   HomeFooter 
 } from "@/components/home/HomeComponents";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <HomeSoluciones />
       <HomeManifesto />
       <HomeIncluye />
+      <HomeQuienes />
       <HomeCTA />
       <HomeFooter />
       <FloatingWhatsApp message={WHATSAPP_MESSAGES.generic} />

@@ -426,6 +426,79 @@ export function HomeIncluye() {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   HomeQuienes — 06 · Quiénes Somos (Marcos & Belén)
+───────────────────────────────────────────────────────────────────────────── */
+export function HomeQuienes() {
+  return (
+    <section id="quienes-somos" className="px-5 md:px-[56px] py-20 md:py-[120px] pb-16 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
+      <div className="flex items-center gap-2.5 mb-10 md:mb-[60px]">
+        <span className="inline-block w-7 h-px bg-ink" />
+        <span className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-mute">06 — Quiénes somos</span>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-10 md:gap-[80px] items-start">
+        {/* Avatares M & B */}
+        <div className="flex items-center" aria-label="Marcos y Belén">
+          <div
+            className="relative w-[96px] h-[96px] md:w-[140px] md:h-[140px] rounded-full flex items-center justify-center shadow-[0_8px_28px_rgba(31,163,181,0.25)]"
+            style={{ background: 'linear-gradient(135deg, #1FA3B5, #0E6B7C)' }}
+          >
+            <span className="font-serif font-semibold text-bone text-[44px] md:text-[64px] leading-none -tracking-[0.04em]" aria-hidden="true">M</span>
+          </div>
+          <div
+            className="relative w-[96px] h-[96px] md:w-[140px] md:h-[140px] rounded-full flex items-center justify-center shadow-[0_8px_28px_rgba(201,169,97,0.25)] -ml-7 md:-ml-10 border-[4px] border-bone2"
+            style={{ background: 'linear-gradient(135deg, #C9A961, #8a6f31)' }}
+          >
+            <span className="font-serif font-semibold text-ink text-[44px] md:text-[64px] leading-none -tracking-[0.04em]" aria-hidden="true">B</span>
+          </div>
+        </div>
+
+        {/* Texto */}
+        <div>
+          <h2 className="m-0 font-display font-semibold leading-[0.96] tracking-[-0.035em] text-[clamp(36px,7vw,72px)] text-ink">
+            Marcos &amp; Belén<span className="text-acc2">.</span>
+          </h2>
+          <p className="mt-2 md:mt-[10px] m-0 font-serif italic text-[clamp(18px,2.5vw,28px)] leading-[1.15] text-acc2">
+            Un estudio. Dos personas.
+          </p>
+
+          <div className="mt-7 md:mt-[36px] flex flex-col gap-4 md:gap-5 max-w-[640px]">
+            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.65] text-ink">
+              Nos especializamos en construir presencia digital para negocios que quieren crecer sin perder identidad.
+            </p>
+            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.65] text-ink">
+              Trabajamos juntos como pareja desde 2025, con la convicción de que la tecnología tiene que servir al negocio, no al revés.
+            </p>
+            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.65] text-ink">
+              Nos apasiona la tecnología cuando transforma lo cotidiano: cómo trabajás, cómo vendés, cuánto crece tu negocio.
+            </p>
+            <p className="m-0 font-display text-[15.5px] md:text-[17px] leading-[1.65] text-ink">
+              No somos una agencia gigante con respuestas automáticas: somos un estudio boutique de Buenos Aires y trabajamos como <span className="font-serif italic text-acc2">tus socios tecnológicos</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Datos */}
+      <div className="mt-12 md:mt-[80px] border-t-[1.5px] border-ink grid grid-cols-3 gap-4 pt-5 md:pt-[24px]">
+        <div>
+          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1.5 md:mb-[8px]">Estudio</div>
+          <div className="font-display font-medium text-[15px] md:text-[17px] text-ink">Boutique</div>
+        </div>
+        <div>
+          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1.5 md:mb-[8px]">Ubicación</div>
+          <div className="font-display font-medium text-[15px] md:text-[17px] text-ink">Buenos Aires</div>
+        </div>
+        <div>
+          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1.5 md:mb-[8px]">Desde</div>
+          <div className="font-display font-medium text-[15px] md:text-[17px] text-ink">2025</div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    HomeCTA
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeCTA() {
@@ -436,7 +509,7 @@ export function HomeCTA() {
         <BBLogo variant="mark-ink" style={{ height: 780, width: 'auto', filter: 'opacity(.4)' }} />
       </div>
       <div className="relative max-w-[880px]">
-        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">06 — Empezá ahora</div>
+        <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">07 — Empezá ahora</div>
         <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.04em] text-[clamp(56px,14vw,140px)]">
           ¿Listo<br />
           para <span className="font-serif italic text-ink font-normal">existir</span><br />
