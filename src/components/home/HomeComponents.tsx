@@ -89,9 +89,10 @@ export function HomeNav() {
               <div className="font-mono text-[11px] font-semibold tracking-[0.18em] md:tracking-[0.22em] uppercase leading-[1.2] text-ink">
                 Britos Berón
               </div>
-              {/* Tagline: envuelve en mobile (max-width controla el wrap a 2 líneas naturalmente) */}
-              <div className="font-mono text-[9.5px] md:text-[10px] tracking-[0.08em] md:tracking-[0.18em] uppercase leading-[1.35] md:leading-[1.5] text-mute mt-0.5 md:mt-1 max-w-[24ch] md:max-w-none whitespace-normal">
-                Estudio digital · Webs, sistemas y crecimiento
+              {/* Tagline: corto en mobile (igual que el drawer), completo en desktop */}
+              <div className="font-mono text-[9.5px] md:text-[10px] tracking-[0.08em] md:tracking-[0.18em] uppercase leading-[1.35] md:leading-[1.5] text-mute mt-0.5 md:mt-1">
+                <span className="md:hidden">Estudio digital</span>
+                <span className="hidden md:inline">Estudio digital · Webs, sistemas y crecimiento</span>
               </div>
             </div>
           </div>
