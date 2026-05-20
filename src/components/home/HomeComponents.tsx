@@ -183,7 +183,7 @@ export function HomeNav() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeHero() {
   return (
-    <section className="relative px-5 md:px-[56px] pt-10 md:pt-[80px] pb-8 md:pb-[100px] border-b border-ink/10">
+    <section className="relative px-5 md:px-[56px] pt-10 md:pt-[80px] pb-6 md:pb-[100px] border-b border-ink/10">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 md:gap-[64px] items-start">
         <div>
           <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-4 md:mb-[32px]">
@@ -223,9 +223,9 @@ export function HomeHero() {
 }
 function ValueBlock({ label, value }: { label: string; value: string }) {
   return (
-    <div className="py-5 border-b border-ink/10 last:border-b-0">
+    <div className="py-3 md:py-5 border-b border-ink/10 last:border-b-0">
       <div className="font-mono text-[9px] md:text-[10px] text-mute tracking-[0.18em] uppercase">{label}</div>
-      <div className="font-display text-[15px] md:text-[16px] font-medium leading-[1.3] mt-1 text-ink">{value}</div>
+      <div className="font-display text-[15px] md:text-[16px] font-medium leading-[1.3] mt-0.5 md:mt-1 text-ink">{value}</div>
     </div>
   );
 }
@@ -240,16 +240,16 @@ export function HomeProcess() {
     { n: '03', t: 'Lanzamos', s: '7 — 14 días', body: 'Online y funcionando. Después seguimos: actualizaciones, soporte y crecimiento mes a mes.' },
   ];
   return (
-    <section id="como-trabajamos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] bg-bone2 border-y-[1.5px] border-ink">
+    <section id="como-trabajamos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-6 md:pb-[100px] bg-bone2 border-y-[1.5px] border-ink">
       <SectionHead nro="02" t="Proceso" sub="Un proceso ágil, transparente y diseñado para que no tengas que preocuparte por nada." />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mt-4 md:mt-[80px]">
         {steps.map((st, i) => (
-          <div key={st.n} className={`py-6 lg:p-[36px_32px_36px] relative ${i > 0 ? 'border-t lg:border-t-0 lg:border-l border-ink/20' : ''}`}>
+          <div key={st.n} className={`py-4 lg:p-[36px_32px_36px] relative ${i > 0 ? 'border-t lg:border-t-0 lg:border-l border-ink/20' : ''}`}>
             <div className="flex items-baseline justify-between">
               <div className="font-display font-bold leading-[0.85] tracking-[-0.06em] text-ink text-[clamp(96px,22vw,220px)]">{st.n}</div>
               <div className="font-mono text-[9px] md:text-[10px] tracking-[0.22em] uppercase text-acc2 [writing-mode:vertical-rl] rotate-180">{st.s}</div>
             </div>
-            <h3 className="my-6 md:my-[24px_0_12px] font-serif italic font-normal leading-none text-acc2 text-[clamp(36px,8vw,54px)]">
+            <h3 className="my-3 md:my-[24px_0_12px] font-serif italic font-normal leading-none text-acc2 text-[clamp(36px,8vw,54px)]">
               {st.t}
             </h3>
             <p className="m-0 font-display text-[15px] leading-[1.6] text-ink max-w-[340px]">{st.body}</p>
@@ -283,10 +283,10 @@ export function HomeSoluciones() {
   ];
 
   return (
-    <section id="soluciones" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] bg-bone border-b border-ink/10">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-[40px] mb-12 md:mb-[80px]">
+    <section id="soluciones" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-6 md:pb-[100px] bg-bone border-b border-ink/10">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 md:gap-[40px] mb-6 md:mb-[80px]">
         <div>
-          <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-3 md:mb-[14px] text-mute">
+          <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-2 md:mb-[14px] text-mute">
             03 — Sección
           </div>
           <h2 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.045em] text-[clamp(40px,9vw,100px)]">
@@ -325,7 +325,7 @@ export function HomeSoluciones() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeManifesto() {
   return (
-    <section id="manifiesto" className="bg-ink text-bone px-5 md:px-[56px] py-14 md:py-[140px] relative overflow-hidden">
+    <section id="manifiesto" className="bg-ink text-bone px-5 md:px-[56px] pt-14 pb-10 md:py-[140px] relative overflow-hidden">
       <div className="bb-grain dark" />
       <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full opacity-5 text-bone">
         <rect width="100%" height="100%" fill="url(#bb-stripes)" />
@@ -345,14 +345,14 @@ export function HomeManifesto() {
             <span className="text-acc"> y trabajamos como si tu negocio fuera el nuestro.</span>
           </p>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 mt-12 md:mt-[80px] border-t border-bone/20">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 mt-6 md:mt-[80px] border-t border-bone/20">
             {[
               ['+24h', 'tiempo de respuesta'],
               ['7-14', 'días al aire'],
               ['1:1', 'trato directo'],
               ['∞', 'revisiones incluidas'],
             ].map(([n, l], i) => (
-              <div key={i} className={`p-6 lg:p-[28px_18px_0] border-b lg:border-b-0 border-bone/20 ${i % 2 !== 0 ? 'border-l' : ''} ${i > 1 ? 'lg:border-l' : ''} ${i === 1 ? 'lg:border-l' : ''}`}>
+              <div key={i} className={`p-4 lg:p-[28px_18px_0] border-b lg:border-b-0 border-bone/20 ${i % 2 !== 0 ? 'border-l' : ''} ${i > 1 ? 'lg:border-l' : ''} ${i === 1 ? 'lg:border-l' : ''}`}>
                 <div className="font-display font-bold leading-[0.9] tracking-[-0.04em] text-[clamp(40px,10vw,84px)]">{n}</div>
                 <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-bone/55 mt-2 md:mt-[10px]">{l}</div>
               </div>
