@@ -430,7 +430,7 @@ export function HomeIncluye() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeQuienes() {
   return (
-    <section id="quienes-somos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-6 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
+    <section id="quienes-somos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
       <div className="flex items-center gap-2.5 mb-5 md:mb-[60px]">
         <span className="inline-block w-7 h-px bg-ink" />
         <span className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-mute">06 — Quiénes somos</span>
@@ -476,22 +476,6 @@ export function HomeQuienes() {
               No somos una agencia gigante con respuestas automáticas: somos un estudio boutique de Buenos Aires y trabajamos como <span className="font-serif italic text-acc2">tus socios tecnológicos</span>.
             </p>
           </div>
-        </div>
-      </div>
-
-      {/* Datos */}
-      <div className="mt-6 md:mt-[80px] border-t-[1.5px] border-ink grid grid-cols-3 gap-4 pt-4 md:pt-[24px]">
-        <div>
-          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1 md:mb-[8px]">Estudio</div>
-          <div className="font-display font-medium text-[15px] md:text-[17px] text-ink">Boutique</div>
-        </div>
-        <div>
-          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1 md:mb-[8px]">Ubicación</div>
-          <div className="font-display font-medium text-[15px] md:text-[17px] text-ink">Buenos Aires</div>
-        </div>
-        <div>
-          <div className="font-mono text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-mute mb-1 md:mb-[8px]">Desde</div>
-          <div className="font-display font-medium text-[15px] md:text-[17px] text-ink">2025</div>
         </div>
       </div>
     </section>
