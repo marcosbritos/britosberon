@@ -133,18 +133,33 @@ export function HomeNav() {
         className={`fixed inset-0 z-50 bg-bone flex flex-col transition-transform duration-300 ease-out ${open ? 'translate-y-0' : '-translate-y-full'}`}
         aria-hidden={!open}
       >
+        {/* Drawer header */}
         <div className="flex items-center justify-between px-5 py-3.5 border-b border-ink/10">
-          <BBLogo variant="mark-ink" className="h-9 w-auto" />
+          <div className="flex items-center gap-3 min-w-0">
+            <BBLogo variant="mark-ink" className="h-9 w-auto shrink-0" />
+            <div className="border-l border-ink/10 pl-3 font-mono text-[8px] tracking-[0.18em] uppercase leading-[1.5] text-ink min-w-0">
+              BRITOS BERÓN<br />
+              <span className="text-mute">Estudio digital</span>
+            </div>
+          </div>
           <button
             type="button"
             onClick={() => setOpen(false)}
             aria-label="Cerrar menú"
-            className="inline-flex items-center justify-center w-11 h-11 border border-ink/20 text-ink hover:bg-ink/5 transition-colors"
+            className="inline-flex items-center justify-center w-11 h-11 border border-ink/20 text-ink hover:bg-ink/5 transition-colors shrink-0"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-[18px] h-[18px]"><path d="M6 6l12 12M18 6L6 18" /></svg>
           </button>
         </div>
-        <nav className="flex-1 flex flex-col px-5 pt-8" aria-label="Menú móvil">
+
+        {/* Section label */}
+        <div className="px-5 pt-7 pb-2 flex items-center gap-2.5">
+          <span className="inline-block w-6 h-px bg-ink" />
+          <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-mute">Navegación</span>
+        </div>
+
+        {/* Menu items */}
+        <nav className="flex-1 flex flex-col px-5" aria-label="Menú móvil">
           {[
             ['01', '/', 'Inicio'],
             ['02', '/#que-hacemos', 'Qué Hacemos'],
@@ -155,23 +170,42 @@ export function HomeNav() {
               key={n}
               href={href}
               onClick={() => setOpen(false)}
-              className="flex items-baseline gap-4 py-5 border-b border-ink/10 font-display font-semibold text-[36px] tracking-[-0.02em] text-ink no-underline"
+              className="group flex items-baseline justify-between gap-4 py-4 border-b border-ink/10 no-underline"
             >
-              <sup className="text-acc2 font-mono text-[12px] tracking-[0.15em] font-medium">{n}</sup>
-              <span>{label}</span>
+              <div className="flex items-baseline gap-4">
+                <span className="font-mono text-[10px] tracking-[0.2em] text-acc2 font-medium">{n}</span>
+                <span className="font-display font-medium text-[22px] tracking-[-0.01em] text-ink group-hover:text-acc2 transition-colors">
+                  {label}
+                </span>
+              </div>
+              <span className="font-serif italic text-[18px] text-mute group-hover:text-acc2 group-hover:translate-x-1 transition-all" aria-hidden="true">→</span>
             </Link>
           ))}
         </nav>
-        <div className="p-5 border-t border-ink/10">
+
+        {/* CTA footer */}
+        <div className="px-5 pt-6 pb-6 border-t border-ink/10 bg-bone2">
+          <div className="font-mono text-[9px] tracking-[0.22em] uppercase text-mute mb-3">
+            ¿Empezamos?
+          </div>
           <a
             href="https://wa.me/5491169299378"
             target="_blank"
             rel="noreferrer"
-            className="w-full bg-ink text-bone min-h-[56px] px-6 py-4 font-mono text-[12px] tracking-[0.2em] uppercase inline-flex items-center justify-center gap-3 no-underline hover:bg-acc2 transition-colors"
+            onClick={() => setOpen(false)}
+            className="w-full bg-ink text-bone min-h-[52px] px-5 py-3.5 font-mono text-[11px] tracking-[0.2em] uppercase inline-flex items-center justify-center gap-3 no-underline hover:bg-acc2 transition-colors"
           >
             Hablemos por WhatsApp
-            <span className="font-serif italic text-[22px] leading-none -translate-y-0.5">→</span>
+            <span className="font-serif italic text-[20px] leading-none -translate-y-0.5">→</span>
           </a>
+          <div className="mt-3 text-center">
+            <a
+              href="mailto:hola@britosberon.com.ar"
+              className="font-mono text-[10px] tracking-[0.18em] uppercase text-mute hover:text-ink transition-colors no-underline"
+            >
+              hola@britosberon.com.ar
+            </a>
+          </div>
         </div>
       </div>
     </>
