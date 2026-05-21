@@ -7,20 +7,24 @@ interface BBLogoProps {
   style?: React.CSSProperties;
 }
 
-export function BBLogo({ variant = 'mark-ink', height = 60, className = "", style = {} }: BBLogoProps) {
-  const src = {
-    'full':       '/assets/logo-circle.png',
-    'circle':     '/assets/logo-circle.png',
-    'mark':       '/assets/logo-mark.png',
-    'mark-ink':   '/assets/logo-mark-ink.png',
-    'mark-bone':  '/assets/logo-mark-bone.png',
-  }[variant] || '/assets/logo-mark.png';
+export function BBLogo({ variant = 'mark-ink', className = "", style = {} }: BBLogoProps) {
+  // Monograma BB (dos B espejadas con divisor central)
+  // variant 'mark-bone' = color hueso para fondos oscuros (footer)
+  // variant cualquier otro = color ink para fondos claros (header, drawer)
+  
+  const src = variant === 'mark-bone' 
+    ? '/logo-bb-bone.png'
+    : '/logo-bb-ink.png';
 
   return (
     <img 
       src={src} 
-      alt="B&B Logo" 
-      style={{ height, width: 'auto', display: 'block', ...style }} 
+      alt="Britos Berón" 
+      style={{ 
+        width: 'auto', 
+        display: 'block',
+        ...style 
+      }} 
       className={className} 
     />
   );

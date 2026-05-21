@@ -78,6 +78,14 @@ export const metadata: Metadata = {
   verification: {
     google: "LKuHJHS-1IyGtexZhCFqUzKgZTfZ_hu1r3vF1Mxj2ps",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: { url: "/favicon-64.png", sizes: "64x64" },
+  },
 };
 
 export default function RootLayout({
