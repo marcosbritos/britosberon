@@ -8,22 +8,22 @@ interface BBLogoProps {
 }
 
 export function BBLogo({ variant = 'mark-ink', className = "", style = {} }: BBLogoProps) {
-  // Para fondos claros (header, drawer): logo COMPLETO con texto integrado
-  //   → /logo-bb-full-ink.png (monograma + BRITOS BERÓN | ESTUDIO DIGITAL + línea cyan)
-  // Para fondos oscuros (footer): solo el monograma BB en color hueso
-  //   → /logo-bb-bone.png
+  // SVG original tal cual lo subió Marcos (sin modificaciones al diseño)
+  // Solo se removió el metadata de Canva para reducir tamaño
+  // - mark-ink (default): logo en sus colores originales
+  // - mark-bone: mismo logo pero filtrado a color hueso para fondos oscuros (footer)
   
-  const src = variant === 'mark-bone' 
-    ? '/logo-bb-bone.png'        // Solo monograma BB, color bone para footer
-    : '/logo-bb-full-ink.png';   // Logo completo con texto para header
+  const isBone = variant === 'mark-bone';
 
   return (
     <img 
-      src={src} 
+      src="/logo-bb.svg" 
       alt="Britos Berón · Estudio digital" 
       style={{ 
         width: 'auto', 
         display: 'block',
+        // Para footer oscuro: invertir colores para que el logo se vea claro
+        filter: isBone ? 'invert(1) brightness(0.95) sepia(0.1) saturate(0.3)' : 'none',
         ...style 
       }} 
       className={className} 
