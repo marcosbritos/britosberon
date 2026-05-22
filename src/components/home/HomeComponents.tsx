@@ -80,21 +80,10 @@ export function HomeNav() {
     <>
       <header className="sticky top-0 z-40 backdrop-blur-md bg-bone/90 supports-[backdrop-filter]:bg-bone/80 border-b border-ink/10">
         <div className="flex items-center justify-between gap-3 px-5 md:px-[56px] py-3.5 md:py-[18px]">
-          <div className="flex items-center gap-3 md:gap-[18px] min-w-0 flex-1">
-            <Link href="/" className="shrink-0" aria-label="Inicio B&B">
-              <BBLogo variant="mark-ink" className="h-9 md:h-[48px] w-auto" />
+          <div className="flex items-center min-w-0 flex-1">
+            <Link href="/" className="shrink-0" aria-label="Inicio Britos Berón">
+              <BBLogo variant="mark-ink" className="h-14 md:h-[72px] w-auto" />
             </Link>
-            <div className="border-l border-ink/15 pl-3 md:pl-[18px] min-w-0">
-              {/* Marca: una línea, peso fuerte */}
-              <div className="font-mono text-[11px] font-semibold tracking-[0.18em] md:tracking-[0.22em] uppercase leading-[1.2] text-ink">
-                Britos Berón
-              </div>
-              {/* Tagline: corto en mobile (igual que el drawer), completo en desktop */}
-              <div className="font-mono text-[9.5px] md:text-[10px] tracking-[0.08em] md:tracking-[0.18em] uppercase leading-[1.35] md:leading-[1.5] text-mute mt-0.5 md:mt-1">
-                <span className="md:hidden">Estudio digital</span>
-                <span className="hidden md:inline">Estudio digital · Webs, sistemas y crecimiento</span>
-              </div>
-            </div>
           </div>
 
           <nav className="hidden lg:flex gap-[36px] font-mono text-[11px] tracking-[0.18em] uppercase" aria-label="Principal">
@@ -136,12 +125,8 @@ export function HomeNav() {
       >
         {/* Drawer header */}
         <div className="flex items-center justify-between px-5 py-3.5 border-b border-ink/10">
-          <div className="flex items-center gap-3 min-w-0">
-            <BBLogo variant="mark-ink" className="h-9 w-auto shrink-0" />
-            <div className="border-l border-ink/10 pl-3 font-mono text-[8px] tracking-[0.18em] uppercase leading-[1.5] text-ink min-w-0">
-              BRITOS BERÓN<br />
-              <span className="text-mute">Estudio digital</span>
-            </div>
+          <div className="flex items-center min-w-0">
+            <BBLogo variant="mark-ink" className="h-12 w-auto shrink-0" />
           </div>
           <button
             type="button"
@@ -566,7 +551,7 @@ export function HomeFooter() {
       <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between gap-5 md:gap-4 text-center md:text-left">
         {/* Logo + dominio */}
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-          <BBLogo variant="mark-bone" className="h-9 md:h-[40px] w-auto" />
+          <BBLogo variant="mark-bone" className="h-16 md:h-[68px] w-auto" />
           <div className="font-mono text-[10px] md:text-[11px] tracking-[0.18em] uppercase text-bone/55">
             britosberon.com.ar
           </div>

@@ -8,18 +8,19 @@ interface BBLogoProps {
 }
 
 export function BBLogo({ variant = 'mark-ink', className = "", style = {} }: BBLogoProps) {
-  // Monograma BB (dos B espejadas con divisor central)
-  // variant 'mark-bone' = color hueso para fondos oscuros (footer)
-  // variant cualquier otro = color ink para fondos claros (header, drawer)
+  // Para fondos claros (header, drawer): logo COMPLETO con texto integrado
+  //   → /logo-bb-full-ink.png (monograma + BRITOS BERÓN | ESTUDIO DIGITAL + línea cyan)
+  // Para fondos oscuros (footer): solo el monograma BB en color hueso
+  //   → /logo-bb-bone.png
   
   const src = variant === 'mark-bone' 
-    ? '/logo-bb-bone.png'
-    : '/logo-bb-ink.png';
+    ? '/logo-bb-bone.png'        // Solo monograma BB, color bone para footer
+    : '/logo-bb-full-ink.png';   // Logo completo con texto para header
 
   return (
     <img 
       src={src} 
-      alt="Britos Berón" 
+      alt="Britos Berón · Estudio digital" 
       style={{ 
         width: 'auto', 
         display: 'block',
