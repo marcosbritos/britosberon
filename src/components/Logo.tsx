@@ -8,10 +8,10 @@ interface BBLogoProps {
 }
 
 export function BBLogo({ variant = 'mark-ink', className = "", style = {} }: BBLogoProps) {
-  // SVG original tal cual lo subió Marcos (sin modificaciones al diseño)
-  // Solo se removió el metadata de Canva para reducir tamaño
-  // - mark-ink (default): logo en sus colores originales
-  // - mark-bone: mismo logo pero filtrado a color hueso para fondos oscuros (footer)
+  // SVG limpio del logo de Marcos (monograma BB + texto BRITOS BERÓN ESTUDIO DIGITAL + divisor cyan)
+  // El diseño es 100% el que Marcos hizo en Canva.
+  // - mark-ink (default): colores originales para fondos claros (header, drawer)
+  // - mark-bone: invertido para fondos oscuros (footer)
   
   const isBone = variant === 'mark-bone';
 
@@ -22,8 +22,7 @@ export function BBLogo({ variant = 'mark-ink', className = "", style = {} }: BBL
       style={{ 
         width: 'auto', 
         display: 'block',
-        // Para footer oscuro: invertir colores para que el logo se vea claro
-        filter: isBone ? 'invert(1) brightness(0.95) sepia(0.1) saturate(0.3)' : 'none',
+        filter: isBone ? 'invert(1) hue-rotate(180deg) brightness(1.05) saturate(0.85)' : 'none',
         ...style 
       }} 
       className={className} 
