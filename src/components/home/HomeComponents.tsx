@@ -212,7 +212,7 @@ export function HomeHero() {
             <span className="flex-1 h-px bg-ink/10 mx-3" />
             <span>↓ scroll</span>
           </div>
-          <h1 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.045em] text-[clamp(44px,11.5vw,130px)]">
+          <h1 className="m-0 font-display font-semibold leading-[0.92] tracking-[-0.045em] text-[clamp(44px,10vw,108px)]">
             Construimos<br />
             negocios digitales.<br />
             <span className="text-acc">Impulsamos<br />
