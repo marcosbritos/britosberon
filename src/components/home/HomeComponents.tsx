@@ -585,11 +585,11 @@ export function HomeFooter() {
 
       {/* Legal line */}
       <div className="mt-6 md:mt-[24px] pt-5 md:pt-[20px] border-t border-bone/15 flex flex-col md:flex-row justify-between gap-3 font-mono text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-bone/45 items-center md:items-start text-center md:text-left">
-        <span>© {new Date().getFullYear()} Britos Berón</span>
+        <span>© 2025 Britos Berón</span>
         <span className="flex gap-3 justify-center">
           <span>Términos</span><span>·</span><span>Privacidad</span><span>·</span><span>Cookies</span>
         </span>
-        <span className="font-tabular-nums">v1.1 · {new Date().toISOString().split('T')[0].replace(/-/g, '.')}</span>
+        <span className="font-tabular-nums">v1.1 · Hecho en Argentina</span>
       </div>
     </footer>
   );
