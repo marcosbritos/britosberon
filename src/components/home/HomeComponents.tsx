@@ -21,7 +21,7 @@ import { BBLogo } from "../Logo";
 
 function SectionHead({ nro, t, sub }: { nro: string; t: string; sub: string }) {
   return (
-    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 md:gap-[40px] mb-6 md:mb-[80px]">
+    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 md:gap-[40px] mb-6 md:mb-[56px]">
       <div>
         <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-2 md:mb-[14px] text-mute">
           {nro} — Sección
@@ -260,7 +260,7 @@ export function HomeProcess() {
     { n: '03', t: 'Lanzamos', s: '7 — 14 días', body: 'Online y funcionando. Después seguimos: actualizaciones, soporte y crecimiento mes a mes.' },
   ];
   return (
-    <section id="como-trabajamos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-6 md:pb-[100px] bg-bone2 border-y-[1.5px] border-ink">
+    <section id="como-trabajamos" className="px-5 md:px-[56px] py-12 md:py-[80px] pb-6 md:pb-[72px] bg-bone2 border-y-[1.5px] border-ink">
       <SectionHead nro="02" t="Proceso" sub="Un proceso ágil, transparente y diseñado para que no tengas que preocuparte por nada." />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mt-4 md:mt-[56px]">
         {steps.map((st, i) => (
@@ -303,8 +303,8 @@ export function HomeSoluciones() {
   ];
 
   return (
-    <section id="soluciones" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-6 md:pb-[100px] bg-bone border-b border-ink/10">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 md:gap-[40px] mb-6 md:mb-[80px]">
+    <section id="soluciones" className="px-5 md:px-[56px] py-12 md:py-[80px] pb-6 md:pb-[72px] bg-bone border-b border-ink/10">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 md:gap-[40px] mb-6 md:mb-[56px]">
         <div>
           <div className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase mb-2 md:mb-[14px] text-mute">
             03 — Sección
@@ -345,7 +345,7 @@ export function HomeSoluciones() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeManifesto() {
   return (
-    <section id="manifiesto" className="bg-ink text-bone px-5 md:px-[56px] pt-14 pb-10 md:py-[140px] relative overflow-hidden">
+    <section id="manifiesto" className="bg-ink text-bone px-5 md:px-[56px] pt-14 pb-10 md:py-[100px] relative overflow-hidden">
       <div className="bb-grain dark" />
       <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full opacity-5 text-bone">
         <rect width="100%" height="100%" fill="url(#bb-stripes)" />
@@ -407,8 +407,8 @@ export function HomeIncluye() {
   ];
 
   return (
-    <section id="que-hacemos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-6 md:pb-[100px]">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 md:gap-[40px] mb-5 md:mb-[60px]">
+    <section id="que-hacemos" className="px-5 md:px-[56px] py-12 md:py-[80px] pb-6 md:pb-[72px]">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 md:gap-[40px] mb-5 md:mb-[44px]">
         <div>
           <div className="flex items-center gap-2.5 mb-2 md:mb-[14px]">
             <span className="inline-block w-7 h-px bg-ink" />
@@ -450,8 +450,8 @@ export function HomeIncluye() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeQuienes() {
   return (
-    <section id="quienes-somos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] bg-bone2 border-t-[1.5px] border-ink">
-      <div className="flex items-center gap-2.5 mb-5 md:mb-[60px]">
+    <section id="quienes-somos" className="px-5 md:px-[56px] py-12 md:py-[80px] pb-10 md:pb-[72px] bg-bone2 border-t-[1.5px] border-ink">
+      <div className="flex items-center gap-2.5 mb-5 md:mb-[44px]">
         <span className="inline-block w-7 h-px bg-ink" />
         <span className="font-mono text-[10px] md:text-[11px] tracking-[0.22em] uppercase text-mute">06 — Quiénes somos</span>
       </div>
@@ -507,7 +507,7 @@ export function HomeQuienes() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeCTA() {
   return (
-    <section id="contacto" className="bg-acc text-bone px-5 md:px-[56px] py-12 md:py-[120px] pb-10 md:pb-[100px] relative overflow-hidden">
+    <section id="contacto" className="bg-acc text-bone px-5 md:px-[56px] py-12 md:py-[80px] pb-10 md:pb-[72px] relative overflow-hidden">
       <div className="bb-grain dark" />
       <div className="relative max-w-[880px]">
         <div className="font-mono text-[10px] md:text-[12px] tracking-[0.22em] uppercase opacity-85 mb-4 md:mb-[24px]">07 — Conectemos</div>
