@@ -549,12 +549,9 @@ export function HomeFooter() {
   return (
     <footer className="bg-ink text-bone px-5 md:px-[56px] py-8 md:py-[40px]">
       <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between gap-5 md:gap-4 text-center md:text-left">
-        {/* Logo + dominio */}
-        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+        {/* Logo */}
+        <div className="flex items-center">
           <BBLogo variant="mark-bone" className="h-20 md:h-[88px] w-auto" />
-          <div className="font-mono text-[10px] md:text-[11px] tracking-[0.18em] uppercase text-bone/55">
-            britosberon.com.ar
-          </div>
         </div>
 
         {/* Social icons */}
