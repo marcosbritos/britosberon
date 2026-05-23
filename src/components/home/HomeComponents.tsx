@@ -262,11 +262,11 @@ export function HomeProcess() {
   return (
     <section id="como-trabajamos" className="px-5 md:px-[56px] py-12 md:py-[120px] pb-6 md:pb-[100px] bg-bone2 border-y-[1.5px] border-ink">
       <SectionHead nro="02" t="Proceso" sub="Un proceso ágil, transparente y diseñado para que no tengas que preocuparte por nada." />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mt-4 md:mt-[80px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mt-4 md:mt-[56px]">
         {steps.map((st, i) => (
-          <div key={st.n} className={`py-4 lg:p-[36px_32px_36px] relative ${i > 0 ? 'border-t lg:border-t-0 lg:border-l border-ink/20' : ''}`}>
+          <div key={st.n} className={`py-4 lg:p-[28px_28px_28px] relative ${i > 0 ? 'border-t lg:border-t-0 lg:border-l border-ink/20' : ''}`}>
             <div className="flex items-baseline justify-between">
-              <div className="font-display font-bold leading-[0.85] tracking-[-0.06em] text-ink text-[clamp(96px,22vw,220px)]">{st.n}</div>
+              <div className="font-display font-bold leading-[0.85] tracking-[-0.06em] text-ink text-[clamp(96px,18vw,160px)]">{st.n}</div>
               <div className="font-mono text-[9px] md:text-[10px] tracking-[0.22em] uppercase text-acc2 [writing-mode:vertical-rl] rotate-180">{st.s}</div>
             </div>
             <h3 className="my-3 md:my-[24px_0_12px] font-serif italic font-normal leading-none text-acc2 text-[clamp(36px,8vw,54px)]">
