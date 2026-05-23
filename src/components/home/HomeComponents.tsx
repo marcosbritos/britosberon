@@ -82,7 +82,7 @@ export function HomeNav() {
         <div className="flex items-center justify-between gap-3 px-5 md:px-[56px] py-3.5 md:py-[18px]">
           <div className="flex items-center min-w-0 flex-1">
             <Link href="/" className="shrink-0" aria-label="Inicio Britos Berón">
-              <BBLogo variant="mark-ink" className="h-20 md:h-[96px] w-auto" />
+              <BBLogo variant="mark-ink" className="h-20 md:h-[84px] w-auto" />
             </Link>
           </div>
 
