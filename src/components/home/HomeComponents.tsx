@@ -203,10 +203,10 @@ export function HomeNav() {
 ───────────────────────────────────────────────────────────────────────────── */
 export function HomeHero() {
   return (
-    <section className="relative px-5 md:px-[56px] pt-10 md:pt-[80px] pb-6 md:pb-[100px] border-b border-ink/10">
+    <section className="relative px-5 md:px-[56px] pt-10 md:pt-[48px] pb-6 md:pb-[60px] border-b border-ink/10">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 md:gap-[64px] items-start">
         <div>
-          <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-4 md:mb-[32px]">
+          <div className="flex items-center gap-3 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-mute mb-4 md:mb-[20px]">
             <span className="inline-block w-6 md:w-[36px] h-px bg-ink" />
             <span>01 — Inicio</span>
             <span className="flex-1 h-px bg-ink/10 mx-3" />
@@ -218,7 +218,7 @@ export function HomeHero() {
             <span className="text-acc">Impulsamos<br />
             su crecimiento.</span>
           </h1>
-          <div className="mt-6 md:mt-[42px] flex items-stretch sm:items-center">
+          <div className="mt-6 md:mt-[28px] flex items-stretch sm:items-center">
             <a
               href="https://wa.me/5491169299378"
               target="_blank"
@@ -232,7 +232,7 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="pt-5 md:pt-[60px] border-t lg:border-t-0 lg:border-l border-ink/10 lg:pl-[30px]">
+        <div className="pt-5 md:pt-[36px] border-t lg:border-t-0 lg:border-l border-ink/10 lg:pl-[30px]">
           <ValueBlock label="Entrega rápida" value="7 a 14 días" />
           <ValueBlock label="Soporte directo" value="WhatsApp · ≤ 24 hs" />
           <ValueBlock label="Tecnología a medida" value="Diseño boutique" />
