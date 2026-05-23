@@ -287,8 +287,8 @@ export function HomeSoluciones() {
   const cards = [
     {
       n: '01',
-      t: 'Plataformas de gestión y ligas',
-      body: 'Nos especializamos en construir plataformas de alto impacto visual, con base de datos sólida para una gestión integral de torneos y ligas. Incorporamos fixtures y tablas automatizadas que optimizan todo el flujo de carga, para que volcar los datos de los partidos sea un proceso simple, rápido y libre de fricciones para el organizador.',
+      t: 'Plataformas de gestión para competiciones deportivas',
+      body: 'Nos especializamos en construir plataformas de alto impacto visual, con base de datos sólida para una gestión integral de competiciones deportivas. Incorporamos fixtures y tablas automatizadas que optimizan todo el flujo de carga, para que volcar los datos de los partidos sea un proceso simple, rápido y libre de fricciones para la organización.',
     },
     {
       n: '02',
